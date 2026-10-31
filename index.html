@@ -140,6 +140,11 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .speak{width:52px;height:52px;border-radius:14px;border:0;background:var(--qa);color:#fff;display:grid;place-items:center;flex:none;box-shadow:0 4px 0 color-mix(in srgb,var(--qa) 65%,#000)}
 .speak.slow{width:40px;height:40px;background:var(--surface);color:var(--qa);border:2px solid var(--line);box-shadow:0 3px 0 var(--line)}
 .bubble{background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:12px 14px;font-size:18px;font-weight:600;min-width:0}
+.simlist{max-height:calc(100dvh - 32px);overflow-y:auto}
+.simlist .lvl{flex:none}
+.chat{display:grid;gap:10px}
+.chat .bubble{width:fit-content;max-width:85%;font-size:16px}
+.chat .bubble.me{justify-self:end;border-color:var(--accent)}
 .reveal-box{display:grid;gap:8px;min-width:0}
 .reveal summary{cursor:pointer;width:fit-content;padding-block:4px;font-size:14px;font-weight:700;color:var(--accent)}
 .reveal .bubble{margin-top:6px}
@@ -453,6 +458,32 @@ function practiceLesson(mode){
   return null;
 }
 
+function simDialogs(){
+  const out=[]; const track=PROFILES[S.pid].track;
+  for(const part of track?["common","track"]:["common"]) for(const l of sortedLessons()){ if(l.review) continue;
+    const dlg=(part==="common"?l.common:trackOf(l,S.pid))?.dialog||[];
+    if(dlg.some(d=>d.s==="You") && dlg.some(d=>d.s!=="You")) out.push({l,part,dlg}); }
+  return out;
+}
+function simLesson(l, dlg){
+  const you=uniq(allDialogYou().map(d=>fill(d.en))), turns=[], hist=[]; let npc=[];
+  for(const d of dlg){ if(d.s!=="You"){ npc.push(d); continue; }
+    const right=fill(d.en);
+    turns.push({type:"sim", hist:hist.slice(), npc, you:d, options:shuffle([right,...pick(you.filter(x=>x!==right),2)]), answer:right});
+    hist.push(...npc,d); npc=[]; if(turns.length===4) break; }
+  return {title:l.title, practice:true, exs:turns, chunks:[]};
+}
+function openSimMenu(){
+  const list=simDialogs(); const label=S.pid==="qa"?"Inglês de QA":"Inglês regulatório";
+  const group=part=>{ const g=list.map((x,i)=>({...x,i})).filter(x=>x.part===part); return g.length?`<div class="lbl">${part==="common"?"Dia a dia":label}</div>${g.map(x=>`<button class="lvl" data-sim="${x.i}"><span><b>${esc(x.l.title)}</b><span class="tiny muted">Dia ${x.l.day} · até ${Math.min(4,x.dlg.filter(d=>d.s==="You").length)} falas</span></span></button>`).join("")}`:""; };
+  layer(`<div class="pop simlist" role="dialog" aria-label="Simulador de conversa">
+    <div><div class="lbl">Simulador de conversa</div><h3>Escolha uma situação</h3></div>
+    ${group("common")}${group("track")}
+    <button class="btn ghost" id="closePop">Fechar</button></div>`, true);
+  $("#closePop").onclick=closeLayer;
+  document.querySelectorAll("[data-sim]").forEach(b=>b.onclick=()=>{ const x=list[+b.dataset.sim]; closeLayer(); runLesson(simLesson(x.l,x.dlg),null,null); });
+}
+
 /* ---------- render shell ---------- */
 function renderTop(){
   const p=P(), pr=PROFILES[S.pid]; const h=hearts();
@@ -556,6 +587,7 @@ function viewPractice(){
       <button class="card row" data-pr="weak" style="text-align:left"><span class="mini-sp" style="background:color-mix(in srgb,var(--sun) 15%,transparent);color:var(--sun)">${ICON("dumbbell")}</span><span style="flex:1"><b>Pontos fracos</b><br><span class="tiny muted">${due} chunks pedindo revisão agora</span></span><span class="chip all">+10 XP</span></button>
       <button class="card row" data-pr="listen" style="text-align:left"><span class="mini-sp">${ICON("sound")}</span><span style="flex:1"><b>Treino de escuta</b><br><span class="tiny muted">Ouça e monte a frase</span></span><span class="chip all">+10 XP</span></button>
       <button class="card row" data-pr="speak" style="text-align:left"><span class="mini-sp" style="background:color-mix(in srgb,var(--reg) 15%,transparent);color:var(--reg)">${ICON("mic")}</span><span style="flex:1"><b>Treino de fala</b><br><span class="tiny muted">Ouça o nativo e repita em voz alta</span></span><span class="chip all">+10 XP</span></button>
+      <button class="card row" id="simBtn" style="text-align:left"><span class="mini-sp" style="background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent)">${ICON("chat")}</span><span style="flex:1"><b>Simulador de conversa</b><br><span class="tiny muted">Conversas curtas: ouça e responda em voz alta</span></span><span class="chip all">+10 XP</span></button>
     </div>
     <div class="sec-h"><h2>Caderno de chunks</h2><span class="muted tiny">${strong} dominados · ${learned.length} vistos</span></div>
     <input class="search" id="libSearch" type="search" placeholder="Buscar em inglês ou português" aria-label="Buscar chunk">
@@ -623,6 +655,7 @@ function viewBadges(){
 function bindView(){
   const m=$("#main");
   m.querySelectorAll(".node").forEach(b=>b.onclick=()=>openNode(+b.dataset.day));
+  const sim=$("#simBtn",m); if(sim) sim.onclick=openSimMenu;
   m.querySelectorAll("[data-pr]").forEach(b=>b.onclick=()=>{ const L=practiceLesson(b.dataset.pr); if(!L){toast("Faça uma lição primeiro.");return;} runLesson(L,null,null); });
   m.querySelectorAll("[data-say]").forEach(b=>b.onclick=()=>say(b.dataset.say));
   const s=$("#libSearch"); if(s) s.oninput=()=>{ const q=norm(s.value); m.querySelectorAll(".lib-item").forEach(el=>el.hidden = q && !el.dataset.q.includes(q)); };
@@ -654,6 +687,39 @@ function openSettings(first){
   </div>`, !first);
   $("#fSave").onclick=()=>{ p.name=$("#fName").value.trim().slice(0,24); p.goal=+$("#fGoal").value; S.sound=$("#fSound").checked; LS.set("sound",S.sound); S.slow=$("#fSlow").checked; save(); closeLayer(); render(); };
   const sw=$("#fSwitch"); if(sw) sw.onclick=()=>{ S.pid=null; LS.set("pid",null); closeLayer(); render(); };
+}
+
+/* ---------- microphone session ---------- */
+function listenOnce(o){
+  const {target,btn,heard,auto,note,min=0.8}=o;
+  const r = new SR(); r.lang="en-US"; r.interimResults=true; r.maxAlternatives=3; r.continuous=false;
+  let finalAlts=null, interim="", msg="", wd=0;
+  const off = () => { clearTimeout(wd); r.onresult=r.onerror=r.onend=r.onspeechstart=null; btn.classList.remove("on"); o.onOff(); };
+  const tooShort = a => scoreSpeech(target,a).score<min && speechTokens(a).length<speechTokens(target).length*0.6;
+  const end = () => { off(); const alts = finalAlts || (interim?[interim]:null);
+    if(alts && alts.every(tooShort)) return o.onShort(alts[0].trim());
+    if(alts) o.onHeard(alts); else heard.textContent = msg || "Não ouvi nada. Toque no microfone e fale mais perto dele."; };
+  const hung = () => { if(!interim) msg="O reconhecimento de voz não respondeu. Ele funciona melhor no Chrome ou no Safari, com internet. Tente de novo ou toque em “Não posso falar agora”."; try{r.abort();}catch(e){} end(); };
+  const arm = ms => { clearTimeout(wd); wd=setTimeout(hung,ms); };
+  btn.classList.add("on"); heard.textContent=note||"Ouvindo… pode falar a frase.";
+  r.onspeechstart = () => { if(!interim && !(auto&&speechSynthesis.speaking)) heard.textContent="Captei sua voz, pode continuar…"; };
+  r.onresult = e => { if(auto&&speechSynthesis.speaking) return; const res=e.results[e.results.length-1]; interim=Array.from(e.results).map(r=>r[0].transcript).join(" ");
+    heard.textContent="“"+interim+"”"; if(res.isFinal){ finalAlts=Array.from(res).map(a=>Array.from(e.results).slice(0,-1).map(r=>r[0].transcript).concat(a.transcript).join(" ")); }
+    const sc=scoreSpeech(target,interim).score; if(sc>=1){ try{r.abort();}catch(e){} end(); return; }
+    arm(res.isFinal?1500:sc>=min?1000:4000); };
+  r.onerror = e => {
+    if(e.error==="not-allowed"||e.error==="service-not-allowed") msg=auto?"Toque no microfone e fale a frase":"O microfone foi bloqueado. Libere o microfone para este site nas configurações do navegador.";
+    else if(e.error==="no-speech") msg="Não ouvi nada. Toque e fale mais perto do microfone.";
+    else if(e.error==="audio-capture") msg="Não encontrei um microfone. Confira o microfone selecionado no computador.";
+    else if(e.error==="network") msg="Este navegador não conseguiu usar o reconhecimento de voz. Tente no Chrome ou no Safari, com internet.";
+    else msg="Não consegui ouvir. Toque e tente de novo.";
+    end(); };
+  r.onend = end;
+  o.onStart({
+    stop(){ if(!interim || scoreSpeech(target,interim).score<min){ heard.textContent="Já estou ouvindo, pode falar a frase."; return; } heard.textContent="Conferindo…"; try{r.stop();}catch(e){} arm(2500); },
+    kill(){ off(); try{r.abort();}catch(e){} } });
+  arm(10000);
+  try{ r.start(); }catch(e){ msg=auto?"Toque no microfone e fale a frase":"Não consegui ligar o microfone. Toque e tente de novo."; end(); }
 }
 
 /* ---------- lesson runner ---------- */
@@ -756,7 +822,7 @@ function runLesson(L, lessonRef, level){
         else { $("#spAgain",el).onclick=()=>{ waiting=true; $("#spRes",el).innerHTML=""; const f=$(".foot .wrap",el); f.innerHTML=`<button class="btn ghost block" id="spSkip">Não posso falar agora</button>`; bindSkip(); if(SR) startMic(false); else { $("#dict",el).value=""; $("#dict",el).focus(); } };
           $("#spGive",el).onclick=()=>{ srsMark(ex.c,false); R.mistakes++; R.queue.shift(); R.done++; show(); }; }
       };
-      let rec=null, micStop=null, armed=false, armT=0, armWait=0, micNote="", retries=0;
+      let rec=null, armed=false, armT=0, armWait=0, micNote="", retries=0;
       const disarm = () => { armed=false; clearTimeout(armT); };
       const armMic = () => { if(!armed) return;
         if(speechSynthesis.speaking){ if(++armWait>40){ disarm(); $("#heard",el).textContent="Toque no microfone e fale a frase"; } else armT=setTimeout(armMic,200); return; }
@@ -767,42 +833,59 @@ function runLesson(L, lessonRef, level){
         if(viaTimer) autoSay(ex.say,slow,false,onEnd); else say(ex.say,slow,false,onEnd);
         $("#heard",el).textContent="Ouça a frase. O microfone liga sozinho em seguida."; };
       const startMic = auto => {
-        hush();
-        const r = new SR(); r.lang="en-US"; r.interimResults=true; r.maxAlternatives=3; r.continuous=false; rec=r;
-        const btn=$("#micBtn",el), heard=$("#heard",el); let finalAlts=null, interim="", msg="", wd=0;
-        const off = () => { clearTimeout(wd); r.onresult=r.onerror=r.onend=r.onspeechstart=null; rec=null; micStop=null; killMic=()=>{}; btn.classList.remove("on"); };
-        const tooShort = a => scoreSpeech(target,a).score<0.8 && speechTokens(a).length<speechTokens(target).length*0.6;
-        const end = () => { off(); const alts = finalAlts || (interim?[interim]:null);
-          if(alts && alts.every(tooShort)){ const note="Ouvi só “"+alts[0].trim()+"”. Fale a frase inteira.";
-            if(retries<2){ retries++; micNote=note; heard.textContent=note; armed=true; armWait=0; killMic=disarm; armT=setTimeout(armMic,400); } else { retries=0; heard.textContent=note+" Toque no microfone para tentar de novo."; } return; }
-          if(alts) grade(alts); else heard.textContent = msg || "Não ouvi nada. Toque no microfone e fale mais perto dele."; };
-        const hung = () => { if(!interim) msg="O reconhecimento de voz não respondeu. Ele funciona melhor no Chrome ou no Safari, com internet. Tente de novo ou toque em “Não posso falar agora”."; try{r.abort();}catch(e){} end(); };
-        const arm = ms => { clearTimeout(wd); wd=setTimeout(hung,ms); };
-        killMic = () => { off(); try{r.abort();}catch(e){} };
-        micStop = () => { if(!interim || scoreSpeech(target,interim).score<0.8){ heard.textContent="Já estou ouvindo, pode falar a frase."; return; } heard.textContent="Conferindo…"; try{r.stop();}catch(e){} arm(2500); };
-        btn.classList.add("on"); heard.textContent=micNote||"Ouvindo… pode falar a frase."; micNote="";
-        r.onspeechstart = () => { if(!interim && !(auto&&speechSynthesis.speaking)) heard.textContent="Captei sua voz, pode continuar…"; };
-        r.onresult = e => { if(auto&&speechSynthesis.speaking) return; const res=e.results[e.results.length-1]; interim=Array.from(e.results).map(r=>r[0].transcript).join(" ");
-          heard.textContent="“"+interim+"”"; if(res.isFinal){ finalAlts=Array.from(res).map(a=>Array.from(e.results).slice(0,-1).map(r=>r[0].transcript).concat(a.transcript).join(" ")); }
-          const sc=scoreSpeech(target,interim).score; if(sc>=1){ try{r.abort();}catch(e){} end(); return; }
-          arm(res.isFinal?1500:sc>=0.8?1000:4000); };
-        r.onerror = e => {
-          if(e.error==="not-allowed"||e.error==="service-not-allowed") msg=auto?"Toque no microfone e fale a frase":"O microfone foi bloqueado. Libere o microfone para este site nas configurações do navegador.";
-          else if(e.error==="no-speech") msg="Não ouvi nada. Toque e fale mais perto do microfone.";
-          else if(e.error==="audio-capture") msg="Não encontrei um microfone. Confira o microfone selecionado no computador.";
-          else if(e.error==="network") msg="Este navegador não conseguiu usar o reconhecimento de voz. Tente no Chrome ou no Safari, com internet.";
-          else msg="Não consegui ouvir. Toque e tente de novo.";
-          end(); };
-        r.onend = end;
-        arm(10000);
-        try{ r.start(); }catch(e){ msg=auto?"Toque no microfone e fale a frase":"Não consegui ligar o microfone. Toque e tente de novo."; end(); }
+        hush(); const note=micNote; micNote=""; const heard=$("#heard",el);
+        listenOnce({target, btn:$("#micBtn",el), heard, auto, note, onStart:c=>{ rec=c; killMic=c.kill; }, onOff:()=>{ rec=null; killMic=()=>{}; }, onHeard:grade,
+          onShort:said=>{ const m="Ouvi só “"+said+"”. Fale a frase inteira.";
+            if(retries<2){ retries++; micNote=m; heard.textContent=m; armed=true; armWait=0; killMic=disarm; armT=setTimeout(armMic,400); } else { retries=0; heard.textContent=m+" Toque no microfone para tentar de novo."; } } });
       };
       const bindSkip = () => { const b=$("#spSkip",el); if(b) b.onclick=()=>{ killMic(); R.queue.shift(); R.done++; show(); }; };
       bindSkip();
-      if(SR) { $("#micBtn",el).onclick=()=>{ if(rec){ micStop(); return; } disarm(); retries=0; startMic(false); };
+      if(SR) { $("#micBtn",el).onclick=()=>{ if(rec){ rec.stop(); return; } disarm(); retries=0; startMic(false); };
         R.replay = slow => { if(waiting) listenAfterAudio(slow); else say(ex.say,slow); };
         listenAfterAudio(false,true); }
       else { autoSay(ex.say); const go=()=>{ const v=$("#dict",el).value.trim(); if(v) grade([v]); }; $("#dictGo",el).onclick=go; $("#dict",el).onkeydown=e=>{ if(e.key==="Enter"){ e.preventDefault(); go(); } }; }
+    }
+    else if(ex.type==="sim"){
+      const target=fill(ex.you.en), npc=ex.npc.map(d=>d.en).join(" "), useOpts=R.simChoice||!SR;
+      let rec=null, armT=0, advT=0, retries=0, micNote="";
+      const line = d => `<div class="bubble ${d.s==="You"?"me":""}"><span class="s">${esc(d.s==="You"?"Você":d.s)}</span>${esc(fill(d.en))}</div>`;
+      const next = () => { killMic(); R.queue.shift(); R.done++; show(); };
+      const answerBox = useOpts ? `<div class="opts">${ex.options.map((o,i)=>`<button class="opt" data-i="${i}" aria-pressed="false">${esc(o)}</button>`).join("")}</div>`
+        : `<button class="mic" id="micBtn" aria-label="Tocar e falar">${ICON("mic")}</button><div class="heard" id="heard">Ouça e espere o microfone ligar.</div>`;
+      frame(`<div class="q-title">${esc(L.title)}</div><div class="chat">${[...ex.hist,...ex.npc].map(line).join("")}</div>
+        <div class="prompt">${npc?speakBtns(npc,true):""}<div class="reveal-box"><div class="hint"><b>Sua vez:</b> ${esc(fill(ex.you.pt))}</div><details class="reveal"><summary>Ver em inglês</summary><div class="bubble">${esc(target)}</div></details></div></div>
+        ${answerBox}<div id="spRes" class="stack"></div>`,
+        useOpts ? `<button class="btn ghost block" id="spSkip">Pular esta fala</button>` : `<button class="btn ghost block" id="spSkip">Não posso falar agora</button>`);
+      const bd=$(".body",el); bd.scrollTop=bd.scrollHeight;
+      killMic = () => { clearTimeout(armT); clearTimeout(advT); if(rec) rec.kill(); };
+      $("#spSkip",el).onclick = () => { if(useOpts){ R.mistakes++; next(); } else { killMic(); R.simChoice=true; show(); } };
+      if(useOpts){
+        if(npc) autoSay(npc,false,true);
+        el.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const ok=norm(ex.options[+b.dataset.i])===norm(ex.answer); beep(ok);
+          el.querySelectorAll(".opt").forEach(x=>{ x.disabled=true; if(norm(ex.options[+x.dataset.i])===norm(ex.answer)) x.classList.add("right"); }); if(!ok){ b.classList.add("wrong"); R.mistakes++; }
+          say(ex.you.en,false,true); advT=setTimeout(next, ok?1500:3500); });
+      } else {
+        const start = auto => { const note=micNote; micNote=""; const heard=$("#heard",el); hush();
+          listenOnce({target, btn:$("#micBtn",el), heard, auto, note, min:0.7, onStart:c=>{ rec=c; }, onOff:()=>{ rec=null; }, onHeard:grade,
+            onShort:said=>{ const m="Ouvi só “"+said+"”. Fale a frase inteira."; heard.textContent=m;
+              if(retries<2){ retries++; micNote=m; armT=setTimeout(()=>start(true),400); } else { retries=0; heard.textContent=m+" Toque no microfone para tentar de novo."; } } }); };
+        const armMic = () => { if(speechSynthesis.speaking){ armT=setTimeout(armMic,200); return; } if(!document.hidden && !rec) start(true); };
+        const play = (slow, viaTimer) => { killMic(); retries=0; if(!npc){ armT=setTimeout(armMic,250); return; }
+          const onEnd = () => { clearTimeout(armT); armT=setTimeout(armMic,600); };
+          armT=setTimeout(armMic, slow ? 2000+words(npc).length*2500 : 2000+npc.length*90/0.8);
+          if(viaTimer) autoSay(npc,slow,true,onEnd); else say(npc,slow,true,onEnd); };
+        const grade = alts => { let top={score:-1}; for(const a of alts){ const g=scoreSpeech(target,a); if(g.score>top.score) top=g; }
+          const pass=top.score>=0.7; beep(pass); $("#heard",el).textContent="";
+          $("#spRes",el).innerHTML=`<div class="score" style="color:${pass?"var(--good)":"var(--bad)"}">${Math.round(top.score*100)}%</div><div class="scored">${top.marks.map(m=>`<span class="${m.ok?"w-ok":"w-no"}">${esc(m.w)}</span>`).join(" ")}</div><div class="heard">Ouvi: “${esc(top.heard||"…")}”</div>`;
+          bd.scrollTop=bd.scrollHeight;
+          if(pass){ advT=setTimeout(next,1600); return; }
+          $(".foot .wrap",el).innerHTML=`<button class="btn block" id="spAgain">Tentar de novo</button><button class="btn ghost block" id="spGive">Seguir em frente</button>`;
+          $("#spAgain",el).onclick=()=>{ $("#spRes",el).innerHTML=""; start(false); };
+          $("#spGive",el).onclick=()=>{ R.mistakes++; next(); }; };
+        $("#micBtn",el).onclick=()=>{ if(rec){ rec.stop(); return; } clearTimeout(armT); retries=0; start(false); };
+        R.replay = slow => play(slow);
+        play(false,true);
+      }
     }
     else if(ex.type==="match"){
       const L1=shuffle(ex.pairs), L2=shuffle(ex.pairs); let a=null, b=null, left=ex.pairs.length, slip=false;
