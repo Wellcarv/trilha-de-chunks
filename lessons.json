@@ -1,0 +1,5009 @@
+[
+{
+"day": 1,
+"week": 1,
+"title": "Conhecendo um vizinho novo",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "I don't think we've met.",
+"pt": "Acho que a gente ainda não se conhece.",
+"pr": "ái dôn thínk uiv mét"
+},
+{
+"en": "I'm {name}, by the way.",
+"pt": "Aliás, eu sou o/a {name}.",
+"pr": "bái dâ uêi"
+},
+{
+"en": "Nice to meet you.",
+"pt": "Prazer em te conhecer.",
+"pr": "náis tâ mítchu"
+},
+{
+"en": "Are you new around here?",
+"pt": "Você é novo por aqui?",
+"pr": "ar iú nú arráund hír"
+},
+{
+"en": "We just moved in.",
+"pt": "A gente acabou de se mudar.",
+"pr": "ui djâst múvdin"
+},
+{
+"en": "Where are you from originally?",
+"pt": "Você é de onde, originalmente?",
+"pr": "uér âr iú fróm orídjinâli"
+},
+{
+"en": "I'm from Brazil, actually.",
+"pt": "Na verdade, sou do Brasil.",
+"pr": "brâzíl, ékchuâli"
+},
+{
+"en": "Let me know if you need anything.",
+"pt": "Se precisar de algo, me avisa.",
+"pr": "lémi nôu"
+},
+{
+"en": "Have a good one!",
+"pt": "Tenha um bom dia!",
+"pr": "hév a gúd uân"
+}
+],
+"dialog": [
+{
+"s": "Neighbor",
+"en": "Hey there! I don't think we've met. I'm Mike.",
+"pt": "Oi! Acho que não nos conhecemos. Sou o Mike."
+},
+{
+"s": "You",
+"en": "Oh, hi! I'm {name}, by the way. Nice to meet you.",
+"pt": "Ah, oi! Sou o/a {name}. Prazer."
+},
+{
+"s": "Neighbor",
+"en": "Nice to meet you too. Are you new around here?",
+"pt": "Prazer. Você é novo por aqui?"
+},
+{
+"s": "You",
+"en": "Yeah, we just moved in. Me and my family.",
+"pt": "Sim, acabamos de mudar. Eu e minha família."
+},
+{
+"s": "Neighbor",
+"en": "Awesome! Where are you from originally?",
+"pt": "Que legal! De onde você é?"
+},
+{
+"s": "You",
+"en": "I'm from Brazil, actually.",
+"pt": "Do Brasil, na verdade."
+},
+{
+"s": "Neighbor",
+"en": "Cool! Well, let me know if you need anything.",
+"pt": "Legal! Se precisar de algo, me avisa."
+},
+{
+"s": "You",
+"en": "Thanks! Have a good one!",
+"pt": "Valeu! Bom dia pra você!"
+}
+],
+"prompts": [
+"Hi! Are you new around here? → apresente-se, diga que acabou de se mudar e com quem mora.",
+"Where are you from originally? → responda, devolva a pergunta e encerre educadamente."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "Sure! Let me tell you a little bit about myself.",
+"pt": "Claro! Deixa eu falar um pouco sobre mim.",
+"pr": "lémi tél iú a lírou bít"
+},
+{
+"en": "I'm based in Orlando, Florida.",
+"pt": "Moro/trabalho em Orlando, Flórida.",
+"pr": "áim bêist in órlêndou"
+},
+{
+"en": "I've got over a decade of experience in software testing.",
+"pt": "Tenho mais de uma década de experiência em teste de software.",
+"pr": "áiv gárôuvâr a dékêid"
+},
+{
+"en": "Most of my work is around test automation.",
+"pt": "A maior parte do meu trabalho é com automação de testes."
+},
+{
+"en": "Right now, I'm working on mobile apps.",
+"pt": "No momento, estou trabalhando com apps mobile."
+},
+{
+"en": "I'm really into building frameworks from scratch.",
+"pt": "Curto muito criar frameworks do zero.",
+"pr": "from scrétch"
+}
+],
+"dialog": [
+{
+"s": "Recruiter",
+"en": "So, tell me a little bit about yourself.",
+"pt": "Me fala um pouco sobre você."
+},
+{
+"s": "You",
+"en": "Sure! I'm {name}, I'm based in Orlando, Florida.",
+"pt": "Claro! Sou o {name}, moro em Orlando."
+},
+{
+"s": "You",
+"en": "I've got over a decade of experience in software testing, and most of my work is around test automation.",
+"pt": "Tenho mais de uma década em teste de software, e a maior parte é automação."
+},
+{
+"s": "Recruiter",
+"en": "Nice. What are you working on these days?",
+"pt": "Legal. Com o que você trabalha hoje em dia?"
+},
+{
+"s": "You",
+"en": "Right now, I'm working on mobile apps. I'm really into building frameworks from scratch.",
+"pt": "No momento, apps mobile. Curto muito criar frameworks do zero."
+},
+{
+"s": "Recruiter",
+"en": "Love that. Let's dig into it.",
+"pt": "Adorei. Vamos entrar nisso."
+}
+],
+"prompts": [
+"Tell me a little bit about yourself. → 4 frases: onde mora, anos de experiência, foco, o que você curte fazer."
+]
+},
+"watch": {
+"title": "Abbott Elementary",
+"where": "Hulu e HBO Max",
+"why": "Comédia leve sobre professores de uma escola pública americana, estilo documentário. Muito small talk.",
+"tip": "Comecem pelo Pilot com legenda em inglês; pausem nos cumprimentos e repitam imitando a entonação.",
+"expr": [
+"Oh, come on! — ah, qual é!",
+"I'm just saying. — só tô falando...",
+"You got it. — pode deixar."
+]
+}
+},
+{
+"day": 2,
+"week": 1,
+"title": "Segunda-feira: \"How was your weekend?\"",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "How was your weekend?",
+"pt": "Como foi seu fim de semana?",
+"pr": "háu uâz iór uíkend"
+},
+{
+"en": "Did you do anything fun?",
+"pt": "Fez alguma coisa legal?",
+"pr": "dídjâ dú éni-thin fân"
+},
+{
+"en": "It was pretty chill.",
+"pt": "Foi bem tranquilo.",
+"pr": "it uâz príri tchíl"
+},
+{
+"en": "We just hung out at home.",
+"pt": "A gente só ficou de boa em casa.",
+"pr": "ui djâst hâng áut at hôum"
+},
+{
+"en": "Can't complain.",
+"pt": "Não posso reclamar / Tudo certo.",
+"pr": "ként kâmplêin"
+},
+{
+"en": "Same old, same old.",
+"pt": "Mesma coisa de sempre."
+},
+{
+"en": "That sounds like a blast!",
+"pt": "Parece que foi muito divertido!",
+"pr": "dét sáunds láik a blést"
+},
+{
+"en": "Mondays, right?",
+"pt": "Segunda-feira, né?"
+},
+{
+"en": "Catch you later.",
+"pt": "Até mais.",
+"pr": "kétchâ lêirâr"
+}
+],
+"dialog": [
+{
+"s": "Sarah",
+"en": "Morning! How was your weekend?",
+"pt": "Bom dia! Como foi o fim de semana?"
+},
+{
+"s": "You",
+"en": "It was pretty chill. We just hung out at home. How about yours?",
+"pt": "Foi tranquilo. Ficamos em casa. E o seu?"
+},
+{
+"s": "Sarah",
+"en": "We took the kids to Disney Springs on Saturday.",
+"pt": "Levamos as crianças na Disney Springs no sábado."
+},
+{
+"s": "You",
+"en": "Oh, nice! That sounds like a blast! Did you do anything fun on Sunday?",
+"pt": "Que legal! Fizeram algo no domingo?"
+},
+{
+"s": "Sarah",
+"en": "Nah, same old, same old. Laundry and groceries.",
+"pt": "Não, o de sempre. Roupa e mercado."
+},
+{
+"s": "You",
+"en": "Ha! Mondays, right?",
+"pt": "Haha! Segunda-feira, né?"
+},
+{
+"s": "Sarah",
+"en": "Tell me about it! Catch you later!",
+"pt": "Nem me fala! Até mais!"
+},
+{
+"s": "You",
+"en": "Catch you later!",
+"pt": "Até!"
+}
+],
+"prompts": [
+"Hey! How was your weekend? → conte o que fizeram no sábado e domingo e devolva a pergunta.",
+"We went to the beach! → reaja com entusiasmo e faça mais uma pergunta."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "I'm on the QA side of things.",
+"pt": "Eu fico na parte de QA."
+},
+{
+"en": "Day to day, I write and maintain automated tests.",
+"pt": "No dia a dia, escrevo e mantenho testes automatizados.",
+"pr": "mêintêin óroumeirid tésts"
+},
+{
+"en": "I work closely with the developers and the product team.",
+"pt": "Trabalho bem próximo dos devs e do time de produto.",
+"pr": "klôusli"
+},
+{
+"en": "Basically, I make sure nothing breaks before it goes live.",
+"pt": "Basicamente, garanto que nada quebre antes de ir pra produção.",
+"pr": "bêisikli… gôuz láiv"
+},
+{
+"en": "I'm kind of the go-to person for test automation.",
+"pt": "Sou meio que a referência em automação.",
+"pr": "káinda dâ gôu-tchu pârsân"
+},
+{
+"en": "Feel free to reach out if you have any questions.",
+"pt": "Fiquem à vontade para me chamar se tiverem dúvidas.",
+"pr": "fíl frí tchu rítch áut"
+}
+],
+"dialog": [
+{
+"s": "Manager",
+"en": "Everyone, this is {name}. Just joined us. Wanna say a few words?",
+"pt": "Pessoal, este é o {name}. Acabou de entrar. Quer falar algo?"
+},
+{
+"s": "You",
+"en": "Sure! Hi everyone. I'm on the QA side of things.",
+"pt": "Claro! Oi, pessoal. Eu fico na parte de QA."
+},
+{
+"s": "Dev",
+"en": "Cool. What does that look like for you?",
+"pt": "Como é isso no seu dia a dia?"
+},
+{
+"s": "You",
+"en": "Day to day, I write and maintain automated tests, and I work closely with the developers and the product team.",
+"pt": "No dia a dia, escrevo e mantenho testes automatizados e trabalho perto dos devs e do produto."
+},
+{
+"s": "You",
+"en": "Basically, I make sure nothing breaks before it goes live.",
+"pt": "Basicamente, garanto que nada quebre antes de ir pra produção."
+},
+{
+"s": "Manager",
+"en": "So you're kind of the go-to person for test automation.",
+"pt": "Então você é a referência em automação."
+},
+{
+"s": "You",
+"en": "Exactly. Feel free to reach out if you have any questions!",
+"pt": "Exato. Fiquem à vontade pra me chamar!"
+}
+],
+"prompts": [
+"So, what do you do? → 4 frases: lado de QA, dia a dia, com quem trabalha, o que você garante."
+]
+},
+"watch": {
+"title": "The Office (US)",
+"where": "Peacock",
+"why": "A comédia de escritório mais famosa dos EUA; small talk de segunda e conversas de trabalho com muito humor.",
+"tip": "Podem começar pela 2ª temporada. Legenda em inglês; pausem nos small talks e repitam.",
+"expr": [
+"Are you kidding me? — tá de brincadeira?",
+"I'm not gonna lie... — não vou mentir..."
+]
+}
+},
+{
+"day": 3,
+"week": 1,
+"title": "Papo sobre o tempo (calor da Flórida)",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Hot enough for ya?",
+"pt": "Tá quente o bastante pra você?",
+"pr": "hót inâf fór iâ"
+},
+{
+"en": "Can you believe this weather?",
+"pt": "Dá pra acreditar nesse tempo?",
+"pr": "kéniu bilív dís uédâr"
+},
+{
+"en": "It's crazy humid today.",
+"pt": "Tá úmido demais hoje.",
+"pr": "krêizi hiúmid"
+},
+{
+"en": "I'm so over this heat.",
+"pt": "Tô de saco cheio desse calor.",
+"pr": "áim sôu ôuvâr dís hít"
+},
+{
+"en": "Looks like it's gonna rain.",
+"pt": "Parece que vai chover.",
+"pr": "gâna rêin"
+},
+{
+"en": "It's finally cooling down.",
+"pt": "Finalmente tá refrescando.",
+"pr": "kúlin dáun"
+},
+{
+"en": "Perfect pool weather, though.",
+"pt": "Mas é tempo perfeito pra piscina.",
+"pr": "dôu"
+},
+{
+"en": "Stay cool!",
+"pt": "Se cuida / Fica no fresquinho!",
+"pr": "stêi kúl"
+}
+],
+"dialog": [
+{
+"s": "Jessica",
+"en": "Hot enough for ya?",
+"pt": "Tá quente o bastante?"
+},
+{
+"s": "You",
+"en": "Ha! Seriously. It's crazy humid today.",
+"pt": "Haha! Sério. Tá úmido demais hoje."
+},
+{
+"s": "Jessica",
+"en": "Can you believe this weather? It's October!",
+"pt": "Dá pra acreditar? É outubro!"
+},
+{
+"s": "You",
+"en": "I know! I'm so over this heat.",
+"pt": "Pois é! Tô de saco cheio desse calor."
+},
+{
+"s": "Jessica",
+"en": "They say it's finally cooling down next week.",
+"pt": "Dizem que vai refrescar semana que vem."
+},
+{
+"s": "You",
+"en": "Hope so. Looks like it's gonna rain soon, though.",
+"pt": "Tomara. Mas parece que vai chover já já."
+},
+{
+"s": "Jessica",
+"en": "Yep, 4 p.m. storm, like clockwork. Well, stay cool!",
+"pt": "É, tempestade das 4, pontual. Se cuida!"
+},
+{
+"s": "You",
+"en": "You too!",
+"pt": "Você também!"
+}
+],
+"prompts": [
+"Hot enough for ya? → reclame do calor, comente a previsão e se despeça.",
+"What's the weather like in Brazil, where you're from? → compare com a Flórida em 2-3 frases."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "I started out as a manual tester.",
+"pt": "Comecei como testador manual.",
+"pr": "stártid áut"
+},
+{
+"en": "Over the years, I moved into automation.",
+"pt": "Com os anos, fui para automação.",
+"pr": "múvd íntu órâmêishân"
+},
+{
+"en": "That's what got me into coding.",
+"pt": "Foi isso que me levou a programar.",
+"pr": "déts uót gárâmi íntu"
+},
+{
+"en": "I've worked across web, mobile and APIs.",
+"pt": "Já trabalhei com web, mobile e APIs.",
+"pr": "akrós"
+},
+{
+"en": "These days, I'm focused on mobile automation.",
+"pt": "Hoje em dia, meu foco é automação mobile.",
+"pr": "fôukâst"
+},
+{
+"en": "Long story short, I love breaking things before users do.",
+"pt": "Resumindo, adoro quebrar as coisas antes dos usuários."
+}
+],
+"dialog": [
+{
+"s": "Recruiter",
+"en": "So how did you get into QA?",
+"pt": "Como você entrou em QA?"
+},
+{
+"s": "You",
+"en": "Well, I started out as a manual tester, more than ten years ago.",
+"pt": "Comecei como testador manual, há mais de dez anos."
+},
+{
+"s": "You",
+"en": "Over the years, I moved into automation. That's what got me into coding.",
+"pt": "Com os anos fui pra automação. Foi isso que me levou a programar."
+},
+{
+"s": "Recruiter",
+"en": "Interesting. What kind of projects?",
+"pt": "Interessante. Que tipo de projetos?"
+},
+{
+"s": "You",
+"en": "I've worked across web, mobile and APIs. These days, I'm focused on mobile automation.",
+"pt": "Web, mobile e APIs. Hoje meu foco é automação mobile."
+},
+{
+"s": "Recruiter",
+"en": "Got it.",
+"pt": "Entendi."
+},
+{
+"s": "You",
+"en": "Long story short, I love breaking things before users do!",
+"pt": "Resumindo, adoro quebrar as coisas antes dos usuários!"
+}
+],
+"prompts": [
+"So how did you get into QA? → 4-5 frases usando os chunks do dia."
+]
+},
+"watch": {
+"title": "Brooklyn Nine-Nine",
+"where": "Netflix e Peacock",
+"why": "Comédia policial divertida, episódios de ~22 min, inglês rápido e natural com gírias de colegas de trabalho.",
+"tip": "Escolham uma fala por episódio, pausem e repitam imitando o tom.",
+"expr": [
+"Cool cool cool, no doubt no doubt — beleza, sem dúvida (nervoso)",
+"Noice! — jeito engraçado de dizer nice"
+]
+}
+},
+{
+"day": 4,
+"week": 1,
+"title": "Reencontrar alguém e se despedir",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Long time no see!",
+"pt": "Quanto tempo!",
+"pr": "lóng táim nôu sí"
+},
+{
+"en": "How've you been?",
+"pt": "Como você tem passado?",
+"pr": "háuviubín"
+},
+{
+"en": "What have you been up to?",
+"pt": "O que você tem feito de bom?",
+"pr": "uórâviu bín âp tchu"
+},
+{
+"en": "Keeping busy, you know.",
+"pt": "Na correria, sabe como é.",
+"pr": "kípin bízi, iâ nôu"
+},
+{
+"en": "Sorry, I gotta run.",
+"pt": "Desculpa, tenho que ir correndo.",
+"pr": "gára rân"
+},
+{
+"en": "Good seeing you!",
+"pt": "Foi bom te ver!",
+"pr": "gúd síin iú"
+},
+{
+"en": "We should get together sometime.",
+"pt": "A gente devia se encontrar qualquer dia.",
+"pr": "uí xúd gét tchâgédâr sâmtáim"
+},
+{
+"en": "Tell Jenny I said hi.",
+"pt": "Manda um oi pra Jenny.",
+"pr": "tél djéni ái séd hái"
+}
+],
+"dialog": [
+{
+"s": "Mark",
+"en": "Hey! Long time no see!",
+"pt": "Ei! Quanto tempo!"
+},
+{
+"s": "You",
+"en": "Mark! Hey, man! How've you been?",
+"pt": "Mark! E aí! Como tem passado?"
+},
+{
+"s": "Mark",
+"en": "Good, good. What have you been up to?",
+"pt": "Bem. O que você tem feito?"
+},
+{
+"s": "You",
+"en": "Keeping busy, you know. Work, kid, the usual.",
+"pt": "Na correria. Trabalho, filho(a), o de sempre."
+},
+{
+"s": "Mark",
+"en": "I hear you. We should get together sometime.",
+"pt": "Te entendo. A gente devia se encontrar."
+},
+{
+"s": "You",
+"en": "For sure! Sorry, I gotta run, someone's waiting in the car.",
+"pt": "Com certeza! Tenho que ir, tem gente me esperando no carro."
+},
+{
+"s": "Mark",
+"en": "No worries. Good seeing you!",
+"pt": "Sem problema. Bom te ver!"
+},
+{
+"s": "You",
+"en": "You too! Tell Jenny I said hi.",
+"pt": "Você também! Manda um oi pra Jenny."
+}
+],
+"prompts": [
+"Hey, long time no see! What have you been up to? → responda em 2-3 frases e devolva a pergunta.",
+"Você está com pressa: encerre a conversa com educação usando pelo menos 3 chunks de saída."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "So, what line of work are you in?",
+"pt": "Você trabalha com o quê?",
+"pr": "uót láin âv uârk"
+},
+{
+"en": "I'm in software quality, specifically test automation.",
+"pt": "Trabalho com qualidade de software, mais especificamente automação.",
+"pr": "spâssífikli"
+},
+{
+"en": "My background is mostly in mobile.",
+"pt": "Minha experiência é principalmente em mobile.",
+"pr": "bék-gráund ... môustli"
+},
+{
+"en": "I'm currently open to new opportunities.",
+"pt": "No momento estou aberto a novas oportunidades.",
+"pr": "kârântli ôupân"
+},
+{
+"en": "Let's connect on LinkedIn.",
+"pt": "Vamos nos conectar no LinkedIn.",
+"pr": "kânékt"
+},
+{
+"en": "It was great chatting with you.",
+"pt": "Foi ótimo conversar com você.",
+"pr": "grêit tchérin uíd iú"
+}
+],
+"dialog": [
+{
+"s": "Emily",
+"en": "Hi, I'm Emily. So, what line of work are you in?",
+"pt": "Oi, sou a Emily. Você trabalha com o quê?"
+},
+{
+"s": "You",
+"en": "Hi Emily, I'm {name}. I'm in software quality, specifically test automation.",
+"pt": "Oi, sou o {name}. Qualidade de software, especificamente automação."
+},
+{
+"s": "Emily",
+"en": "Oh, cool! Web or mobile?",
+"pt": "Legal! Web ou mobile?"
+},
+{
+"s": "You",
+"en": "Both, but my background is mostly in mobile. And I'm currently open to new opportunities.",
+"pt": "Os dois, mas principalmente mobile. E estou aberto a oportunidades."
+},
+{
+"s": "Emily",
+"en": "Nice! Our team is actually hiring.",
+"pt": "Meu time tá contratando, na verdade."
+},
+{
+"s": "You",
+"en": "Oh, really? Let's connect on LinkedIn.",
+"pt": "Sério? Vamos nos conectar no LinkedIn."
+},
+{
+"s": "Emily",
+"en": "Sure, here's my QR code.",
+"pt": "Claro, aqui meu QR code."
+},
+{
+"s": "You",
+"en": "Perfect. It was great chatting with you!",
+"pt": "Perfeito. Foi ótimo conversar com você!"
+}
+],
+"prompts": [
+"So, what line of work are you in? → apresente-se em 4 frases e termine trocando contato."
+]
+},
+"watch": {
+"title": "Friends",
+"where": "HBO Max",
+"why": "Sitcom clássica de amigos que vivem se reencontrando no café. Inglês claro e muito 'pôr o papo em dia'.",
+"tip": "Quando alguém chegar ou sair de cena, pausem e repitam o cumprimento/despedida.",
+"expr": [
+"How you doin'? — cantada clássica do Joey",
+"We were on a break! — a gente tinha dado um tempo!"
+]
+}
+},
+{
+"day": 5,
+"week": 1,
+"title": "Fazer planos e convidar alguém",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Are you guys free this Saturday?",
+"pt": "Vocês estão livres no sábado?",
+"pr": "ár iú gáiz frí dís séridêi"
+},
+{
+"en": "Wanna come over?",
+"pt": "Quer vir aqui em casa?",
+"pr": "uâna câm ôuvâr"
+},
+{
+"en": "We're having a few people over.",
+"pt": "Vamos receber umas pessoas em casa.",
+"pr": "uír hévin a fiú pípâl ôuvâr"
+},
+{
+"en": "I'm down!",
+"pt": "Tô dentro!",
+"pr": "áim dáun"
+},
+{
+"en": "Let me check and get back to you.",
+"pt": "Deixa eu ver e te dou retorno."
+},
+{
+"en": "Can I take a rain check?",
+"pt": "Pode ficar pra próxima?",
+"pr": "kén ái têik a rêin tchék"
+},
+{
+"en": "What time works for you?",
+"pt": "Que horário fica bom pra você?",
+"pr": "uót táim uârks fór iú"
+},
+{
+"en": "Sounds like a plan!",
+"pt": "Fechado!",
+"pr": "sáunz láik a plén"
+},
+{
+"en": "Should we bring anything?",
+"pt": "Quer que a gente leve algo?",
+"pr": "xúd uí bríng éni-thin"
+}
+],
+"dialog": [
+{
+"s": "Ashley",
+"en": "Hey! Are you guys free this Saturday?",
+"pt": "Vocês estão livres no sábado?"
+},
+{
+"s": "You",
+"en": "I think so. Why?",
+"pt": "Acho que sim. Por quê?"
+},
+{
+"s": "Ashley",
+"en": "We're having a few people over for a little cookout. Wanna come over? The kids can play.",
+"pt": "Vamos receber umas pessoas pra um churrasquinho. Querem vir?"
+},
+{
+"s": "You",
+"en": "Aw, I'm down! Let me check and get back to you.",
+"pt": "Tô dentro! Vou confirmar e te falo."
+},
+{
+"s": "Ashley",
+"en": "Sure! Around four?",
+"pt": "Lá pelas quatro?"
+},
+{
+"s": "You",
+"en": "Four's perfect for us.",
+"pt": "Quatro é perfeito pra gente."
+},
+{
+"s": "Ashley",
+"en": "Sounds like a plan!",
+"pt": "Fechado!"
+},
+{
+"s": "You",
+"en": "Should we bring anything?",
+"pt": "Levamos alguma coisa?"
+}
+],
+"prompts": [
+"Wanna come over Saturday? → recuse com rain check e sugira outro dia."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "Can everyone hear me okay?",
+"pt": "Todo mundo está me ouvindo bem?"
+},
+{
+"en": "Just a quick intro on my end.",
+"pt": "Só uma apresentação rápida da minha parte."
+},
+{
+"en": "I'll be your main point of contact for anything testing-related.",
+"pt": "Vou ser o principal contato para testes.",
+"pr": "mêin póint âv kóntékt"
+},
+{
+"en": "My strongest area is end-to-end automation.",
+"pt": "Meu ponto mais forte é automação ponta a ponta."
+},
+{
+"en": "I'm coming from a fintech background.",
+"pt": "Venho de experiência em fintech."
+},
+{
+"en": "I'm happy to jump on a call anytime.",
+"pt": "Topo entrar numa call a qualquer hora."
+}
+],
+"dialog": [
+{
+"s": "PM",
+"en": "Okay, let's do a round of intros. You're up.",
+"pt": "Vamos fazer uma rodada de apresentações. Sua vez."
+},
+{
+"s": "You",
+"en": "Thanks! Can everyone hear me okay?",
+"pt": "Obrigado! Todos me ouvem bem?"
+},
+{
+"s": "PM",
+"en": "Loud and clear.",
+"pt": "Alto e claro."
+},
+{
+"s": "You",
+"en": "Great. Just a quick intro on my end: I'll be your main point of contact for anything testing-related.",
+"pt": "Ótimo. Apresentação rápida: sou o principal contato para testes."
+},
+{
+"s": "Dev",
+"en": "Awesome. What's your sweet spot?",
+"pt": "Qual sua especialidade?"
+},
+{
+"s": "You",
+"en": "My strongest area is end-to-end automation, mostly mobile. I'm coming from a fintech background.",
+"pt": "Automação ponta a ponta, mais mobile. Venho de fintech."
+},
+{
+"s": "PM",
+"en": "Perfect fit for this project.",
+"pt": "Encaixa perfeito no projeto."
+},
+{
+"s": "You",
+"en": "Glad to hear it. I'm happy to jump on a call anytime if you need me.",
+"pt": "Que bom. Topo uma call quando precisarem."
+}
+],
+"prompts": [
+"Give us a quick intro. → checar áudio, seu papel, ponto forte, de onde vem.",
+"So who should we talk to about testing? → diga que é você e ofereça uma call."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "I'm a pharmacist by training.",
+"pt": "Sou farmacêutica de formação.",
+"pr": "fármâssist bái trêinin"
+},
+{
+"en": "I specialize in Regulatory Affairs.",
+"pt": "Sou especializada em Assuntos Regulatórios.",
+"pr": "régiulâtóri âférs"
+},
+{
+"en": "I have years of experience in the pharmaceutical industry.",
+"pt": "Tenho anos de experiência na indústria farmacêutica.",
+"pr": "farmâssúrikâl"
+},
+{
+"en": "I mainly handle regulatory submissions and labeling.",
+"pt": "Cuido principalmente de submissões e rotulagem.",
+"pr": "sâbmíshâns, lêibâlin"
+},
+{
+"en": "For me, compliance always comes first.",
+"pt": "Pra mim, conformidade vem em primeiro lugar.",
+"pr": "kâmpláiâns"
+},
+{
+"en": "I'm looking to grow my career here in the US.",
+"pt": "Quero crescer na carreira aqui nos EUA."
+}
+],
+"dialog": [
+{
+"s": "Manager",
+"en": "Thanks for coming in. Tell me about your background.",
+"pt": "Obrigado por vir. Me fale da sua formação."
+},
+{
+"s": "You",
+"en": "Sure. I'm a pharmacist by training, and I specialize in Regulatory Affairs.",
+"pt": "Claro. Sou farmacêutica e especializada em Assuntos Regulatórios."
+},
+{
+"s": "Manager",
+"en": "Great. How long have you been in the field?",
+"pt": "Há quanto tempo está na área?"
+},
+{
+"s": "You",
+"en": "I have years of experience in the pharmaceutical industry, back in Brazil.",
+"pt": "Tenho anos de experiência na indústria farmacêutica no Brasil."
+},
+{
+"s": "Manager",
+"en": "And what did your day-to-day look like?",
+"pt": "Como era seu dia a dia?"
+},
+{
+"s": "You",
+"en": "I mainly handled regulatory submissions and labeling. For me, compliance always comes first.",
+"pt": "Submissões e rotulagem. Conformidade em primeiro lugar."
+},
+{
+"s": "Manager",
+"en": "I like that. Why are you interested in this role?",
+"pt": "Gostei. Por que se interessa pela vaga?"
+},
+{
+"s": "You",
+"en": "I'm looking to grow my career here in the US, and this role is a great fit.",
+"pt": "Quero crescer na carreira nos EUA, e a vaga encaixa bem."
+}
+],
+"prompts": [
+"Tell me about your background. → formação, especialização, anos de experiência.",
+"What kind of work did you do day to day? → submissões, rotulagem, compliance.",
+"Why do you want to work in Regulatory Affairs here in the US? → 2-3 frases com 'grow my career'."
+]
+},
+"watch": {
+"title": "Parks and Recreation",
+"where": "Peacock",
+"why": "Comédia leve sobre a prefeitura de uma cidadezinha; vivem organizando eventos e convidando todo mundo.",
+"tip": "Toda vez que alguém convidar ou recusar, pausem e repitam.",
+"expr": [
+"Treat yo' self! — se dá um presente!",
+"I'm in! — tô dentro!"
+]
+}
+},
+{
+"day": 6,
+"week": 1,
+"title": "\"Não entendi!\" — pedir pra repetir sem travar",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Sorry, I didn't catch that.",
+"pt": "Desculpa, não peguei o que você disse.",
+"pr": "ái dídân kétch dét"
+},
+{
+"en": "Come again?",
+"pt": "Como é? / Repete?",
+"pr": "kâm âguén"
+},
+{
+"en": "Could you say that one more time?",
+"pt": "Pode repetir mais uma vez?",
+"pr": "kúdjâ sêi dét uân mór táim"
+},
+{
+"en": "Could you slow down a little?",
+"pt": "Pode falar um pouquinho mais devagar?",
+"pr": "slôu dáun â lírou"
+},
+{
+"en": "What do you mean by that?",
+"pt": "O que você quer dizer com isso?",
+"pr": "uâdâiâ mín bái dét"
+},
+{
+"en": "How do you spell that?",
+"pt": "Como se escreve?",
+"pr": "háu dâiâ spél dét"
+},
+{
+"en": "Sorry, English is my second language.",
+"pt": "Desculpa, inglês é minha segunda língua.",
+"pr": "sékân lénguêdj"
+},
+{
+"en": "Oh, gotcha! That makes sense.",
+"pt": "Ah, entendi! Faz sentido.",
+"pr": "gótchâ / dét mêiks séns"
+}
+],
+"dialog": [
+{
+"s": "Staff",
+"en": "Hi! Here for your amenity card? I'll just need your ID and a proof of address, like a utility bill.",
+"pt": "Veio pelo cartão de acesso? Preciso do documento e um comprovante de endereço, tipo uma conta."
+},
+{
+"s": "You",
+"en": "Sorry, I didn't catch that. Could you slow down a little? English is my second language.",
+"pt": "Desculpa, não peguei. Pode falar mais devagar? Inglês é minha segunda língua."
+},
+{
+"s": "Staff",
+"en": "Oh, of course! Your ID... and a proof of address.",
+"pt": "Claro! Seu documento... e um comprovante de endereço."
+},
+{
+"s": "You",
+"en": "What do you mean by \"utility bill\"?",
+"pt": "O que você quer dizer com 'utility bill'?"
+},
+{
+"s": "Staff",
+"en": "Like your electric or water bill.",
+"pt": "Tipo conta de luz ou de água."
+},
+{
+"s": "You",
+"en": "Oh, gotcha! That makes sense. Sorry, what was your name?",
+"pt": "Ah, entendi! Desculpa, qual seu nome?"
+},
+{
+"s": "Staff",
+"en": "Kaitlyn.",
+"pt": "Kaitlyn."
+},
+{
+"s": "You",
+"en": "Kaitlyn? How do you spell that?",
+"pt": "Kaitlyn? Como se escreve?"
+},
+{
+"s": "Staff",
+"en": "K-A-I-T-L-Y-N. You're all set!",
+"pt": "K-A-I-T-L-Y-N. Pronto, tudo certo!"
+}
+],
+"prompts": [
+"Alguém fala super rápido com você → peça pra repetir mais devagar e explique que inglês é sua segunda língua."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "Sorry, you cut out for a second.",
+"pt": "Desculpa, sua voz cortou por um segundo.",
+"pr": "iú kâráut"
+},
+{
+"en": "Could you repeat the question?",
+"pt": "Pode repetir a pergunta?",
+"pr": "ripít dâ kuéstchân"
+},
+{
+"en": "Just to make sure I understand, you're asking about...",
+"pt": "Só pra garantir que entendi, você está perguntando sobre..."
+},
+{
+"en": "That's a great question. Let me think for a sec.",
+"pt": "Ótima pergunta. Deixa eu pensar um segundo."
+},
+{
+"en": "To give you some context...",
+"pt": "Pra te dar um contexto...",
+"pr": "kóntekst"
+},
+{
+"en": "Does that answer your question?",
+"pt": "Isso responde sua pergunta?",
+"pr": "énsâr"
+}
+],
+"dialog": [
+{
+"s": "Recruiter",
+"en": "So, can you walk me through how you... ...your test suite?",
+"pt": "Pode me explicar como você... ...sua suíte de testes?"
+},
+{
+"s": "You",
+"en": "Sorry, you cut out for a second. Could you repeat the question?",
+"pt": "Desculpa, cortou. Pode repetir a pergunta?"
+},
+{
+"s": "Recruiter",
+"en": "Sure! How do you keep your test suite stable as the app grows?",
+"pt": "Como você mantém a suíte estável conforme o app cresce?"
+},
+{
+"s": "You",
+"en": "Just to make sure I understand, you're asking about maintenance, right?",
+"pt": "Só pra confirmar, você pergunta sobre manutenção, certo?"
+},
+{
+"s": "Recruiter",
+"en": "Exactly.",
+"pt": "Exato."
+},
+{
+"s": "You",
+"en": "That's a great question. Let me think for a sec... To give you some context, our app has over a hundred automated flows, so we review flaky tests every sprint.",
+"pt": "Ótima pergunta... Pra contextualizar, temos mais de cem fluxos automatizados, então revisamos testes instáveis a cada sprint."
+},
+{
+"s": "You",
+"en": "Does that answer your question?",
+"pt": "Isso responde sua pergunta?"
+},
+{
+"s": "Recruiter",
+"en": "Totally. That's really helpful.",
+"pt": "Totalmente. Ajudou muito."
+}
+],
+"prompts": [
+"So tell me about your experience with... [corta] ...and the pipeline? → avise que cortou, peça pra repetir e confirme.",
+"What's the most challenging project you've worked on? → ganhe tempo, dê contexto e feche com 'Does that answer your question?'."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "I graduated in Pharmacy back in Brazil.",
+"pt": "Me formei em Farmácia no Brasil.",
+"pr": "grédjuêirid in fármâssi"
+},
+{
+"en": "I also have a postgraduate degree in Regulatory Affairs.",
+"pt": "Também tenho pós-graduação em Assuntos Regulatórios.",
+"pr": "pôust-grédjuât digrí"
+},
+{
+"en": "I'm familiar with both ANVISA and FDA requirements.",
+"pt": "Conheço as exigências da ANVISA e do FDA.",
+"pr": "fâmíliâr / rikuáiârmânts"
+},
+{
+"en": "I'm currently working toward the RAC certification.",
+"pt": "Estou me preparando para a certificação RAC.",
+"pr": "sârtifikêishân"
+},
+{
+"en": "Sorry, could you rephrase that?",
+"pt": "Desculpa, pode reformular a pergunta?",
+"pr": "rifrêiz"
+},
+{
+"en": "I'm a fast learner, and I pay close attention to detail.",
+"pt": "Aprendo rápido e presto muita atenção aos detalhes."
+}
+],
+"dialog": [
+{
+"s": "HR",
+"en": "Let's talk about your education. Where did you study?",
+"pt": "Vamos falar da sua formação. Onde estudou?"
+},
+{
+"s": "You",
+"en": "I graduated in Pharmacy back in Brazil, and I also have a postgraduate degree in Regulatory Affairs.",
+"pt": "Me formei em Farmácia no Brasil e tenho pós em Assuntos Regulatórios."
+},
+{
+"s": "HR",
+"en": "Great. How well do you know the US regulatory landscape?",
+"pt": "Quanto você conhece do cenário regulatório americano?"
+},
+{
+"s": "You",
+"en": "Sorry, could you rephrase that?",
+"pt": "Desculpa, pode reformular?"
+},
+{
+"s": "HR",
+"en": "Sure. Do you know how the FDA works?",
+"pt": "Claro. Você sabe como o FDA funciona?"
+},
+{
+"s": "You",
+"en": "Yes. I'm familiar with both ANVISA and FDA requirements, and I'm currently working toward the RAC certification.",
+"pt": "Sim. Conheço ANVISA e FDA e estou me preparando para o RAC."
+},
+{
+"s": "HR",
+"en": "That's impressive. What would you say is your biggest strength?",
+"pt": "Impressionante. Qual seu maior ponto forte?"
+},
+{
+"s": "You",
+"en": "I'm a fast learner, and I pay close attention to detail, which is key in regulatory work.",
+"pt": "Aprendo rápido e presto atenção aos detalhes, essencial no regulatório."
+}
+],
+"prompts": [
+"Tell me about your education. → formação, pós e experiência com ANVISA e FDA.",
+"How comfortable are you navigating 21 CFR? (falado rápido) → peça para reformular e responda com 'I'm familiar with...'.",
+"What would you say is your biggest strength? → 2-3 frases com 'fast learner' e 'attention to detail' + um exemplo."
+]
+},
+"watch": {
+"title": "Ghosts (CBS)",
+"where": "Paramount+",
+"why": "Casal herda uma casa cheia de fantasmas; só ela vê, então ele vive perguntando 'o que eles disseram?'.",
+"tip": "S1E1 com legenda em inglês; quando ele pedir explicação, pausem e repitam.",
+"expr": [
+"Wait, what? — peraí, como assim?",
+"Long story. — longa história."
+]
+}
+},
+{
+"day": 7,
+"week": 1,
+"title": "Revisão da semana: se apresentar e bater papo",
+"review": true,
+"common": {
+"chunks": [],
+"dialog": [
+{
+"s": "Ashley",
+"en": "Hey, you made it! Come on in!",
+"pt": "Vocês vieram! Entrem!"
+},
+{
+"s": "You",
+"en": "Hi! Thanks for having us.",
+"pt": "Oi! Obrigado pelo convite."
+},
+{
+"s": "Mike",
+"en": "Hey, long time no see! How've you been?",
+"pt": "Quanto tempo! Como tem passado?"
+},
+{
+"s": "You",
+"en": "Keeping busy, you know. How's it going with you?",
+"pt": "Na correria. E com você?"
+},
+{
+"s": "Mike",
+"en": "Can't complain. Hot enough for ya?",
+"pt": "Não posso reclamar. Calor, hein?"
+},
+{
+"s": "You",
+"en": "Ha! It's crazy humid today. Perfect pool weather, though.",
+"pt": "Haha! Tá úmido demais. Mas tempo perfeito pra piscina."
+},
+{
+"s": "Mike",
+"en": "So, did you guys do anything fun this week? We tried that new taco spot by the pier...",
+"pt": "Fizeram algo legal? Fomos naquele taco novo perto do píer..."
+},
+{
+"s": "You",
+"en": "Sorry, I didn't catch that. Could you slow down a little?",
+"pt": "Desculpa, não peguei. Pode falar mais devagar?"
+},
+{
+"s": "Mike",
+"en": "My bad! A new taco place, by the lake.",
+"pt": "Foi mal! Um lugar de taco novo, perto do lago."
+},
+{
+"s": "You",
+"en": "Oh, gotcha! That sounds like a blast!",
+"pt": "Ah, entendi! Parece muito divertido!"
+},
+{
+"s": "Mike",
+"en": "You should come with us next time.",
+"pt": "Vocês deviam ir com a gente da próxima."
+},
+{
+"s": "You",
+"en": "I'm down! What time works for you guys?",
+"pt": "Tô dentro! Que horário fica bom?"
+},
+{
+"s": "Mike",
+"en": "Friday night?",
+"pt": "Sexta à noite?"
+},
+{
+"s": "You",
+"en": "Sounds like a plan! Well, sorry, we gotta run. It's past bedtime for the kid.",
+"pt": "Fechado! Bom, temos que ir. Já passou da hora da criança dormir."
+},
+{
+"s": "Ashley",
+"en": "No worries! Good seeing you guys!",
+"pt": "Sem problema! Bom ver vocês!"
+},
+{
+"s": "You",
+"en": "You too! Have a good one!",
+"pt": "Vocês também! Tenham um bom dia!"
+}
+],
+"prompts": []
+},
+"qa": {
+"chunks": [],
+"dialog": [
+{
+"s": "Recruiter",
+"en": "Hi, thanks for taking the time. Can you hear me okay?",
+"pt": "Oi, obrigado pelo tempo. Me ouve bem?"
+},
+{
+"s": "You",
+"en": "Loud and clear. Thanks for reaching out!",
+"pt": "Alto e claro. Obrigado pelo contato!"
+},
+{
+"s": "Recruiter",
+"en": "So, to start, tell me a little bit about yourself.",
+"pt": "Pra começar, me fale um pouco de você."
+},
+{
+"s": "You",
+"en": "Sure! I'm based in Orlando, and I've got over a decade of experience in software testing.",
+"pt": "Claro! Moro em Orlando e tenho mais de uma década em testes."
+},
+{
+"s": "Recruiter",
+"en": "Great. How did you get into QA?",
+"pt": "Ótimo. Como entrou em QA?"
+},
+{
+"s": "You",
+"en": "I started out as a manual tester. Over the years, I moved into automation, and that's what got me into coding.",
+"pt": "Comecei manual. Com os anos fui pra automação, e isso me levou a programar."
+},
+{
+"s": "Recruiter",
+"en": "And what does your day-to-day look like... ...current team?",
+"pt": "E como é seu dia a dia... ...time atual?"
+},
+{
+"s": "You",
+"en": "Sorry, you cut out for a second. Just to make sure I understand, you're asking about my current role?",
+"pt": "Desculpa, cortou. Só pra confirmar, sobre meu papel atual?"
+},
+{
+"s": "Recruiter",
+"en": "Exactly.",
+"pt": "Exato."
+},
+{
+"s": "You",
+"en": "Day to day, I write and maintain automated tests. Basically, I make sure nothing breaks before it goes live.",
+"pt": "Escrevo e mantenho testes automatizados. Garanto que nada quebre antes de ir pra produção."
+},
+{
+"s": "Recruiter",
+"en": "Love it. What's your strongest area?",
+"pt": "Adorei. Qual seu ponto mais forte?"
+},
+{
+"s": "You",
+"en": "My strongest area is end-to-end automation, mostly mobile. Does that answer your question?",
+"pt": "Automação ponta a ponta, mais mobile. Isso responde?"
+},
+{
+"s": "Recruiter",
+"en": "Totally. Let's connect on LinkedIn and set up a call with the hiring manager.",
+"pt": "Totalmente. Vamos conectar no LinkedIn e marcar com o gestor."
+},
+{
+"s": "You",
+"en": "Sounds great. It was great chatting with you!",
+"pt": "Ótimo. Foi ótimo conversar!"
+}
+],
+"prompts": [
+"Walk me through your background in under a minute. → junte os chunks da semana em menos de 60 s.",
+"So, what line of work are you in? → 3 frases e troque contato."
+]
+},
+"reg": {
+"chunks": [],
+"dialog": [
+{
+"s": "Director",
+"en": "Hi, nice to meet you. Thanks for coming in.",
+"pt": "Prazer. Obrigada por vir."
+},
+{
+"s": "You",
+"en": "Nice to meet you too. Thanks for having me.",
+"pt": "O prazer é meu. Obrigada pelo convite."
+},
+{
+"s": "Director",
+"en": "So, walk me through your background.",
+"pt": "Me conte sua trajetória."
+},
+{
+"s": "You",
+"en": "Sure. I'm a pharmacist by training, and I specialize in Regulatory Affairs. I graduated in Pharmacy back in Brazil.",
+"pt": "Sou farmacêutica, especializada em AR. Me formei no Brasil."
+},
+{
+"s": "Director",
+"en": "How would you assess your familiarity with the US regulatory framework?",
+"pt": "Como avalia sua familiaridade com o arcabouço regulatório dos EUA?"
+},
+{
+"s": "You",
+"en": "Sorry, could you rephrase that?",
+"pt": "Desculpa, pode reformular?"
+},
+{
+"s": "Director",
+"en": "Of course. How well do you know the FDA rules?",
+"pt": "Claro. Quanto conhece as regras do FDA?"
+},
+{
+"s": "You",
+"en": "I'm familiar with both ANVISA and FDA requirements, and I'm currently working toward the RAC certification.",
+"pt": "Conheço ANVISA e FDA e estou me preparando para o RAC."
+},
+{
+"s": "Director",
+"en": "That's great. What matters most to you in this kind of work?",
+"pt": "Ótimo. O que mais importa pra você nesse trabalho?"
+},
+{
+"s": "You",
+"en": "For me, compliance always comes first. I'm a fast learner, and I pay close attention to detail.",
+"pt": "Conformidade em primeiro lugar. Aprendo rápido e sou detalhista."
+},
+{
+"s": "Director",
+"en": "And why this role?",
+"pt": "E por que esta vaga?"
+},
+{
+"s": "You",
+"en": "I'm looking to grow my career here in the US, and this role is a great fit for my background.",
+"pt": "Quero crescer nos EUA, e a vaga encaixa com minha trajetória."
+}
+],
+"prompts": [
+"Tell me about yourself. → formação, especialização, anos, submissions/labeling.",
+"Why do you want to work in Regulatory Affairs here in the US? → 2-3 frases com 'compliance always comes first' e 'grow my career'."
+]
+},
+"watch": {
+"title": "Young Sheldon",
+"where": "Netflix e HBO Max",
+"why": "Comédia de família no Texas: vizinhos, escola, churrasco. Narrador fala devagar e claro.",
+"tip": "Revejam uma cena curta sem legenda e repitam imitando o sotaque sulista.",
+"expr": [
+"Bless your heart — coitadinho (às vezes irônico)",
+"Y'all — vocês (muito usado no Sul)"
+]
+}
+},
+{
+"day": 8,
+"week": 2,
+"title": "Drive-thru: pedir sem travar",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Hi, can I get a number one, please?",
+"pt": "Oi, me vê um número 1, por favor?",
+"pr": "kâni guérâ nâmbâr uân"
+},
+{
+"en": "Can I get that with no pickles?",
+"pt": "Pode vir sem picles?",
+"pr": "uídh nôu píkâls"
+},
+{
+"en": "Yeah, make it a large.",
+"pt": "Isso, pode ser o grande.",
+"pr": "mêikirâ lárdj"
+},
+{
+"en": "Could I also get a kid's meal with apple juice?",
+"pt": "Também pode me ver um lanche infantil com suco de maçã?",
+"pr": "kídz míl"
+},
+{
+"en": "Can I get some extra sauce with that?",
+"pt": "Me dá um molho extra junto?",
+"pr": "éxtrâ sóss"
+},
+{
+"en": "Yep, that's it.",
+"pt": "Sim, só isso.",
+"pr": "iép, déts it"
+},
+{
+"en": "Oh, and could I get some extra napkins?",
+"pt": "E uns guardanapos a mais?",
+"pr": "népkins"
+},
+{
+"en": "Can I pay with Apple Pay?",
+"pt": "Posso pagar com Apple Pay?"
+},
+{
+"en": "What can I get started for you today?",
+"pt": "(Você vai ouvir) O que vai querer hoje?"
+},
+{
+"en": "Is that gonna be all for you?",
+"pt": "(Você vai ouvir) Vai ser só isso?",
+"pr": "gâna bi ól"
+},
+{
+"en": "Please pull up to the first window.",
+"pt": "(Você vai ouvir) Pode avançar até a primeira janela.",
+"pr": "púl âp"
+}
+],
+"dialog": [
+{
+"s": "Speaker",
+"en": "Hi, welcome to Chick-fil-A! What can I get started for you today?",
+"pt": "Bem-vindo! O que vai querer hoje?"
+},
+{
+"s": "You",
+"en": "Hi, can I get a number one, please?",
+"pt": "Oi, me vê um número 1?"
+},
+{
+"s": "Speaker",
+"en": "Sure! Would you like to make that a large?",
+"pt": "Claro! Quer o grande?"
+},
+{
+"s": "You",
+"en": "Yeah, make it a large. Can I get that with no pickles?",
+"pt": "Isso, o grande. Pode vir sem picles?"
+},
+{
+"s": "Speaker",
+"en": "No problem. Anything else?",
+"pt": "Sem problema. Mais alguma coisa?"
+},
+{
+"s": "You",
+"en": "Could I also get a kid's meal with apple juice?",
+"pt": "Também um lanche infantil com suco de maçã?"
+},
+{
+"s": "Speaker",
+"en": "Absolutely. Is that gonna be all for you?",
+"pt": "Claro. Vai ser só isso?"
+},
+{
+"s": "You",
+"en": "Yep, that's it. Oh, and could I get some extra napkins?",
+"pt": "Sim, só isso. E uns guardanapos a mais?"
+},
+{
+"s": "Speaker",
+"en": "My pleasure! That'll be $18.47. Please pull up to the first window.",
+"pt": "Com prazer! Fica $18,47. Avance até a primeira janela."
+},
+{
+"s": "You",
+"en": "Can I pay with Apple Pay?",
+"pt": "Posso pagar com Apple Pay?"
+},
+{
+"s": "Worker",
+"en": "Sure thing! Here you go. Have a great day!",
+"pt": "Claro! Aqui está. Tenha um ótimo dia!"
+}
+],
+"prompts": [
+"Peça um combo grande with no onions e um kid's meal."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "Let me walk you through it.",
+"pt": "Deixa eu te explicar passo a passo.",
+"pr": "uók iú thrú it"
+},
+{
+"en": "First, I put together a test plan.",
+"pt": "Primeiro, eu monto um plano de teste.",
+"pr": "púrâgédâr"
+},
+{
+"en": "It covers scope, approach and timelines.",
+"pt": "Cobre escopo, abordagem e prazos.",
+"pr": "skôup, âprôutch"
+},
+{
+"en": "Each test case has clear steps and an expected result.",
+"pt": "Cada caso de teste tem passos claros e um resultado esperado.",
+"pr": "ikspéktid rizâlt"
+},
+{
+"en": "We prioritize test cases by risk.",
+"pt": "Priorizamos os casos de teste por risco.",
+"pr": "praiórâtáiz"
+},
+{
+"en": "That's out of scope for this release.",
+"pt": "Isso está fora do escopo desta release.",
+"pr": "áurâv skôup"
+}
+],
+"dialog": [
+{
+"s": "QA Lead",
+"en": "So how do you usually plan testing for a new feature?",
+"pt": "Como você costuma planejar testes de uma feature nova?"
+},
+{
+"s": "You",
+"en": "Let me walk you through it. First, I put together a test plan. It covers scope, approach and timelines.",
+"pt": "Vou explicar. Primeiro monto um plano de teste: escopo, abordagem e prazos."
+},
+{
+"s": "QA Lead",
+"en": "How detailed are your test cases?",
+"pt": "Quão detalhados são seus casos de teste?"
+},
+{
+"s": "You",
+"en": "Pretty detailed. Each test case has clear steps and an expected result.",
+"pt": "Bem detalhados. Passos claros e resultado esperado."
+},
+{
+"s": "QA Lead",
+"en": "And if there's no time to run everything?",
+"pt": "E se não der tempo de rodar tudo?"
+},
+{
+"s": "You",
+"en": "We prioritize test cases by risk. Login and checkout always come first.",
+"pt": "Priorizamos por risco. Login e checkout sempre primeiro."
+},
+{
+"s": "QA Lead",
+"en": "What about the new dark mode?",
+"pt": "E o novo modo escuro?"
+},
+{
+"s": "You",
+"en": "That's out of scope for this release, but I've already drafted a few test cases for it.",
+"pt": "Fora do escopo desta release, mas já rascunhei alguns casos."
+},
+{
+"s": "QA Lead",
+"en": "Love that.",
+"pt": "Adorei."
+}
+],
+"prompts": [
+"Walk me through how you'd test a new password reset feature. → test plan, test cases com expected result, prioridade por risco.",
+"Can we add the new payment method to this sprint's testing? → fora de escopo, sugira a próxima release."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "We're getting ready to submit to the FDA.",
+"pt": "Estamos nos preparando para submeter ao FDA.",
+"pr": "sâbmít tchu dâ éf-dí-êi"
+},
+{
+"en": "The submission is due at the end of the month.",
+"pt": "O prazo da submissão é no fim do mês.",
+"pr": "sâbmíshân iz dú"
+},
+{
+"en": "We're still waiting on FDA approval.",
+"pt": "Ainda aguardando a aprovação do FDA.",
+"pr": "âprúvâl"
+},
+{
+"en": "According to the latest FDA guidance...",
+"pt": "De acordo com o guidance mais recente do FDA...",
+"pr": "gáidâns"
+},
+{
+"en": "We need to make sure the label is compliant.",
+"pt": "Precisamos garantir que o rótulo está em conformidade.",
+"pr": "lêibâl / kâmpláiânt"
+},
+{
+"en": "It's a regulatory requirement, so it's non-negotiable.",
+"pt": "É exigência regulatória, não tem negociação.",
+"pr": "nán-nigôushâbâl"
+}
+],
+"dialog": [
+{
+"s": "PM",
+"en": "Where are we with the FDA submission?",
+"pt": "Como estamos com a submissão ao FDA?"
+},
+{
+"s": "You",
+"en": "We're getting ready to submit to the FDA. The submission is due at the end of the month.",
+"pt": "Nos preparando para submeter. O prazo é fim do mês."
+},
+{
+"s": "PM",
+"en": "Great. Can Marketing start using the new packaging?",
+"pt": "Ótimo. O Marketing já pode usar a embalagem nova?"
+},
+{
+"s": "You",
+"en": "Not yet. We're still waiting on FDA approval for the labeling changes.",
+"pt": "Ainda não. Aguardando aprovação das mudanças de rotulagem."
+},
+{
+"s": "PM",
+"en": "They also want a bigger logo and a shorter warnings section.",
+"pt": "Querem um logo maior e advertências mais curtas."
+},
+{
+"s": "You",
+"en": "I hear you, but according to the latest FDA guidance, the warnings have to stay. We need to make sure the label is compliant.",
+"pt": "Entendo, mas pelo guidance as advertências ficam. O rótulo precisa estar em conformidade."
+},
+{
+"s": "PM",
+"en": "So no shortcuts?",
+"pt": "Então sem atalhos?"
+},
+{
+"s": "You",
+"en": "It's a regulatory requirement, so it's non-negotiable.",
+"pt": "É exigência regulatória, não tem negociação."
+},
+{
+"s": "PM",
+"en": "Got it. Thanks for keeping us on track.",
+"pt": "Entendi. Obrigado por manter a gente nos trilhos."
+}
+],
+"prompts": [
+"Where are we with the FDA submission? → status e prazo em 2 frases.",
+"Can we launch the new label next week? → ainda aguardando aprovação; rótulo precisa estar compliant.",
+"Marketing wants to remove one of the warnings. Is that okay? → discorde com 'I hear you, but...', guidance e non-negotiable."
+]
+},
+"watch": {
+"title": "Bob's Burgers",
+"where": "Hulu",
+"why": "Desenho sobre uma família dona de hamburgueria: clientes pedindo, mudando pedido, pagando.",
+"tip": "Pausem a cada pedido no balcão e repitam juntos.",
+"expr": [
+"Order up! — pedido saindo!",
+"What can I get you? — o que vai querer?"
+]
+}
+},
+{
+"day": 9,
+"week": 2,
+"title": "Restaurante: pegar mesa e pedir",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Hi, table for three, please.",
+"pt": "Mesa para três, por favor.",
+"pr": "têibâl fór thrí"
+},
+{
+"en": "How long's the wait?",
+"pt": "Quanto tempo de espera?",
+"pr": "háu lóngz dâ uêit"
+},
+{
+"en": "Could we get a booth?",
+"pt": "Pode ser uma mesa de sofá?",
+"pr": "búth"
+},
+{
+"en": "Could we also get a booster seat for her?",
+"pt": "Pode trazer um assento elevado pra ela?",
+"pr": "búster sít"
+},
+{
+"en": "Can we get some waters for the table?",
+"pt": "Pode trazer água pra mesa?",
+"pr": "uórârz fór dâ têibâl"
+},
+{
+"en": "Can we get a few more minutes?",
+"pt": "Mais uns minutinhos?",
+"pr": "a fiú mór mínits"
+},
+{
+"en": "What would you recommend?",
+"pt": "O que você recomenda?",
+"pr": "uát uúdjâ rékâménd"
+},
+{
+"en": "I'll go with the salmon.",
+"pt": "Vou de salmão.",
+"pr": "áu gôu uídh"
+},
+{
+"en": "Could I get the dressing on the side?",
+"pt": "O molho pode vir à parte?",
+"pr": "ón dâ sáid"
+},
+{
+"en": "How many in your party?",
+"pt": "(Você vai ouvir) Quantas pessoas?"
+},
+{
+"en": "Can I start you off with something to drink?",
+"pt": "(Você vai ouvir) Algo pra beber pra começar?"
+}
+],
+"dialog": [
+{
+"s": "Host",
+"en": "Hi there! How many in your party?",
+"pt": "Oi! Quantas pessoas?"
+},
+{
+"s": "You",
+"en": "Hi, table for three, please. How long's the wait?",
+"pt": "Mesa para três. Quanto tempo de espera?"
+},
+{
+"s": "Host",
+"en": "It's gonna be about fifteen minutes.",
+"pt": "Uns quinze minutos."
+},
+{
+"s": "You",
+"en": "No problem. Could we get a booth? And could we also get a booster seat for her?",
+"pt": "Sem problema. Pode ser sofá? E um assento elevado pra ela?"
+},
+{
+"s": "Server",
+"en": "Hi guys, I'm Jake, I'll be taking care of you tonight. Can I start you off with something to drink?",
+"pt": "Oi, sou o Jake, vou atender vocês. Algo pra beber?"
+},
+{
+"s": "You",
+"en": "Can we get some waters for the table? And can we get a few more minutes?",
+"pt": "Água pra mesa? E mais uns minutinhos?"
+},
+{
+"s": "Server",
+"en": "Alright, are you guys ready?",
+"pt": "Prontos?"
+},
+{
+"s": "You",
+"en": "What would you recommend? ... Okay, I'll go with the salmon. Could I get the dressing on the side?",
+"pt": "O que recomenda? ... Vou de salmão. Molho à parte?"
+}
+],
+"prompts": [
+"Chegue no restaurante: peça mesa para a família, pergunte a espera e peça um assento infantil."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "I ran into a bug on the checkout screen.",
+"pt": "Encontrei um bug na tela de checkout.",
+"pr": "rén íntu â bâg"
+},
+{
+"en": "I was able to reproduce it consistently.",
+"pt": "Consegui reproduzir toda vez.",
+"pr": "riprâdús it kânsístântli"
+},
+{
+"en": "Here are the steps to reproduce.",
+"pt": "Aqui estão os passos para reproduzir."
+},
+{
+"en": "It should show the total, but instead it just keeps loading.",
+"pt": "Deveria mostrar o total, mas fica carregando.",
+"pr": "bât instéd"
+},
+{
+"en": "I'd say it's high severity, but medium priority.",
+"pt": "Severidade alta, prioridade média.",
+"pr": "sivérâri / praiórâri"
+},
+{
+"en": "I logged it and attached a screen recording and the logs.",
+"pt": "Registrei e anexei gravação de tela e logs.",
+"pr": "âtétcht"
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "Hey Ryan, got a sec? I ran into a bug on the checkout screen.",
+"pt": "Ryan, tem um segundo? Achei um bug no checkout."
+},
+{
+"s": "Dev",
+"en": "Hmm, it works on my machine.",
+"pt": "Hmm, na minha máquina funciona."
+},
+{
+"s": "You",
+"en": "Ha! I was able to reproduce it consistently on Android. Here are the steps to reproduce.",
+"pt": "Haha! Reproduzi toda vez no Android. Aqui os passos."
+},
+{
+"s": "Dev",
+"en": "Okay, so what's happening?",
+"pt": "Tá, o que acontece?"
+},
+{
+"s": "You",
+"en": "It should show the total, but instead it just keeps loading.",
+"pt": "Deveria mostrar o total, mas fica carregando."
+},
+{
+"s": "Dev",
+"en": "Ouch. How bad is it?",
+"pt": "Ai. Quão grave?"
+},
+{
+"s": "You",
+"en": "I'd say it's high severity, but medium priority. It only happens with gift cards.",
+"pt": "Severidade alta, prioridade média. Só acontece com gift card."
+},
+{
+"s": "Dev",
+"en": "Can you send me the details?",
+"pt": "Me manda os detalhes?"
+},
+{
+"s": "You",
+"en": "Already did. I logged it and attached a screen recording and the logs.",
+"pt": "Já mandei. Registrei com gravação de tela e logs."
+}
+],
+"prompts": [
+"It works on my machine. What exactly did you do? → reproduziu sempre + steps + 'It should... but instead...'.",
+"How bad is it? Should we hold the release? → severity e priority + justificativa."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "We need to stay in compliance with FDA regulations.",
+"pt": "Precisamos continuar em conformidade com as regulamentações do FDA.",
+"pr": "stêi in kâmpláiâns… régiulêishâns"
+},
+{
+"en": "Guidance documents aren't legally binding, but the FDA expects us to follow them.",
+"pt": "Guidances não têm força de lei, mas o FDA espera que a gente siga.",
+"pr": "lígâli báindin"
+},
+{
+"en": "If we're not compliant, we could get a warning letter.",
+"pt": "Se não estivermos em conformidade, podemos receber uma warning letter.",
+"pr": "uórnin lérâr"
+},
+{
+"en": "Let me double-check the regulatory requirements before we move forward.",
+"pt": "Deixa eu checar as exigências antes de seguirmos."
+},
+{
+"en": "That could be a compliance risk.",
+"pt": "Isso pode ser um risco de conformidade."
+},
+{
+"en": "I'd rather flag it now than deal with it later.",
+"pt": "Prefiro sinalizar agora do que resolver depois.",
+"pr": "áid réidhâr flég it"
+}
+],
+"dialog": [
+{
+"s": "Marketing",
+"en": "We want the new website to say our product is \"the best on the market.\" Quick approval?",
+"pt": "Queremos dizer no site que o produto é 'o melhor do mercado'. Aprova rapidinho?"
+},
+{
+"s": "You",
+"en": "Hmm, that could be a compliance risk. We need to stay in compliance with FDA regulations, and claims like that need data to back them up.",
+"pt": "Hmm, risco de conformidade. Afirmações assim precisam de dados."
+},
+{
+"s": "Marketing",
+"en": "But it's just a website, not the label.",
+"pt": "Mas é só o site, não o rótulo."
+},
+{
+"s": "You",
+"en": "The FDA looks at promotional materials too. If we're not compliant, we could get a warning letter.",
+"pt": "O FDA olha material promocional também. Podemos receber warning letter."
+},
+{
+"s": "Marketing",
+"en": "I read it's only in a guidance, not a law.",
+"pt": "Li que é só guidance, não lei."
+},
+{
+"s": "You",
+"en": "True, guidance documents aren't legally binding, but the FDA expects us to follow them.",
+"pt": "Verdade, não tem força de lei, mas o FDA espera que sigamos."
+},
+{
+"s": "Marketing",
+"en": "Okay... so what now?",
+"pt": "Tá... e agora?"
+},
+{
+"s": "You",
+"en": "Let me double-check the regulatory requirements before we move forward. I'd rather flag it now than deal with it later.",
+"pt": "Vou checar as exigências antes. Prefiro sinalizar agora."
+}
+],
+"prompts": [
+"Can we say our product is 'clinically proven' on Instagram? → compliance risk + warning letter.",
+"It's just guidance, so we don't really have to follow it, right? → legally binding + FDA expects.",
+"Production wants to start the new process tomorrow. Are we good? → double-check + 'I'd rather flag it now...'."
+]
+},
+"watch": {
+"title": "Fresh Off the Boat",
+"where": "Hulu",
+"why": "Família de imigrantes que se muda para Orlando nos anos 90 e abre um restaurante. Adaptação, escola e muita cena de restaurante.",
+"tip": "Nas cenas do restaurante, pausem e repitam juntos.",
+"expr": [
+"Your table's ready. — sua mesa está pronta",
+"What a deal! — que pechincha!"
+]
+}
+},
+{
+"day": 10,
+"week": 2,
+"title": "Pagar a conta, gorjeta e levar o resto",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "No, I'm still working on it, thanks!",
+"pt": "Não, ainda estou comendo, obrigado(a)!",
+"pr": "áim stíl uârkin ón it"
+},
+{
+"en": "Everything was great, thanks!",
+"pt": "Estava tudo ótimo!",
+"pr": "évrithin uâz grêit"
+},
+{
+"en": "Could we get the check, please?",
+"pt": "Pode trazer a conta?",
+"pr": "kúdui guét dâ tchék"
+},
+{
+"en": "Can we split the check?",
+"pt": "Dá pra dividir a conta?",
+"pr": "splít dâ tchék"
+},
+{
+"en": "Could I get a to-go box for this?",
+"pt": "Pode me dar uma caixinha pra levar?",
+"pr": "tchu-gôu bóks"
+},
+{
+"en": "Is the tip already included?",
+"pt": "A gorjeta já está incluída?",
+"pr": "ólrédi inklúdid"
+},
+{
+"en": "Keep the change.",
+"pt": "Pode ficar com o troco.",
+"pr": "kíp dâ tchêindj"
+},
+{
+"en": "We're all set, thank you!",
+"pt": "Tá tudo certo, obrigado(a)!",
+"pr": "uír ól sét"
+},
+{
+"en": "Are you still working on that?",
+"pt": "(Você vai ouvir) Ainda está comendo?"
+},
+{
+"en": "I'll take that whenever you're ready.",
+"pt": "(Você vai ouvir) Levo quando vocês estiverem prontos."
+}
+],
+"dialog": [
+{
+"s": "Server",
+"en": "Are you still working on that?",
+"pt": "Ainda está comendo?"
+},
+{
+"s": "You",
+"en": "No, I'm done, thanks! Actually, could I get a to-go box for this?",
+"pt": "Não, terminei! Pode me dar uma caixinha pra levar?"
+},
+{
+"s": "Server",
+"en": "Sure thing! Can I get you guys anything else? Any dessert?",
+"pt": "Claro! Mais alguma coisa? Sobremesa?"
+},
+{
+"s": "You",
+"en": "We're all set, thank you! Could we get the check, please?",
+"pt": "Tudo certo, obrigado! Pode trazer a conta?"
+},
+{
+"s": "Server",
+"en": "Absolutely. Is this gonna be together or separate?",
+"pt": "Claro. Junto ou separado?"
+},
+{
+"s": "You",
+"en": "Together's fine. Oh, quick question: is the tip already included?",
+"pt": "Junto. Ah, a gorjeta já está incluída?"
+},
+{
+"s": "Server",
+"en": "Nope, it's not. I'll take that whenever you're ready.",
+"pt": "Não. Levo quando estiverem prontos."
+},
+{
+"s": "You",
+"en": "Everything was great, thanks! Keep the change.",
+"pt": "Estava tudo ótimo! Pode ficar com o troco."
+}
+],
+"prompts": [
+"No fim do jantar: diga que estava ótimo, peça a conta, pergunte se a gorjeta está incluída e peça uma caixinha."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "We need to run a full regression before the release.",
+"pt": "Precisamos rodar uma regressão completa antes da release.",
+"pr": "fúl riguréshân"
+},
+{
+"en": "This looks like a regression. It was working fine in the last build.",
+"pt": "Parece uma regressão. Funcionava no último build."
+},
+{
+"en": "Which environment are you testing on?",
+"pt": "Em qual ambiente você está testando?",
+"pr": "inváiârnmânt"
+},
+{
+"en": "It passed on staging, but it's failing in production.",
+"pt": "Passou em staging, mas falha em produção.",
+"pr": "stêidjin / prâdâkshân"
+},
+{
+"en": "Let's run a quick smoke test first.",
+"pt": "Vamos rodar um smoke test rápido primeiro.",
+"pr": "smôuk tést"
+},
+{
+"en": "Heads up, the test environment is down again.",
+"pt": "Atenção, o ambiente de teste caiu de novo.",
+"pr": "hédz âp"
+}
+],
+"dialog": [
+{
+"s": "Dev Lead",
+"en": "Anything blocking you?",
+"pt": "Algo te bloqueando?"
+},
+{
+"s": "You",
+"en": "Yeah, heads up, the test environment is down again.",
+"pt": "Sim, atenção, o ambiente de teste caiu de novo."
+},
+{
+"s": "Dev Lead",
+"en": "Ugh. I'll ping DevOps. Anything else?",
+"pt": "Aff. Vou chamar o DevOps. Mais algo?"
+},
+{
+"s": "You",
+"en": "The login bug is back. This looks like a regression. It was working fine in the last build.",
+"pt": "O bug de login voltou. Parece regressão. Funcionava no último build."
+},
+{
+"s": "Dev",
+"en": "Weird. Which environment are you testing on?",
+"pt": "Estranho. Qual ambiente?"
+},
+{
+"s": "You",
+"en": "It passed on staging, but it's failing in production.",
+"pt": "Passou em staging, falha em produção."
+},
+{
+"s": "Dev Lead",
+"en": "Okay, that's not good. Are we still shipping Friday?",
+"pt": "Não é bom. Ainda lançamos sexta?"
+},
+{
+"s": "You",
+"en": "Let's run a quick smoke test first. But honestly, we need to run a full regression before the release.",
+"pt": "Vamos rodar um smoke test. Mas precisamos de regressão completa antes."
+}
+],
+"prompts": [
+"Anything blocking you today? → avise que o ambiente caiu com 'Heads up...'.",
+"Can we ship tomorrow without testing everything? → smoke test agora e defenda a full regression."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "I'm reviewing the draft labeling right now.",
+"pt": "Estou revisando o rascunho da rotulagem.",
+"pr": "dréft lêibâlin"
+},
+{
+"en": "The wording has to match the approved labeling.",
+"pt": "O texto precisa bater com a rotulagem aprovada.",
+"pr": "uârdin / âprúvd"
+},
+{
+"en": "This claim isn't supported by the data.",
+"pt": "Essa alegação não é sustentada pelos dados.",
+"pr": "klêim / sâpórtid"
+},
+{
+"en": "I'll send it back with tracked changes.",
+"pt": "Vou devolver com controle de alterações.",
+"pr": "trékt tchêindjiz"
+},
+{
+"en": "We also need to update the package insert and the carton.",
+"pt": "Também precisamos atualizar a bula e o cartucho.",
+"pr": "pékâdj ínsârt / kártân"
+},
+{
+"en": "Once Legal and Medical sign off, we're good to go.",
+"pt": "Assim que Jurídico e Médico aprovarem, podemos seguir.",
+"pr": "sáin óf"
+}
+],
+"dialog": [
+{
+"s": "Packaging",
+"en": "Did you get a chance to look at the new carton artwork?",
+"pt": "Conseguiu ver a arte do novo cartucho?"
+},
+{
+"s": "You",
+"en": "Yes, I'm reviewing the draft labeling right now. I found a couple of issues.",
+"pt": "Sim, estou revisando agora. Achei alguns problemas."
+},
+{
+"s": "Packaging",
+"en": "Oh no. Like what?",
+"pt": "Ah não. Tipo o quê?"
+},
+{
+"s": "You",
+"en": "First, \"fast relief in 5 minutes\": this claim isn't supported by the data.",
+"pt": "Primeiro, 'alívio em 5 minutos': não é sustentado pelos dados."
+},
+{
+"s": "Packaging",
+"en": "Can we just change it a little?",
+"pt": "Dá pra só mudar um pouco?"
+},
+{
+"s": "You",
+"en": "Not really. The wording has to match the approved labeling. I'll send it back with tracked changes.",
+"pt": "Não. Tem que bater com o aprovado. Devolvo com controle de alterações."
+},
+{
+"s": "Packaging",
+"en": "Got it. Anything else?",
+"pt": "Entendi. Mais algo?"
+},
+{
+"s": "You",
+"en": "We also need to update the package insert and the carton. Once Legal and Medical sign off, we're good to go.",
+"pt": "Atualizar bula e cartucho. Com o aval do Jurídico e Médico, seguimos."
+}
+],
+"prompts": [
+"Is the new carton ready to go to print? → está revisando o draft e há ajustes.",
+"Marketing wants to add 'doctor recommended' to the box. Can we? → claim not supported + wording must match.",
+"What are the next steps? → tracked changes, package insert, carton, sign-off."
+]
+},
+"watch": {
+"title": "Ratatouille (Pixar)",
+"where": "Disney+",
+"why": "Ratinho que sonha ser chef em Paris. Muita cena de cozinha, garçom e cliente; inglês americano claro. Dá pra ver com a criança.",
+"tip": "Escolham 2 cenas da cozinha, repitam as falas, depois revejam sem legenda.",
+"expr": [
+"Anyone can cook! — qualquer um pode cozinhar",
+"Keep your station clean! — mantenha a bancada limpa"
+]
+}
+},
+{
+"day": 11,
+"week": 2,
+"title": "Pedir comida por telefone/app e reclamar de pedido errado",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Hi, I'd like to place an order for pickup.",
+"pt": "Oi, quero fazer um pedido pra retirar.",
+"pr": "áid láik tchu plêis ân órdâr fór píkâp"
+},
+{
+"en": "It's under \"{name}.\"",
+"pt": "Tá no nome de \"{name}\".",
+"pr": "its ândâr"
+},
+{
+"en": "About how long will that take?",
+"pt": "Mais ou menos quanto tempo vai levar?",
+"pr": "âbáut háu lóng uíl dét têik"
+},
+{
+"en": "Hey, I think there's a mix-up with my order.",
+"pt": "Acho que houve uma confusão com meu pedido.",
+"pr": "dérz â míks-âp"
+},
+{
+"en": "I ordered the chicken wrap, but I got a burger instead.",
+"pt": "Pedi o wrap de frango, mas veio um hambúrguer no lugar.",
+"pr": "bârâi gárâ bârgâr instéd"
+},
+{
+"en": "We're also missing a side of fries.",
+"pt": "Também tá faltando uma porção de fritas.",
+"pr": "míssin â sáid âv fráiz"
+},
+{
+"en": "Could you guys fix that, or should I just get a refund?",
+"pt": "Vocês resolvem ou é melhor pedir reembolso?",
+"pr": "rífând"
+},
+{
+"en": "It's all good, these things happen.",
+"pt": "Tá tudo bem, acontece.",
+"pr": "dhíz thíngz hépân"
+},
+{
+"en": "Is this gonna be for pickup or delivery?",
+"pt": "(Você vai ouvir) Retirada ou entrega?"
+},
+{
+"en": "Let me make that right for you.",
+"pt": "(Você vai ouvir) Deixa eu resolver isso pra você."
+}
+],
+"dialog": [
+{
+"s": "Employee",
+"en": "Thanks for calling Tony's! Is this gonna be for pickup or delivery?",
+"pt": "Obrigado por ligar! Retirada ou entrega?"
+},
+{
+"s": "You",
+"en": "Hi, I'd like to place an order for pickup. A large pepperoni and a chicken wrap.",
+"pt": "Oi, pedido pra retirar. Uma pepperoni grande e um wrap de frango."
+},
+{
+"s": "Employee",
+"en": "You got it. What name is that under?",
+"pt": "Certo. Em nome de quem?"
+},
+{
+"s": "You",
+"en": "It's under \"{name}.\" About how long will that take?",
+"pt": "No nome de \"{name}\". Quanto tempo leva?"
+},
+{
+"s": "Employee",
+"en": "It'll be ready in about twenty minutes.",
+"pt": "Fica pronto em uns 20 minutos."
+},
+{
+"s": "You",
+"en": "Hey, I think there's a mix-up with my order. I ordered the chicken wrap, but I got a burger instead.",
+"pt": "Acho que houve confusão. Pedi wrap e veio hambúrguer."
+},
+{
+"s": "Employee",
+"en": "Oh no, I'm so sorry about that! Let me make that right for you.",
+"pt": "Ah não, mil desculpas! Deixa eu resolver."
+},
+{
+"s": "You",
+"en": "Thanks. We're also missing a side of fries. Could you guys fix that, or should I just get a refund?",
+"pt": "Obrigado. Também faltou fritas. Vocês resolvem ou peço reembolso?"
+},
+{
+"s": "Employee",
+"en": "I'll refund the wrap and the fries right now. Next order's on us!",
+"pt": "Reembolso o wrap e as fritas agora. O próximo é por nossa conta!"
+},
+{
+"s": "You",
+"en": "Oh, that's so nice. It's all good, these things happen.",
+"pt": "Que gentil. Tudo bem, acontece."
+}
+],
+"prompts": [
+"Seu pedido veio errado: ligue, explique o que pediu e o que veio, e peça para resolver."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "I kicked off a test run this morning.",
+"pt": "Iniciei uma rodada de testes hoje de manhã.",
+"pr": "kíkt óf"
+},
+{
+"en": "Forty-five passed, three failed, and two are blocked.",
+"pt": "45 passaram, 3 falharam, 2 bloqueados.",
+"pr": "pést, fêiuld, blókt"
+},
+{
+"en": "The actual result doesn't match the expected one.",
+"pt": "O resultado real não bate com o esperado.",
+"pr": "ékchuâl rizâlt"
+},
+{
+"en": "Those tests are blocked until the API is fixed.",
+"pt": "Bloqueados até a API ser corrigida.",
+"pr": "ântíl"
+},
+{
+"en": "We don't have enough test coverage on payments.",
+"pt": "Não temos cobertura de teste suficiente em pagamentos.",
+"pr": "kâvârâdj"
+},
+{
+"en": "Did we cover the edge cases?",
+"pt": "A gente cobriu os edge cases?",
+"pr": "édj kêissiz"
+}
+],
+"dialog": [
+{
+"s": "QA Manager",
+"en": "Morning! Where are we with testing?",
+"pt": "Bom dia! Como estão os testes?"
+},
+{
+"s": "You",
+"en": "I kicked off a test run this morning. Forty-five passed, three failed, and two are blocked.",
+"pt": "Iniciei uma rodada hoje. 45 passaram, 3 falharam, 2 bloqueados."
+},
+{
+"s": "QA Manager",
+"en": "What's going on with the failures?",
+"pt": "O que houve com as falhas?"
+},
+{
+"s": "You",
+"en": "On the refund screen, the actual result doesn't match the expected one. It shows the wrong amount.",
+"pt": "Na tela de reembolso, o resultado real não bate. Mostra valor errado."
+},
+{
+"s": "QA Manager",
+"en": "And the blocked ones?",
+"pt": "E os bloqueados?"
+},
+{
+"s": "You",
+"en": "Those tests are blocked until the API is fixed. The backend team's on it.",
+"pt": "Bloqueados até corrigirem a API. O backend está cuidando."
+},
+{
+"s": "QA Manager",
+"en": "Okay. Anything that worries you?",
+"pt": "Algo te preocupa?"
+},
+{
+"s": "You",
+"en": "Honestly, we don't have enough test coverage on payments. Did we cover the edge cases, like zero-dollar orders?",
+"pt": "Falta cobertura em pagamentos. Cobrimos edge cases, tipo pedido de zero dólar?"
+},
+{
+"s": "QA Manager",
+"en": "Good catch. Let's add those this sprint.",
+"pt": "Boa. Vamos adicionar nesta sprint."
+}
+],
+"prompts": [
+"Quick status on the regression run? → números: passed / failed / blocked.",
+"Are we good to release the payments feature? → falta de coverage + edge cases (dê um exemplo)."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "The FDA sent us an information request this morning.",
+"pt": "O FDA mandou um pedido de informação (IR) hoje de manhã.",
+"pr": "infârmêishân rikuést"
+},
+{
+"en": "We have to respond within ten business days.",
+"pt": "Temos que responder em até 10 dias úteis.",
+"pr": "rispánd uídhín"
+},
+{
+"en": "They found a deficiency in the stability data.",
+"pt": "Encontraram uma deficiência nos dados de estabilidade.",
+"pr": "difíshânsi"
+},
+{
+"en": "Our target action date is still in March.",
+"pt": "Nossa data-alvo de decisão continua em março."
+},
+{
+"en": "If we don't address it, we could get a Complete Response Letter.",
+"pt": "Se não resolvermos, podemos receber uma CRL (não aprovação).",
+"pr": "âdrés / sí-ár-él"
+},
+{
+"en": "Let's put together a response and get it out the door by Friday.",
+"pt": "Vamos montar a resposta e mandar até sexta."
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "Hi everyone, quick update. The FDA sent us an information request this morning.",
+"pt": "Oi, atualização rápida. O FDA mandou um IR hoje."
+},
+{
+"s": "CMC Lead",
+"en": "Uh-oh. What are they asking for?",
+"pt": "Ih. O que estão pedindo?"
+},
+{
+"s": "You",
+"en": "They found a deficiency in the stability data. They want the 12-month results for all three batches.",
+"pt": "Deficiência nos dados de estabilidade. Querem 12 meses dos três lotes."
+},
+{
+"s": "CMC Lead",
+"en": "We have those. How much time do we have?",
+"pt": "Temos isso. Quanto tempo?"
+},
+{
+"s": "You",
+"en": "We have to respond within ten business days.",
+"pt": "Responder em até 10 dias úteis."
+},
+{
+"s": "PM",
+"en": "Does this push back the approval?",
+"pt": "Isso atrasa a aprovação?"
+},
+{
+"s": "You",
+"en": "Not if we answer on time. Our target action date is still in March. But if we don't address it, we could get a Complete Response Letter.",
+"pt": "Não se respondermos a tempo. A data-alvo continua março. Senão, CRL."
+},
+{
+"s": "PM",
+"en": "Okay, that's a no-go. What do you need from us?",
+"pt": "Isso não pode. O que precisa?"
+},
+{
+"s": "You",
+"en": "Send me the data by Wednesday. Let's put together a response and get it out the door by Friday.",
+"pt": "Me mandem os dados até quarta. Enviamos a resposta até sexta."
+}
+],
+"prompts": [
+"Did we hear anything from the FDA? → chegou um information request e qual a deficiência.",
+"Is our approval date at risk? → target action date e risco de CRL.",
+"What's the plan? → prazo, o que precisa do time e 'get it out the door by...'."
+]
+},
+"watch": {
+"title": "Schitt's Creek",
+"where": "Hulu",
+"why": "Família milionária perde tudo e vai morar num motel. Muitas cenas no café com pedidos confusos.",
+"tip": "Em cada cena do café, pausem e repitam o pedido.",
+"expr": [
+"Ew, David! — eca, David!",
+"Can I get you anything else? — mais alguma coisa?"
+]
+}
+},
+{
+"day": 12,
+"week": 2,
+"title": "Cafeteria: pedir café do seu jeito",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Hi! Could I do a medium iced latte with oat milk?",
+"pt": "Pode ser um latte gelado médio com leite de aveia?",
+"pr": "kúdái dú â mídiâm áist látêi uídh ôut mílk"
+},
+{
+"en": "Can you make it half-sweet, with light ice?",
+"pt": "Metade do açúcar e pouco gelo?",
+"pr": "héf-suít, uídh láit áis"
+},
+{
+"en": "Could you add an extra shot?",
+"pt": "Uma dose extra de espresso?",
+"pr": "éd ân éxtrâ xót"
+},
+{
+"en": "Do you guys have any dairy-free options?",
+"pt": "Vocês têm opções sem leite?",
+"pr": "déri-frí ópshâns"
+},
+{
+"en": "And can I grab a cake pop for my daughter?",
+"pt": "E um cake pop pra minha filha?",
+"pr": "grébâ kêik póp / dórâr"
+},
+{
+"en": "Could you warm that up for me?",
+"pt": "Pode esquentar isso pra mim?",
+"pr": "uórm dérâp"
+},
+{
+"en": "To go, please.",
+"pt": "Pra viagem, por favor.",
+"pr": "tchu gôu"
+},
+{
+"en": "Sorry, I think that one's mine.",
+"pt": "Desculpa, acho que esse é o meu.",
+"pr": "dét uânz máin"
+},
+{
+"en": "What can I get going for you?",
+"pt": "(Você vai ouvir) O que vai querer?"
+},
+{
+"en": "It'll be at the end of the bar.",
+"pt": "(Você vai ouvir) Vai sair no final do balcão."
+}
+],
+"dialog": [
+{
+"s": "Barista",
+"en": "Hey there! What can I get going for you?",
+"pt": "Oi! O que vai querer?"
+},
+{
+"s": "You",
+"en": "Hi! Could I do a medium iced latte with oat milk? Can you make it half-sweet, with light ice?",
+"pt": "Um latte gelado médio com leite de aveia? Metade do açúcar, pouco gelo?"
+},
+{
+"s": "Barista",
+"en": "You got it. Anything else?",
+"pt": "Certo. Mais algo?"
+},
+{
+"s": "You",
+"en": "Yeah, a large hot coffee. Could you add an extra shot? And can I grab a cake pop for my daughter?",
+"pt": "Um café quente grande com dose extra. E um cake pop pra minha filha?"
+},
+{
+"s": "Barista",
+"en": "Sure! Anything to eat?",
+"pt": "Claro! Algo pra comer?"
+},
+{
+"s": "You",
+"en": "A banana bread. Could you warm that up for me?",
+"pt": "Um banana bread. Pode esquentar?"
+},
+{
+"s": "Barista",
+"en": "Absolutely. For here or to go?",
+"pt": "Claro. Pra comer aqui ou levar?"
+},
+{
+"s": "You",
+"en": "To go, please.",
+"pt": "Pra viagem."
+},
+{
+"s": "Barista",
+"en": "Can I get a name for the order? It'll be at the end of the bar.",
+"pt": "Um nome pro pedido? Sai no final do balcão."
+},
+{
+"s": "You",
+"en": "Sorry, I think that one's mine. It says \"{name}.\"",
+"pt": "Desculpa, acho que esse é o meu. Tá escrito \"{name}\"."
+},
+{
+"s": "Customer",
+"en": "Oh, my bad! Here you go.",
+"pt": "Ah, foi mal! Aqui."
+}
+],
+"prompts": [
+"Peça o SEU café de verdade, do seu jeito, sem olhar."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "Let's go over the acceptance criteria first.",
+"pt": "Vamos repassar os critérios de aceite primeiro.",
+"pr": "ékséptâns kraitíria"
+},
+{
+"en": "I'm gonna need some test data for that.",
+"pt": "Vou precisar de dados de teste pra isso.",
+"pr": "áim gâna níd sâm tést dêirâ"
+},
+{
+"en": "I added five new test cases to the suite.",
+"pt": "Adicionei cinco casos de teste na suíte.",
+"pr": "suít"
+},
+{
+"en": "I also did some exploratory testing around it.",
+"pt": "Também fiz testes exploratórios em volta disso.",
+"pr": "iksplórâtóri"
+},
+{
+"en": "Once the fix is in, I'll verify it and close it out.",
+"pt": "Assim que a correção entrar, eu valido e encerro.",
+"pr": "vérifái"
+},
+{
+"en": "That's not a bug, it's working as intended.",
+"pt": "Não é bug, está funcionando como planejado.",
+"pr": "inténdid"
+}
+],
+"dialog": [
+{
+"s": "PO",
+"en": "Okay, next story: users can save their favorite stores. Any questions?",
+"pt": "Próxima história: usuário salva lojas favoritas. Dúvidas?"
+},
+{
+"s": "You",
+"en": "Let's go over the acceptance criteria first. What happens if someone saves more than ten?",
+"pt": "Vamos repassar os critérios de aceite. E se salvarem mais de dez?"
+},
+{
+"s": "PO",
+"en": "Good question. Let's say ten is the max.",
+"pt": "Boa. Dez é o máximo."
+},
+{
+"s": "You",
+"en": "Got it. I'm gonna need some test data for that, a few accounts with different numbers of favorites.",
+"pt": "Certo. Vou precisar de dados de teste, contas com quantidades diferentes."
+},
+{
+"s": "Dev",
+"en": "I can set that up. By the way, someone said the list isn't sorted. Bug?",
+"pt": "Eu preparo. Aliás, disseram que a lista não está ordenada. Bug?"
+},
+{
+"s": "You",
+"en": "That's not a bug, it's working as intended. It's sorted by date, per the criteria.",
+"pt": "Não é bug, funciona como planejado. Ordena por data, pelos critérios."
+},
+{
+"s": "PO",
+"en": "Nice. And the crash we saw last week?",
+"pt": "E aquele crash da semana passada?"
+},
+{
+"s": "You",
+"en": "I added five new test cases to the suite, and I also did some exploratory testing around it. Once the fix is in, I'll verify it and close it out.",
+"pt": "Adicionei cinco casos e fiz testes exploratórios. Quando a correção entrar, valido e encerro."
+}
+],
+"prompts": [
+"Here's the new login story. Can you start testing right away? → acceptance criteria + test data.",
+"The search shows old results first. That's a bug, right? → working as intended e por quê."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "What's our regulatory pathway for this product?",
+"pt": "Qual é o caminho regulatório deste produto?",
+"pr": "régiulâtóri péthuêi"
+},
+{
+"en": "Is it gonna be Rx or OTC?",
+"pt": "Vai ser de prescrição ou isento de prescrição?",
+"pr": "ár-éks / ôu-tí-sí"
+},
+{
+"en": "It falls under 21 CFR Part 211.",
+"pt": "Se enquadra no 21 CFR Parte 211 (cGMP de medicamentos).",
+"pr": "tuêni-uân sí-éf-ár párt tchu-ilévân"
+},
+{
+"en": "We should request a pre-submission meeting with the FDA.",
+"pt": "Deveríamos pedir uma reunião de pré-submissão com o FDA.",
+"pr": "prí-sâbmíshân mírin"
+},
+{
+"en": "I'm putting together the briefing package.",
+"pt": "Estou montando o briefing package.",
+"pr": "brífin pékâdj"
+},
+{
+"en": "Let's get alignment with the agency before we file.",
+"pt": "Vamos alinhar com a agência antes de protocolar.",
+"pr": "âláinmânt · éidjânsi · fáiâl"
+}
+],
+"dialog": [
+{
+"s": "R&D Director",
+"en": "We wanna launch a new 12-hour version of our allergy tablet. How fast can we do it?",
+"pt": "Queremos lançar uma versão 12 horas do antialérgico. Quão rápido?"
+},
+{
+"s": "You",
+"en": "Good question. First: what's our regulatory pathway for this product? Is it gonna be Rx or OTC?",
+"pt": "Boa. Primeiro: qual o caminho regulatório? Rx ou OTC?"
+},
+{
+"s": "R&D Director",
+"en": "OTC, same as the current one. Just a new extended-release formula.",
+"pt": "OTC, como o atual. Só uma fórmula de liberação prolongada."
+},
+{
+"s": "You",
+"en": "Okay. A new dosage form usually needs new data, so I don't wanna guess. We should request a pre-submission meeting with the FDA.",
+"pt": "Nova forma farmacêutica costuma exigir dados. Devemos pedir pré-submissão ao FDA."
+},
+{
+"s": "R&D Director",
+"en": "Isn't that gonna slow us down?",
+"pt": "Isso não vai atrasar?"
+},
+{
+"s": "You",
+"en": "A little at first, but it saves time later. Let's get alignment with the agency before we file.",
+"pt": "Um pouco no início, mas economiza depois. Vamos alinhar com a agência antes."
+},
+{
+"s": "QA Manager",
+"en": "And manufacturing, anything new for us?",
+"pt": "E a fabricação, algo novo?"
+},
+{
+"s": "You",
+"en": "The new line still falls under 21 CFR Part 211, so cGMP applies as usual. I'm putting together the briefing package.",
+"pt": "Continua no 21 CFR 211, cGMP normal. Estou montando o briefing package."
+}
+],
+"prompts": [
+"We have a new product idea. Where do we even start? → regulatory pathway + Rx ou OTC.",
+"Why talk to the FDA before filing? → pre-submission meeting + alignment with the agency."
+]
+},
+"watch": {
+"title": "Gilmore Girls",
+"where": "Prime Video",
+"why": "Mãe e filha numa cidadezinha; a mãe é viciada em café e vive no balcão do Luke.",
+"tip": "Falam rápido: escolham 1 cena no café, repitam 3x e revejam sem legenda.",
+"expr": [
+"Can I get a refill? — pode encher de novo?",
+"I need coffee. — preciso de café"
+]
+}
+},
+{
+"day": 15,
+"week": 3,
+"title": "Supermercado: achar o produto no Publix",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Excuse me, where can I find the peanut butter?",
+"pt": "Com licença, onde fica a pasta de amendoim?",
+"pr": "ékskiúz mi, uér kâni fáind dâ pínât bârâr"
+},
+{
+"en": "Which aisle is the bread in?",
+"pt": "Em qual corredor fica o pão?",
+"pr": "uítch áiâl (o s de aisle é mudo)"
+},
+{
+"en": "Do you guys carry gluten-free pasta?",
+"pt": "Vocês vendem macarrão sem glúten?",
+"pr": "kéri"
+},
+{
+"en": "I'm looking for kids' snacks, like Goldfish.",
+"pt": "Estou procurando lanchinhos de criança, tipo Goldfish.",
+"pr": "áim lúkin fór kídz snéks"
+},
+{
+"en": "Is this buy one, get one?",
+"pt": "Isso tá no 'leve dois, pague um'?",
+"pr": "BOGO ≈ bôugôu"
+},
+{
+"en": "Do you have any more of these in the back?",
+"pt": "Tem mais desses no estoque?",
+"pr": "éni mór âv dhíz in dâ bék"
+},
+{
+"en": "Could you grab that for me? It's on the top shelf.",
+"pt": "Pode pegar aquilo pra mim? Tá na prateleira de cima.",
+"pr": "tóp xélf"
+},
+{
+"en": "Never mind, I found it!",
+"pt": "Deixa pra lá, achei!",
+"pr": "névâr máind"
+},
+{
+"en": "It's in aisle seven, on your left.",
+"pt": "(Você vai ouvir) Fica no corredor 7, à esquerda."
+},
+{
+"en": "Sorry, we're out of it right now.",
+"pt": "(Você vai ouvir) Desculpa, está em falta agora."
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "Excuse me, where can I find the peanut butter?",
+"pt": "Com licença, onde fica a pasta de amendoim?"
+},
+{
+"s": "Employee",
+"en": "Sure! It's in aisle seven, on your left. Follow me, I'll show you.",
+"pt": "Claro! Corredor 7, à esquerda. Vem comigo."
+},
+{
+"s": "You",
+"en": "Thanks! Oh, is this buy one, get one?",
+"pt": "Obrigado! Isso tá no leve dois pague um?"
+},
+{
+"s": "Employee",
+"en": "Yep, that one's BOGO this week.",
+"pt": "Sim, tá BOGO esta semana."
+},
+{
+"s": "You",
+"en": "Nice. Do you have any more of these in the back? The shelf's almost empty.",
+"pt": "Legal. Tem mais no estoque? A prateleira tá quase vazia."
+},
+{
+"s": "Employee",
+"en": "Let me check in the back for you. Anything else?",
+"pt": "Vou ver no estoque. Mais algo?"
+},
+{
+"s": "You",
+"en": "Yeah, I'm looking for kids' snacks, like Goldfish. And which aisle is the bread in?",
+"pt": "Procuro lanchinhos de criança. E o pão fica em qual corredor?"
+},
+{
+"s": "Employee",
+"en": "Snacks are in aisle nine, bread's in aisle two.",
+"pt": "Lanches no 9, pão no 2."
+},
+{
+"s": "You",
+"en": "And could you grab that for me? It's on the top shelf.",
+"pt": "E pode pegar aquilo? Tá lá em cima."
+},
+{
+"s": "Employee",
+"en": "Of course! Here you go.",
+"pt": "Claro! Aqui."
+},
+{
+"s": "You",
+"en": "Hey, do you guys carry gluten-free pasta? ... Oh, never mind, I found it!",
+"pt": "Vocês vendem macarrão sem glúten? ... Deixa pra lá, achei!"
+}
+],
+"prompts": [
+"Pergunte por 2 produtos reais da sua lista de compras: onde fica, qual corredor e se está em promoção."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "Yesterday I wrapped up testing on the sign-up flow.",
+"pt": "Ontem terminei os testes do fluxo de cadastro.",
+"pr": "réptâp"
+},
+{
+"en": "Today I'm gonna pick up the next ticket on the board.",
+"pt": "Hoje vou pegar o próximo ticket do board.",
+"pr": "gâna píkâp"
+},
+{
+"en": "No blockers on my end.",
+"pt": "Sem bloqueios do meu lado.",
+"pr": "blókârz ón mái énd"
+},
+{
+"en": "I'm about halfway through it.",
+"pt": "Estou mais ou menos na metade.",
+"pr": "héfuêi thrú"
+},
+{
+"en": "Can we take that offline?",
+"pt": "Podemos falar disso depois da daily?",
+"pr": "óf-láin"
+},
+{
+"en": "I'll keep you posted.",
+"pt": "Te mantenho informado.",
+"pr": "kíp iú pôustid"
+}
+],
+"dialog": [
+{
+"s": "Scrum Master",
+"en": "Morning, everyone! You wanna go first?",
+"pt": "Bom dia! Quer começar?"
+},
+{
+"s": "You",
+"en": "Sure. Yesterday I wrapped up testing on the sign-up flow. Today I'm gonna pick up the next ticket on the board, the push notifications one.",
+"pt": "Claro. Ontem terminei o cadastro. Hoje pego o próximo ticket, o das notificações."
+},
+{
+"s": "Scrum Master",
+"en": "How's that looking?",
+"pt": "Como está?"
+},
+{
+"s": "You",
+"en": "I'm about halfway through it already. No blockers on my end.",
+"pt": "Já estou na metade. Sem bloqueios."
+},
+{
+"s": "Dev",
+"en": "Quick question: did you test sign-up with an expired email link? I think there's an issue there.",
+"pt": "Testou cadastro com link de e-mail expirado? Acho que tem problema."
+},
+{
+"s": "You",
+"en": "Good point. Can we take that offline? I'll ping you right after this.",
+"pt": "Boa. Falamos depois? Te chamo logo após."
+},
+{
+"s": "Scrum Master",
+"en": "Perfect. Anything else?",
+"pt": "Perfeito. Mais algo?"
+},
+{
+"s": "You",
+"en": "That's it from me. I'll keep you posted.",
+"pt": "É isso. Te mantenho informado."
+}
+],
+"prompts": [
+"Your update? → o que terminou ontem + o que vai pegar hoje + blockers.",
+"Wait, can we talk about the flaky login test right now? → leve a conversa 'offline' com educação."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "Let's go through the open action items.",
+"pt": "Vamos repassar as pendências em aberto.",
+"pr": "ékshân áirâmz"
+},
+{
+"en": "Who owns this one?",
+"pt": "Quem é o responsável por essa?",
+"pr": "hú ôunz"
+},
+{
+"en": "That's still pending on QA's side.",
+"pt": "Ainda está pendente do lado da Qualidade.",
+"pr": "péndin / kiú-êiz sáid"
+},
+{
+"en": "I'll update the submission tracker after the meeting.",
+"pt": "Vou atualizar o controle de submissões depois da reunião.",
+"pr": "sâbmíshân trékâr"
+},
+{
+"en": "Is that deadline still realistic?",
+"pt": "Esse prazo ainda é realista?",
+"pr": "dédláin / rialístik"
+},
+{
+"en": "Let's circle back on this next week.",
+"pt": "Vamos retomar isso semana que vem.",
+"pr": "sârkâl bék"
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "Hi everyone, thanks for joining. Let's go through the open action items.",
+"pt": "Oi, obrigada por entrarem. Vamos às pendências."
+},
+{
+"s": "RA Specialist",
+"en": "First one is the annual report for the cough syrup.",
+"pt": "Primeira: relatório anual do xarope."
+},
+{
+"s": "You",
+"en": "Okay. Who owns this one?",
+"pt": "Quem é o responsável?"
+},
+{
+"s": "RA Specialist",
+"en": "I do. I have almost everything, but the batch data is missing. That's still pending on QA's side.",
+"pt": "Eu. Falta os dados de lote, pendente com a Qualidade."
+},
+{
+"s": "You",
+"en": "Got it. The due date is the 15th. Is that deadline still realistic?",
+"pt": "Entendi. O prazo é dia 15. Ainda é realista?"
+},
+{
+"s": "RA Specialist",
+"en": "If QA sends the data by Friday, yes.",
+"pt": "Se a Qualidade mandar até sexta, sim."
+},
+{
+"s": "You",
+"en": "Okay, I'll reach out to them today. What about the labeling update for the vitamins?",
+"pt": "Falo com eles hoje. E a rotulagem das vitaminas?"
+},
+{
+"s": "Associate",
+"en": "We're still waiting for comments from Marketing.",
+"pt": "Esperando comentários do Marketing."
+},
+{
+"s": "You",
+"en": "Then let's circle back on this next week. I'll update the submission tracker after the meeting.",
+"pt": "Retomamos semana que vem. Atualizo o tracker depois."
+}
+],
+"prompts": [
+"Abra a reunião semanal: cumprimente o time e chame a revisão das action items.",
+"The stability summary isn't ready yet. → pergunte o responsável e se está pendente com outra área.",
+"Can we still make the submission at the end of the month? → prazo realista, retomar semana que vem, atualizar o tracker."
+]
+},
+"watch": {
+"title": "Superstore",
+"where": "Peacock e Hulu",
+"why": "Comédia sobre os funcionários de uma loja gigante tipo Walmart: clientes perguntando onde fica cada coisa.",
+"tip": "Quando um cliente pergunta algo, pausem e repitam.",
+"expr": [
+"Can I help you find something? — posso ajudar a encontrar algo?",
+"Clean-up on aisle five! — limpeza no corredor 5!"
+]
+}
+},
+{
+"day": 16,
+"week": 3,
+"title": "No caixa: \"Did you find everything okay?\"",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Yeah, I found everything, thanks!",
+"pt": "Sim, achei tudo, obrigado(a)!",
+"pr": "iéâ, ái fáund évrithin, thénks"
+},
+{
+"en": "I brought my own bags.",
+"pt": "Eu trouxe minhas sacolas.",
+"pr": "ái brót mái ôun bégz"
+},
+{
+"en": "Could you double-bag that? It's kinda heavy.",
+"pt": "Pode colocar em duas sacolas? É meio pesado.",
+"pr": "dâbâl-bég / káindâ hévi"
+},
+{
+"en": "I think that rang up wrong, it's supposed to be on sale.",
+"pt": "Acho que passou o preço errado, era pra estar em promoção.",
+"pr": "réng âp róng / sâpôust tchu bi ón sêil"
+},
+{
+"en": "Do I just tap my card here?",
+"pt": "É só encostar o cartão aqui?",
+"pr": "dú ái djâst tép mái kárd hír"
+},
+{
+"en": "Can I get forty in cash back?",
+"pt": "Pode me dar 40 dólares de saque no caixa?",
+"pr": "fórri in késh bék"
+},
+{
+"en": "I'm good, no receipt, thanks.",
+"pt": "Tô bem, não precisa de nota.",
+"pr": "rissít (o p é mudo)"
+},
+{
+"en": "Oh, hold on a sec, I forgot the milk!",
+"pt": "Ah, espera um segundo, esqueci o leite!",
+"pr": "hôuld ónâ sék / fârgát"
+},
+{
+"en": "Did you find everything okay?",
+"pt": "(Você vai ouvir) Achou tudo certinho?"
+},
+{
+"en": "Would you like help out to your car?",
+"pt": "(Você vai ouvir) Quer ajuda pra levar até o carro?"
+}
+],
+"dialog": [
+{
+"s": "Cashier",
+"en": "Hi there! Did you find everything okay?",
+"pt": "Oi! Achou tudo certinho?"
+},
+{
+"s": "You",
+"en": "Yeah, I found everything, thanks! Oh, and I brought my own bags.",
+"pt": "Sim, achei tudo! E trouxe minhas sacolas."
+},
+{
+"s": "Cashier",
+"en": "Perfect. Can I get your phone number for your account?",
+"pt": "Perfeito. Seu telefone pra conta de pontos?"
+},
+{
+"s": "You",
+"en": "Sure... Wait, I think that rang up wrong. The orange juice is supposed to be on sale.",
+"pt": "Claro... Espera, acho que passou errado. O suco era pra estar em promoção."
+},
+{
+"s": "Cashier",
+"en": "Let me check... You're right, it's BOGO. I fixed it.",
+"pt": "Deixa ver... Tem razão, é BOGO. Corrigi."
+},
+{
+"s": "You",
+"en": "Thanks! Could you double-bag that? It's kinda heavy. Oh, hold on a sec, I forgot the milk!",
+"pt": "Obrigado! Coloca em duas sacolas? É pesado. Ah, espera, esqueci o leite!"
+},
+{
+"s": "Cashier",
+"en": "No worries, go ahead. ... Okay, your total is $86.40. Debit or credit?",
+"pt": "Sem problema. ... Total $86,40. Débito ou crédito?"
+},
+{
+"s": "You",
+"en": "Debit. Do I just tap my card here? And can I get forty in cash back?",
+"pt": "Débito. É só encostar? E 40 de saque?"
+},
+{
+"s": "Cashier",
+"en": "Yep, just tap. Would you like your receipt?",
+"pt": "Sim, só encostar. Quer a nota?"
+},
+{
+"s": "You",
+"en": "I'm good, no receipt, thanks.",
+"pt": "Não precisa, obrigado."
+},
+{
+"s": "Cashier",
+"en": "Would you like help out to your car?",
+"pt": "Quer ajuda até o carro?"
+},
+{
+"s": "You",
+"en": "We're good, thank you! Have a good one!",
+"pt": "Tudo bem, obrigado! Bom dia!"
+}
+],
+"prompts": [
+"O caixa passa um preço errado de um produto: reclame com educação e peça para corrigir."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "I just logged a bug for that.",
+"pt": "Acabei de abrir um bug pra isso.",
+"pr": "ái djâst lógd â bâg"
+},
+{
+"en": "I can reproduce it every single time.",
+"pt": "Consigo reproduzir toda vez.",
+"pr": "évri síngâl táim"
+},
+{
+"en": "I attached a screen recording and the logs.",
+"pt": "Anexei uma gravação de tela e os logs.",
+"pr": "âtétcht / skrín rikórdin"
+},
+{
+"en": "I'd mark it as high priority, it's blocking checkout.",
+"pt": "Eu marcaria como alta prioridade, está travando o checkout.",
+"pr": "prâióriti"
+},
+{
+"en": "Could you take a look when you get a chance?",
+"pt": "Pode dar uma olhada quando tiver um tempinho?",
+"pr": "têikâ lúk / guérâ tchéns"
+},
+{
+"en": "I'll jump on it after lunch.",
+"pt": "Começo a resolver depois do almoço."
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "Hey Mike, got a minute? The app crashes when you apply a coupon. I just logged a bug for that.",
+"pt": "Mike, tem um minuto? O app trava ao aplicar cupom. Acabei de abrir o bug."
+},
+{
+"s": "Dev",
+"en": "Hmm, it works on my machine. Is it random?",
+"pt": "Hmm, na minha máquina funciona. É aleatório?"
+},
+{
+"s": "You",
+"en": "No, I can reproduce it every single time. Add two items, go to checkout, apply \"SAVE10\".",
+"pt": "Não, reproduzo toda vez. Dois itens, checkout, aplica 'SAVE10'."
+},
+{
+"s": "Dev",
+"en": "Okay. Any logs?",
+"pt": "Tá. Tem logs?"
+},
+{
+"s": "You",
+"en": "Yep, I attached a screen recording and the logs to the ticket.",
+"pt": "Sim, anexei gravação e logs no ticket."
+},
+{
+"s": "Dev",
+"en": "Cool. What priority did you set?",
+"pt": "Legal. Que prioridade?"
+},
+{
+"s": "You",
+"en": "I'd mark it as high priority, it's blocking checkout. Could you take a look when you get a chance?",
+"pt": "Alta, está travando o checkout. Pode olhar quando puder?"
+},
+{
+"s": "Dev",
+"en": "Sure, I'll jump on it after lunch.",
+"pt": "Claro, pego depois do almoço."
+}
+],
+"prompts": [
+"The login button doesn't work on Android. Did you report it? → já abriu o bug + anexou gravação e logs.",
+"How urgent is this one? → prioridade + porquê + peça para olhar quando puder."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "I went through the whole document and left some comments.",
+"pt": "Li o documento inteiro e deixei alguns comentários.",
+"pr": "uént thrú dâ hôul dókiumânt"
+},
+{
+"en": "There are a few inconsistencies between Module 2 and Module 3.",
+"pt": "Há algumas inconsistências entre o Módulo 2 e o Módulo 3.",
+"pr": "inkânsístânsiz / mádjul"
+},
+{
+"en": "Can you double-check the numbers against the source data?",
+"pt": "Pode conferir os números com os dados de origem?",
+"pr": "dâbâl-tchék / âguénst / sórs dêirâ"
+},
+{
+"en": "We need to cross-reference this table in the summary.",
+"pt": "Precisamos fazer a referência cruzada desta tabela no resumo.",
+"pr": "krós-réfrâns"
+},
+{
+"en": "I'll need the final version by end of day Thursday.",
+"pt": "Vou precisar da versão final até o fim do dia de quinta.",
+"pr": "énd âv dêi thârzdêi"
+},
+{
+"en": "It looks good overall, just a few minor fixes.",
+"pt": "No geral está bom, só umas correções pequenas.",
+"pr": "ôuvârál / máinâr fíksiz"
+}
+],
+"dialog": [
+{
+"s": "Writer",
+"en": "Did you have time to review the Quality Overall Summary?",
+"pt": "Teve tempo de revisar o QOS?"
+},
+{
+"s": "You",
+"en": "Yes, I went through the whole document and left some comments. It looks good overall, just a few minor fixes.",
+"pt": "Sim, li tudo e comentei. No geral está bom, só pequenas correções."
+},
+{
+"s": "Writer",
+"en": "Great. Anything major?",
+"pt": "Ótimo. Algo grave?"
+},
+{
+"s": "You",
+"en": "One thing: there are a few inconsistencies between Module 2 and Module 3. The impurity limits don't match.",
+"pt": "Uma coisa: inconsistências entre Módulo 2 e 3. Os limites de impureza não batem."
+},
+{
+"s": "Writer",
+"en": "Oh, I probably used the old spec.",
+"pt": "Ah, devo ter usado a especificação antiga."
+},
+{
+"s": "You",
+"en": "Could be. Can you double-check the numbers against the source data? And we need to cross-reference this table in the summary.",
+"pt": "Pode ser. Confere com os dados de origem? E referência cruzada dessa tabela no resumo."
+},
+{
+"s": "Writer",
+"en": "No problem. When do you need it back?",
+"pt": "Sem problema. Pra quando?"
+},
+{
+"s": "You",
+"en": "I'll need the final version by end of day Thursday, so we have time for the eCTD publishing.",
+"pt": "Versão final até fim do dia de quinta, pra dar tempo do eCTD."
+}
+],
+"prompts": [
+"Did you get a chance to review the stability report? → leu tudo, deixou comentários, no geral está bom.",
+"Are there any problems with the dossier? → inconsistências entre módulos + conferir com dados de origem.",
+"When do you need the updated version? → prazo e motivo."
+]
+},
+"watch": {
+"title": "Kim's Convenience",
+"where": "Peacock",
+"why": "Família coreana imigrante dona de uma lojinha de conveniência. Metade das cenas é no balcão do caixa.",
+"tip": "Quando um cliente chegar no caixa, pausem e repitam a fala.",
+"expr": [
+"Can I help you? — posso ajudar?",
+"That'll be five fifty. — dá 5 e 50"
+]
+}
+},
+{
+"day": 17,
+"week": 3,
+"title": "Walmart: devolver ou trocar no Customer Service",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "Hi, I'd like to return this.",
+"pt": "Oi, eu gostaria de devolver isso.",
+"pr": "rái, áid láik tchu ritârn dhís"
+},
+{
+"en": "It stopped working after two days.",
+"pt": "Parou de funcionar depois de dois dias.",
+"pr": "it stópt uârkin éftâr tchú dêiz"
+},
+{
+"en": "I've got the receipt on my app.",
+"pt": "Tenho o recibo no app.",
+"pr": "áiv gárâ rissít ón mái ép"
+},
+{
+"en": "Could I exchange it for a bigger size?",
+"pt": "Posso trocar por um tamanho maior?",
+"pr": "ikstchêindj / bígâr sáiz"
+},
+{
+"en": "Actually, I'd rather just get a refund.",
+"pt": "Na verdade, prefiro só pegar o dinheiro de volta.",
+"pr": "éktchuâli, áid rédhâr djâst guérâ rífând"
+},
+{
+"en": "It's still in the box. Never even opened it.",
+"pt": "Ainda está na caixa. Nem abri.",
+"pr": "névâr ívân ôupând it"
+},
+{
+"en": "Can you put it back on my card?",
+"pt": "Pode estornar no meu cartão?",
+"pr": "púrit bék ón mái kárd"
+},
+{
+"en": "How long till it shows up on my account?",
+"pt": "Quanto tempo até aparecer na minha conta?",
+"pr": "háu lóng tíl it xôuz âp"
+},
+{
+"en": "What's the reason for the return?",
+"pt": "(Você vai ouvir) Qual o motivo da devolução?"
+},
+{
+"en": "It'll take three to five business days to post.",
+"pt": "(Você vai ouvir) Leva de 3 a 5 dias úteis pra cair."
+}
+],
+"dialog": [
+{
+"s": "Associate",
+"en": "Hi there, what can I do for you?",
+"pt": "Oi, em que posso ajudar?"
+},
+{
+"s": "You",
+"en": "Hi, I'd like to return this air fryer. It stopped working after two days.",
+"pt": "Quero devolver esta air fryer. Parou depois de dois dias."
+},
+{
+"s": "Associate",
+"en": "Oh no, sorry about that. Do you have the receipt?",
+"pt": "Que pena. Tem o recibo?"
+},
+{
+"s": "You",
+"en": "Yeah, I've got the receipt on my app. Here you go.",
+"pt": "Sim, está no app. Aqui."
+},
+{
+"s": "Associate",
+"en": "Perfect. Do you wanna swap it for a new one?",
+"pt": "Perfeito. Quer trocar por uma nova?"
+},
+{
+"s": "You",
+"en": "Actually, I'd rather just get a refund. Can you put it back on my card?",
+"pt": "Prefiro o reembolso. Pode estornar no cartão?"
+},
+{
+"s": "Associate",
+"en": "Sure. Can I see the card you paid with?",
+"pt": "Claro. Me mostra o cartão que usou?"
+},
+{
+"s": "You",
+"en": "Here. How long till it shows up on my account?",
+"pt": "Aqui. Quanto tempo até aparecer na conta?"
+},
+{
+"s": "Associate",
+"en": "It'll take three to five business days to post.",
+"pt": "De 3 a 5 dias úteis."
+},
+{
+"s": "You",
+"en": "And these rain boots are too small. Could I exchange them for a bigger size? They're still in the box. Never even opened them.",
+"pt": "E estas galochas ficaram pequenas. Posso trocar por maior? Estão na caixa, nem abri."
+},
+{
+"s": "Associate",
+"en": "No problem! Just grab the next size from aisle twelve and bring them back here.",
+"pt": "Sem problema! Pega o próximo tamanho no corredor 12 e traz aqui."
+},
+{
+"s": "You",
+"en": "Awesome, thanks so much!",
+"pt": "Ótimo, muito obrigado!"
+}
+],
+"prompts": [
+"Devolva um produto de verdade da sua casa: motivo, recibo e se quer troca ou reembolso."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "What's the sprint goal?",
+"pt": "Qual é o objetivo da sprint?",
+"pr": "uóts dâ sprínt gôul"
+},
+{
+"en": "How many story points is this one?",
+"pt": "Quantos story points tem esse?",
+"pr": "háu méni stóri póints"
+},
+{
+"en": "I'd estimate it at a five. There's a lot of testing involved.",
+"pt": "Eu estimaria em cinco. Tem muito teste envolvido.",
+"pr": "éstimêirit / inválvd"
+},
+{
+"en": "Let's make sure testing is part of the estimate.",
+"pt": "Vamos garantir que o teste entre na estimativa.",
+"pr": "éstimât"
+},
+{
+"en": "I don't think we have the capacity for that this sprint.",
+"pt": "Acho que não temos capacidade pra isso nesta sprint.",
+"pr": "kâpéssâri"
+},
+{
+"en": "Can we carry it over to the next sprint?",
+"pt": "Podemos passar pra próxima sprint?",
+"pr": "kéri it ôuvâr"
+}
+],
+"dialog": [
+{
+"s": "Scrum Master",
+"en": "Okay team, let's kick off planning. What's the sprint goal?",
+"pt": "Vamos começar o planning. Qual o objetivo?"
+},
+{
+"s": "PO",
+"en": "Ship the new loyalty points screen.",
+"pt": "Entregar a nova tela de pontos."
+},
+{
+"s": "Scrum Master",
+"en": "First ticket: show the points balance. How many story points is this one?",
+"pt": "Primeiro ticket: saldo de pontos. Quantos pontos?"
+},
+{
+"s": "Dev",
+"en": "I'd say a three.",
+"pt": "Eu diria três."
+},
+{
+"s": "You",
+"en": "I'd estimate it at a five. There's a lot of testing involved: iOS, Android and three user types. Let's make sure testing is part of the estimate.",
+"pt": "Eu estimaria cinco. Muito teste: iOS, Android e três tipos de usuário. O teste entra na estimativa."
+},
+{
+"s": "Dev",
+"en": "Fair point. Five it is.",
+"pt": "Justo. Fica cinco."
+},
+{
+"s": "PO",
+"en": "Can we also squeeze in the referral feature?",
+"pt": "Dá pra encaixar a feature de indicação?"
+},
+{
+"s": "You",
+"en": "Honestly, I don't think we have the capacity for that this sprint. I'm out on Friday, too.",
+"pt": "Sinceramente, não temos capacidade nesta sprint. E não estou na sexta."
+},
+{
+"s": "Scrum Master",
+"en": "Got it. Can we carry it over to the next sprint?",
+"pt": "Entendi. Passamos pra próxima?"
+},
+{
+"s": "PO",
+"en": "Sure, that works.",
+"pt": "Claro, funciona."
+}
+],
+"prompts": [
+"How many points would you give the new login screen ticket? → estimativa + motivo + testing no estimate.",
+"Can we add dark mode to this sprint? → sem capacity + carry over."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "We're running behind schedule on the submission.",
+"pt": "Estamos atrasados com a submissão.",
+"pr": "rânin bihâind skédjul"
+},
+{
+"en": "The timeline is pretty tight.",
+"pt": "O cronograma está bem apertado.",
+"pr": "táimláin / príri táit"
+},
+{
+"en": "What's causing the delay?",
+"pt": "O que está causando o atraso?",
+"pr": "kózin dâ diléi"
+},
+{
+"en": "Can we push the internal deadline by a week?",
+"pt": "Podemos empurrar o prazo interno em uma semana?",
+"pr": "púx / dédláin"
+},
+{
+"en": "I'd rather not rush it. A mistake here could cost us months.",
+"pt": "Prefiro não apressar. Um erro aqui pode custar meses.",
+"pr": "râx it"
+},
+{
+"en": "Worst-case scenario, the launch slips to Q2.",
+"pt": "No pior cenário, o lançamento escorrega pro 2º trimestre.",
+"pr": "uârst-kêis sinério / slíps"
+}
+],
+"dialog": [
+{
+"s": "PM",
+"en": "Quick check-in on the site transfer supplement. Are we on track?",
+"pt": "Check-in rápido do suplemento de transferência de site. Estamos no prazo?"
+},
+{
+"s": "You",
+"en": "Not really. We're running behind schedule on the submission.",
+"pt": "Não muito. Estamos atrasados."
+},
+{
+"s": "PM",
+"en": "Oh. What's causing the delay?",
+"pt": "O que está causando o atraso?"
+},
+{
+"s": "You",
+"en": "The QC lab hasn't finished the stability testing for the new site. Without that data, we can't complete Module 3.",
+"pt": "O laboratório não terminou a estabilidade do novo site. Sem isso não fecho o Módulo 3."
+},
+{
+"s": "PM",
+"en": "Can't we just send what we have?",
+"pt": "Não dá pra mandar o que temos?"
+},
+{
+"s": "You",
+"en": "I'd rather not rush it. A mistake here could cost us months. The timeline is pretty tight already.",
+"pt": "Prefiro não apressar. Um erro custa meses. O cronograma já está apertado."
+},
+{
+"s": "PM",
+"en": "So what do you suggest?",
+"pt": "O que sugere?"
+},
+{
+"s": "You",
+"en": "Can we push the internal deadline by a week? That gives us time for the data and a final review.",
+"pt": "Empurrar o prazo interno uma semana? Dá tempo dos dados e revisão final."
+},
+{
+"s": "PM",
+"en": "And if the data comes in even later?",
+"pt": "E se os dados atrasarem mais?"
+},
+{
+"s": "You",
+"en": "Worst-case scenario, the launch slips to Q2. I'll send you an updated timeline today.",
+"pt": "No pior cenário, vai pro Q2. Mando cronograma atualizado hoje."
+}
+],
+"prompts": [
+"Are we still on track for the submission? → atrasada + causa.",
+"Can't we just submit with the data we have? → 'I'd rather not rush it...' + risco.",
+"What's plan B? → empurrar o prazo interno + worst-case scenario."
+]
+},
+"watch": {
+"title": "Toy Story 2 (Pixar)",
+"where": "Disney+",
+"why": "Divertido para a família toda; cena clássica numa loja de brinquedos com corredores e prateleiras.",
+"tip": "Na cena da loja, pausem, repitam 2 ou 3 falas e revejam sem legenda.",
+"expr": [
+"To infinity and beyond! — ao infinito e além!",
+"Reach for the sky! — mãos ao alto!"
+]
+}
+},
+{
+"day": 18,
+"week": 3,
+"title": "Walmart pelo app: pickup e entrega",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "I placed an order for pickup on the app.",
+"pt": "Fiz um pedido de retirada pelo app.",
+"pr": "ái plêist ân órdâr fór píkâp ón dhi ép"
+},
+{
+"en": "I'm on my way. I'll be there in ten.",
+"pt": "Tô a caminho. Chego em dez minutos.",
+"pr": "áim ón mái uêi / áiu bi dér in tén"
+},
+{
+"en": "Hi, I'm here for my pickup. I'm parked in spot six.",
+"pt": "Oi, cheguei pra retirada. Estou na vaga seis.",
+"pr": "párkt in spát síks"
+},
+{
+"en": "The trunk's open. You can just toss it in the back.",
+"pt": "O porta-malas tá aberto. Pode só jogar lá atrás.",
+"pr": "trânks ôupân / tós it in dâ bék"
+},
+{
+"en": "Looks like they subbed the milk for a different brand.",
+"pt": "Parece que trocaram o leite por outra marca.",
+"pr": "sâbd / brénd"
+},
+{
+"en": "Can I just say no to that substitution?",
+"pt": "Posso só recusar essa substituição?",
+"pr": "sâbstitúxân"
+},
+{
+"en": "Could you leave it at the door? No need to knock.",
+"pt": "Pode deixar na porta? Não precisa bater.",
+"pr": "lívit ét dâ dór / nók (k mudo)"
+},
+{
+"en": "The app says it was delivered, but it's not here.",
+"pt": "O app diz que foi entregue, mas não tá aqui.",
+"pr": "dilívârd"
+},
+{
+"en": "Just so you know, we had to substitute a couple of items.",
+"pt": "(Você vai ouvir) Só pra avisar, tivemos que substituir alguns itens."
+},
+{
+"en": "You're all set!",
+"pt": "(Você vai ouvir) Tudo certo, pode ir!"
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "I placed an order for pickup on the app. I'm on my way. I'll be there in ten.",
+"pt": "Fiz um pedido de retirada. Tô a caminho, chego em dez."
+},
+{
+"s": "Associate",
+"en": "Hi there! What's the last name on the order?",
+"pt": "Oi! Qual o sobrenome do pedido?"
+},
+{
+"s": "You",
+"en": "It's {name}. I'm here for my pickup. I'm parked in spot six.",
+"pt": "{name}. Vim retirar. Estou na vaga seis."
+},
+{
+"s": "Associate",
+"en": "Got it. Just so you know, we had to substitute a couple of items.",
+"pt": "Certo. Só avisando, substituímos alguns itens."
+},
+{
+"s": "You",
+"en": "Oh, okay. Looks like they subbed the milk for a different brand. That's fine.",
+"pt": "Ah, ok. Trocaram a marca do leite. Tudo bem."
+},
+{
+"s": "Associate",
+"en": "And the Goldfish for the store brand. Are you okay with that?",
+"pt": "E o Goldfish pela marca da loja. Tudo bem?"
+},
+{
+"s": "You",
+"en": "Hmm, can I just say no to that substitution? The kid only eats the real ones.",
+"pt": "Hmm, posso recusar essa? A criança só come o original."
+},
+{
+"s": "Associate",
+"en": "Sure, I'll take it off. You won't be charged.",
+"pt": "Claro, tiro. Não será cobrado."
+},
+{
+"s": "You",
+"en": "Thanks! The trunk's open. You can just toss it in the back.",
+"pt": "Obrigado! O porta-malas tá aberto, pode jogar atrás."
+},
+{
+"s": "Associate",
+"en": "You're all set! Have a great day!",
+"pt": "Tudo certo! Ótimo dia!"
+}
+],
+"prompts": [
+"Na vaga do pickup: avise que chegou, diga a vaga e aceite uma substituição e recuse outra."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "The build just got deployed to staging.",
+"pt": "O build acabou de subir pra staging.",
+"pr": "diplóid tchu stêidjin"
+},
+{
+"en": "I'm gonna run a quick smoke test.",
+"pt": "Vou rodar um smoke test rápido.",
+"pr": "gâna rân â kuík smôuk tést"
+},
+{
+"en": "Smoke test passed. We're good to go.",
+"pt": "O smoke test passou. Podemos seguir.",
+"pr": "uír gúd tchu gôu"
+},
+{
+"en": "Is this the release candidate?",
+"pt": "Essa é a versão candidata ao release?",
+"pr": "riliís kéndidêit"
+},
+{
+"en": "I'd hold off on the release until that's fixed.",
+"pt": "Eu seguraria o release até isso ser corrigido.",
+"pr": "áid hôuld óf"
+},
+{
+"en": "If anything breaks, can we roll it back?",
+"pt": "Se algo quebrar, dá pra fazer rollback?",
+"pr": "rôul it bék"
+}
+],
+"dialog": [
+{
+"s": "Eng Manager",
+"en": "Okay folks, it's release day. Where are we at?",
+"pt": "Pessoal, dia de release. Em que pé estamos?"
+},
+{
+"s": "You",
+"en": "The build just got deployed to staging. I'm gonna run a quick smoke test.",
+"pt": "O build subiu pra staging. Vou rodar um smoke test."
+},
+{
+"s": "Eng Manager",
+"en": "Cool. Ping me when you're done.",
+"pt": "Legal. Me avisa quando terminar."
+},
+{
+"s": "You",
+"en": "Smoke test passed. Login, cart and checkout look good.",
+"pt": "Smoke passou. Login, carrinho e checkout ok."
+},
+{
+"s": "Eng Manager",
+"en": "Nice. So is this the release candidate?",
+"pt": "Boa. Essa é a release candidate?"
+},
+{
+"s": "You",
+"en": "Yep, RC two. But push notifications aren't showing up on iOS. I'd hold off on the release until that's fixed.",
+"pt": "Sim, RC2. Mas as notificações não aparecem no iOS. Seguraria o release até corrigir."
+},
+{
+"s": "Eng Manager",
+"en": "Fair enough. If anything breaks, can we roll it back?",
+"pt": "Justo. Se quebrar, dá rollback?"
+},
+{
+"s": "Dev",
+"en": "Yeah, it takes like two minutes.",
+"pt": "Sim, leva uns dois minutos."
+},
+{
+"s": "Eng Manager",
+"en": "Alright, it's a go after the fix.",
+"pt": "Aprovado depois da correção."
+},
+{
+"s": "You",
+"en": "Sounds good. I'll do a sanity check on prod right after the deploy.",
+"pt": "Beleza. Faço um sanity check em produção logo depois."
+}
+],
+"prompts": [
+"The new build is on staging. What's next? → smoke test + resultado.",
+"Are we ready to ship today? → release candidate + segurar o release até corrigir.",
+"What if users find a big bug tonight? → roll back + sanity check em prod."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "I've got a lot on my plate this week.",
+"pt": "Estou com muita coisa essa semana.",
+"pr": "áiv gárâ lárân mái plêit"
+},
+{
+"en": "Let me prioritize. What's most urgent?",
+"pt": "Deixa eu priorizar. O que é mais urgente?",
+"pr": "prâiórâtáiz"
+},
+{
+"en": "Just following up on my email from Monday.",
+"pt": "Só retomando meu e-mail de segunda.",
+"pr": "fálôuin âp"
+},
+{
+"en": "I still need your sign-off on the cover letter.",
+"pt": "Ainda preciso da sua aprovação na carta de apresentação.",
+"pr": "sáin-óf / kâvâr lérâr"
+},
+{
+"en": "Can you give me a heads-up if anything changes?",
+"pt": "Você me avisa com antecedência se algo mudar?",
+"pr": "hédz-âp"
+},
+{
+"en": "Let's touch base tomorrow morning.",
+"pt": "Vamos nos falar rapidinho amanhã de manhã.",
+"pr": "tâtch bêis"
+}
+],
+"dialog": [
+{
+"s": "Manager",
+"en": "Hi! How's your week going?",
+"pt": "Oi! Como está a semana?"
+},
+{
+"s": "You",
+"en": "Busy! I've got a lot on my plate this week: the annual report, a labeling update and the CMC supplement.",
+"pt": "Corrida! Muita coisa: relatório anual, rotulagem e o suplemento CMC."
+},
+{
+"s": "Manager",
+"en": "Wow, okay. Which one comes first?",
+"pt": "Nossa. Qual vem primeiro?"
+},
+{
+"s": "You",
+"en": "Let me prioritize. The annual report is due Friday, so that's the most urgent.",
+"pt": "Deixa eu priorizar. O relatório anual vence sexta, é o mais urgente."
+},
+{
+"s": "Manager",
+"en": "Makes sense. Anything you need from me?",
+"pt": "Faz sentido. Precisa de algo de mim?"
+},
+{
+"s": "You",
+"en": "Yes. I still need your sign-off on the cover letter for the supplement. Just following up on my email from Monday.",
+"pt": "Sim. Preciso da sua aprovação na carta do suplemento. Retomando meu e-mail de segunda."
+},
+{
+"s": "Manager",
+"en": "Oh, sorry, it got buried in my inbox. I'll sign it today.",
+"pt": "Desculpa, se perdeu na caixa. Assino hoje."
+},
+{
+"s": "You",
+"en": "Thank you! And the labeling depends on Marketing. Can you give me a heads-up if their timeline changes?",
+"pt": "Obrigada! A rotulagem depende do Marketing. Me avisa se o prazo deles mudar?"
+},
+{
+"s": "Manager",
+"en": "Will do.",
+"pt": "Pode deixar."
+},
+{
+"s": "You",
+"en": "Great. Let's touch base tomorrow morning to check on the annual report.",
+"pt": "Ótimo. Falamos amanhã cedo sobre o relatório anual."
+}
+],
+"prompts": [
+"Can you take on one more submission this week? → a lot on my plate + o que é mais urgente.",
+"Is the cover letter ready to go? → falta a sign-off + retomando o e-mail.",
+"Marketing might change the label artwork. → peça um heads-up + touch base amanhã."
+]
+},
+"watch": {
+"title": "Home Alone (1990)",
+"where": "Disney+",
+"why": "Comédia clássica de fim de ano; o Kevin faz compras sozinho no supermercado e passa no caixa.",
+"tip": "Na cena do supermercado, pausem, repitam 2 ou 3 falas e revejam sem legenda.",
+"expr": [
+"Keep the change, ya filthy animal! — fique com o troco, seu animal!",
+"Are you here all by yourself? — você está aqui sozinho?"
+]
+}
+},
+{
+"day": 19,
+"week": 3,
+"title": "Self-checkout: quando a máquina dá problema",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "I'm just gonna use the self-checkout.",
+"pt": "Vou usar o autoatendimento.",
+"pr": "áim djâst gâna iúz dâ sélf-tchékáut"
+},
+{
+"en": "It won't scan. I've tried like three times.",
+"pt": "Não passa. Já tentei umas três vezes.",
+"pr": "it uônt skén"
+},
+{
+"en": "It keeps saying \"unexpected item in the bagging area.\"",
+"pt": "Fica dizendo 'item inesperado na área de embalagem'.",
+"pr": "ânikspéktid áirâm / béguin érria"
+},
+{
+"en": "How do I look up bananas? Is there a code?",
+"pt": "Como eu procuro banana? Tem código?",
+"pr": "lúkâp bânénâz"
+},
+{
+"en": "Oops, I accidentally scanned it twice.",
+"pt": "Opa, passei duas vezes sem querer.",
+"pr": "éksidéntâli skénd it tuáis"
+},
+{
+"en": "The screen froze. It's not doing anything.",
+"pt": "A tela travou. Não faz nada.",
+"pr": "frôuz"
+},
+{
+"en": "Can somebody help me out over here?",
+"pt": "Alguém pode me dar uma ajuda aqui?",
+"pr": "sâmbâri hélp mi áut"
+},
+{
+"en": "I need someone to check my ID for this.",
+"pt": "Preciso que alguém confira meu documento pra isso.",
+"pr": "ái-dí"
+},
+{
+"en": "Let me override that for you.",
+"pt": "(Você vai ouvir) Deixa eu liberar isso pra você.",
+"pr": "ôuvâráid"
+},
+{
+"en": "No worries, I'll void that one.",
+"pt": "(Você vai ouvir) Tranquilo, eu cancelo esse item.",
+"pr": "vóid"
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "The line's huge. I'm just gonna use the self-checkout.",
+"pt": "A fila tá enorme. Vou no autoatendimento."
+},
+{
+"s": "Partner",
+"en": "Okay. How do I look up bananas? Is there a code?",
+"pt": "Tá. Como procuro banana? Tem código?"
+},
+{
+"s": "You",
+"en": "Hit \"Look Up Item\"... Ugh, now the candy won't scan. I've tried like three times.",
+"pt": "Aperta 'Look Up Item'... Aff, agora o doce não passa. Tentei três vezes."
+},
+{
+"s": "Partner",
+"en": "And it keeps saying \"unexpected item in the bagging area.\" Can somebody help me out over here?",
+"pt": "E fica dizendo 'item inesperado'. Alguém pode ajudar aqui?"
+},
+{
+"s": "Associate",
+"en": "Sure! Did you put your purse on the scale? That's probably it. Let me override that for you.",
+"pt": "Claro! Colocou a bolsa na balança? Deve ser isso. Vou liberar."
+},
+{
+"s": "You",
+"en": "Oops, I accidentally scanned the candy twice.",
+"pt": "Opa, passei o doce duas vezes."
+},
+{
+"s": "Associate",
+"en": "No worries, I'll void that one. Just hit \"Pay Now\" when you're done.",
+"pt": "Tranquilo, cancelo esse. Aperta 'Pay Now' quando terminar."
+},
+{
+"s": "Partner",
+"en": "Thanks! Oh, and the wine. I need someone to check my ID for this.",
+"pt": "Obrigada! E o vinho, precisa conferir meu documento."
+},
+{
+"s": "Associate",
+"en": "Got it. You're good. Happy Halloween!",
+"pt": "Certo. Tudo ok. Feliz Halloween!"
+}
+],
+"prompts": [
+"A máquina deu problema: explique o que aconteceu e peça ajuda ao funcionário."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "This ticket's ready for QA. I'll pick it up after lunch.",
+"pt": "Esse ticket está pronto pra QA. Pego depois do almoço.",
+"pr": "rédi fór kiú-êi"
+},
+{
+"en": "It doesn't meet the acceptance criteria.",
+"pt": "Não atende os critérios de aceite.",
+"pr": "ékséptâns kráitíria"
+},
+{
+"en": "I'm gonna move it back to In Progress.",
+"pt": "Vou voltar ele pra In Progress.",
+"pr": "múv it bék"
+},
+{
+"en": "I reopened the ticket and left a comment.",
+"pt": "Reabri o ticket e deixei um comentário.",
+"pr": "riôupând"
+},
+{
+"en": "Is this a bug or a new requirement?",
+"pt": "Isso é bug ou requisito novo?",
+"pr": "rikuáiârmânt"
+},
+{
+"en": "Verified on build 2.4.1, closing it out.",
+"pt": "Verificado no build 2.4.1, fechando.",
+"pr": "vérifáid / klôuzin it áut"
+}
+],
+"dialog": [
+{
+"s": "Dev",
+"en": "Hey, the password reset ticket is ready for QA.",
+"pt": "O ticket de reset de senha está pronto pra QA."
+},
+{
+"s": "You",
+"en": "Cool, I'll pick it up after lunch.",
+"pt": "Legal, pego depois do almoço."
+},
+{
+"s": "You",
+"en": "So, the reset works, but it doesn't meet the acceptance criteria. The link should expire in 15 minutes and it never expires.",
+"pt": "O reset funciona, mas não atende os critérios. O link devia expirar em 15 min e nunca expira."
+},
+{
+"s": "Dev",
+"en": "Oh, I missed that part.",
+"pt": "Ah, deixei passar essa parte."
+},
+{
+"s": "You",
+"en": "No worries. I reopened the ticket and left a comment with the steps. I'm gonna move it back to In Progress.",
+"pt": "Tranquilo. Reabri e comentei os passos. Vou voltar pra In Progress."
+},
+{
+"s": "PO",
+"en": "Also, the error message is kinda confusing. Can we change it?",
+"pt": "A mensagem de erro é confusa. Dá pra mudar?"
+},
+{
+"s": "You",
+"en": "Good catch, but is this a bug or a new requirement? It's not in the ticket.",
+"pt": "Boa observação, mas é bug ou requisito novo? Não está no ticket."
+},
+{
+"s": "PO",
+"en": "Fair. I'll create a separate story.",
+"pt": "Justo. Crio outra história."
+},
+{
+"s": "You",
+"en": "Verified on build 2.4.1, closing it out.",
+"pt": "Verificado no build 2.4.1, fechando."
+}
+],
+"prompts": [
+"The checkout ticket is done. Can you test it? → pronto pra QA + quando você pega.",
+"Why did you move my ticket back? → não atende os acceptance criteria + reabriu e comentou."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "The SOP is still in draft.",
+"pt": "O SOP ainda está em rascunho.",
+"pr": "és-ôu-pí / dréft"
+},
+{
+"en": "I routed it for approval this morning.",
+"pt": "Mandei pro fluxo de aprovação hoje de manhã.",
+"pr": "ráutid it fór âprúvâl"
+},
+{
+"en": "Make sure you're working on the latest version.",
+"pt": "Confira se está trabalhando na versão mais recente.",
+"pr": "lêitâst vârjân"
+},
+{
+"en": "Someone has it checked out, so I can't edit it.",
+"pt": "Alguém fez check-out dele, então não consigo editar.",
+"pr": "tchékt áut"
+},
+{
+"en": "It just needs your e-signature in Vault.",
+"pt": "Só falta sua assinatura eletrônica no Vault.",
+"pr": "í-sígnâtchâr / vólt"
+},
+{
+"en": "When does it become effective?",
+"pt": "Quando ele entra em vigor?",
+"pr": "bikâm iféktiv"
+}
+],
+"dialog": [
+{
+"s": "Doc Control",
+"en": "Quick question about the labeling review SOP. Is it ready?",
+"pt": "Pergunta rápida sobre o SOP de revisão de rotulagem. Está pronto?"
+},
+{
+"s": "You",
+"en": "Almost. I routed it for approval this morning, but it's stuck on the second approver.",
+"pt": "Quase. Mandei pra aprovação hoje, mas está travado no segundo aprovador."
+},
+{
+"s": "Doc Control",
+"en": "Oh, that's the RA Director. I'll ping him. Did you include Marketing's changes?",
+"pt": "É o Diretor de AR. Vou chamá-lo. Incluiu as mudanças do Marketing?"
+},
+{
+"s": "You",
+"en": "Yes, but Marketing sent me an old copy. Make sure you're working on the latest version. It's 3.0, not 2.1.",
+"pt": "Sim, mas me mandaram cópia antiga. Confira a versão mais recente: 3.0, não 2.1."
+},
+{
+"s": "Doc Control",
+"en": "Good to know. I also wanted to fix a typo, but I can't open it.",
+"pt": "Bom saber. Queria corrigir um erro de digitação, mas não abre."
+},
+{
+"s": "You",
+"en": "Right, someone has it checked out, so nobody can edit it.",
+"pt": "Alguém fez check-out, ninguém consegue editar."
+},
+{
+"s": "Doc Control",
+"en": "Okay. Anything you need from the Director?",
+"pt": "Precisa de algo do Diretor?"
+},
+{
+"s": "You",
+"en": "It just needs his e-signature in Vault. Then, when does it become effective?",
+"pt": "Só a assinatura eletrônica no Vault. E quando entra em vigor?"
+},
+{
+"s": "Doc Control",
+"en": "Usually 30 days after approval, so the team has time for training.",
+"pt": "Normalmente 30 dias após aprovação, pra dar tempo de treinamento."
+}
+],
+"prompts": [
+"Where are we with the new SOP? → em rascunho ou em aprovação (e quando).",
+"I tried to edit the document, but it's locked. → alguém fez check-out + versão mais recente.",
+"What's left before we can use it? → falta e-signature + quando entra em vigor."
+]
+},
+"watch": {
+"title": "Hocus Pocus (1993)",
+"where": "Disney+",
+"why": "Três bruxas voltam em plena noite de Halloween. Mostra como funciona o trick-or-treat (sustos leves).",
+"tip": "Na cena das crianças pedindo doces, pausem e repitam 2 ou 3 falas.",
+"expr": [
+"Trick or treat! — doces ou travessuras!",
+"It's just a bunch of hocus pocus! — é tudo bobagem!"
+]
+}
+},
+{
+"day": 20,
+"week": 3,
+"title": "Halloween na loja: doces e fantasia",
+"review": false,
+"common": {
+"chunks": [
+{
+"en": "We still gotta grab candy for tomorrow.",
+"pt": "A gente ainda tem que pegar doce pra amanhã.",
+"pr": "uí stíu gára gréb kéndi"
+},
+{
+"en": "Do you have this costume in a kids' 4T?",
+"pt": "Tem essa fantasia no tamanho 4T infantil?",
+"pr": "kóstum / fór-tí"
+},
+{
+"en": "These are pretty much sold out, huh?",
+"pt": "Tá praticamente esgotado, né?",
+"pr": "príri mâtch sôuld áut"
+},
+{
+"en": "Is there a fitting room, or can she just try it on here?",
+"pt": "Tem provador, ou ela pode experimentar aqui mesmo?",
+"pr": "fírin rúm / trái-ri-ón"
+},
+{
+"en": "Which one's the better deal, the big bag or the two small ones?",
+"pt": "Qual compensa mais, o pacote grande ou os dois pequenos?",
+"pr": "bérâr díl"
+},
+{
+"en": "Let's get the nut-free stuff, just to be safe.",
+"pt": "Vamos levar os sem amendoim/castanha, só por segurança.",
+"pr": "nât-frí stâf"
+},
+{
+"en": "She can't make up her mind.",
+"pt": "Ela não consegue se decidir.",
+"pr": "méikâp hâr máind"
+},
+{
+"en": "Okay, that should do it. Let's head out.",
+"pt": "Pronto, acho que é isso. Vamos embora.",
+"pr": "dhét xúd dú it / héd áut"
+},
+{
+"en": "That one runs small.",
+"pt": "(Você vai ouvir) Esse veste pequeno."
+},
+{
+"en": "Just so you know, all sales on costumes are final.",
+"pt": "(Você vai ouvir) Fantasia não tem troca nem devolução."
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "We still gotta grab candy for tomorrow.",
+"pt": "Ainda temos que pegar doce pra amanhã."
+},
+{
+"s": "Partner",
+"en": "And a costume! She wants to be a butterfly. Excuse me, do you have this costume in a kids' 4T?",
+"pt": "E fantasia! Ela quer ser borboleta. Com licença, tem essa no 4T?"
+},
+{
+"s": "Associate",
+"en": "Let me see... We only have what's on the rack. What size is she?",
+"pt": "Deixa ver... Só o que está na arara. Que tamanho ela usa?"
+},
+{
+"s": "Partner",
+"en": "She's a four. Ugh, these are pretty much sold out, huh?",
+"pt": "Quatro. Aff, tá praticamente esgotado, né?"
+},
+{
+"s": "Associate",
+"en": "Pretty much, sorry. There's a 5T, but that one runs small. And all costumes are 30% off today.",
+"pt": "Praticamente. Tem 5T, mas veste pequeno. E tudo com 30% off hoje."
+},
+{
+"s": "Partner",
+"en": "Is there a fitting room, or can she just try it on here?",
+"pt": "Tem provador ou ela experimenta aqui?"
+},
+{
+"s": "Associate",
+"en": "She can just try it on here, no problem. Just so you know, all sales on costumes are final.",
+"pt": "Pode experimentar aqui. Só avisando, fantasia não tem troca."
+},
+{
+"s": "You",
+"en": "Now she wants the bee one too... She can't make up her mind.",
+"pt": "Agora ela quer a de abelha também... Não consegue se decidir."
+},
+{
+"s": "Partner",
+"en": "Butterfly. Final answer. Now candy: which one's the better deal, the big bag or the two small ones?",
+"pt": "Borboleta. Resposta final. Agora doce: qual compensa mais?"
+},
+{
+"s": "You",
+"en": "The big bag. And let's get the nut-free stuff, just to be safe.",
+"pt": "O pacote grande. E os sem amendoim, por segurança."
+},
+{
+"s": "Partner",
+"en": "Okay, that should do it. Let's head out.",
+"pt": "Pronto, é isso. Vamos embora."
+}
+],
+"prompts": [
+"Na loja: peça uma fantasia num tamanho específico, pergunte se pode experimentar e qual doce compensa mais."
+]
+},
+"qa": {
+"chunks": [
+{
+"en": "What went well this sprint?",
+"pt": "O que deu certo nesta sprint?"
+},
+{
+"en": "What could we do better next time?",
+"pt": "O que dá pra melhorar da próxima vez?"
+},
+{
+"en": "We kept getting tickets late in the sprint.",
+"pt": "Os tickets ficaram chegando no fim da sprint."
+},
+{
+"en": "That left us almost no time for testing.",
+"pt": "Isso deixou a gente quase sem tempo pra testar."
+},
+{
+"en": "Shout-out to Ahmed for fixing that crash so fast.",
+"pt": "Um salve pro Ahmed por corrigir aquele crash tão rápido.",
+"pr": "xáut-áut"
+},
+{
+"en": "Can we try a code freeze two days before the end?",
+"pt": "Podemos testar um congelamento de código dois dias antes do fim?",
+"pr": "kôud fríz"
+}
+],
+"dialog": [
+{
+"s": "Scrum Master",
+"en": "Alright, let's start the retro. What went well this sprint?",
+"pt": "Vamos começar a retro. O que deu certo?"
+},
+{
+"s": "You",
+"en": "The release went smoothly. And shout-out to Ahmed for fixing that crash so fast.",
+"pt": "O release correu tranquilo. E um salve pro Ahmed pelo crash."
+},
+{
+"s": "Ahmed",
+"en": "Aw, thanks, man.",
+"pt": "Valeu, cara."
+},
+{
+"s": "Scrum Master",
+"en": "Love it. What could we do better next time?",
+"pt": "Adorei. O que melhorar?"
+},
+{
+"s": "You",
+"en": "We kept getting tickets late in the sprint. Four tickets came in on Wednesday, and that left us almost no time for testing.",
+"pt": "Os tickets chegaram tarde. Quatro na quarta, quase sem tempo pra testar."
+},
+{
+"s": "Dev",
+"en": "Yeah, fair. Some of those were bigger than we thought.",
+"pt": "Justo. Alguns eram maiores que achávamos."
+},
+{
+"s": "You",
+"en": "Totally. So, can we try a code freeze two days before the end? Just for one sprint, to see how it goes.",
+"pt": "Total. Podemos testar um code freeze dois dias antes? Só uma sprint, pra ver."
+},
+{
+"s": "Scrum Master",
+"en": "I like that. Let's give it a shot. Anything else?",
+"pt": "Gostei. Vamos tentar. Mais algo?"
+},
+{
+"s": "You",
+"en": "Nope, that's it from my side. Have a great weekend, guys!",
+"pt": "Não, é isso. Bom fim de semana!"
+}
+],
+"prompts": [
+"What went well for you this sprint? → algo que deu certo + um shout-out.",
+"Anything we should do better? → tickets tarde + pouco tempo de teste.",
+"So what do you suggest? → proponha o code freeze 'just for one sprint'."
+]
+},
+"reg": {
+"chunks": [
+{
+"en": "We just got an information request from the FDA.",
+"pt": "Acabamos de receber um pedido de informação do FDA.",
+"pr": "infârmêixân rikuést"
+},
+{
+"en": "They're asking us to clarify the dissolution method.",
+"pt": "Estão pedindo pra esclarecer o método de dissolução.",
+"pr": "klérifái / dissâlúxân"
+},
+{
+"en": "We've got ten days to get back to them.",
+"pt": "Temos dez dias pra responder a eles."
+},
+{
+"en": "Who's the best person to pull that data?",
+"pt": "Quem é a melhor pessoa pra levantar esses dados?"
+},
+{
+"en": "Let's keep the response short and to the point.",
+"pt": "Vamos manter a resposta curta e objetiva."
+},
+{
+"en": "I'll set up a quick call with CMC and the lab.",
+"pt": "Vou marcar uma call rápida com CMC e o laboratório.",
+"pr": "sérâp"
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "Do you have a minute? We just got an information request from the FDA on the ANDA.",
+"pt": "Tem um minuto? Recebemos um IR do FDA sobre a ANDA."
+},
+{
+"s": "Director",
+"en": "Oh boy. What are they asking for?",
+"pt": "Xi. O que estão pedindo?"
+},
+{
+"s": "You",
+"en": "They're asking us to clarify the dissolution method. Basically, why we picked that medium and that speed.",
+"pt": "Esclarecer o método de dissolução: por que escolhemos aquele meio e velocidade."
+},
+{
+"s": "Director",
+"en": "Okay. How much time do we have?",
+"pt": "Quanto tempo temos?"
+},
+{
+"s": "You",
+"en": "We've got ten days to get back to them. So I'd like an internal draft by Wednesday.",
+"pt": "Dez dias. Quero um rascunho interno até quarta."
+},
+{
+"s": "Director",
+"en": "Makes sense. Who's gonna pull the method validation data?",
+"pt": "Faz sentido. Quem levanta os dados de validação?"
+},
+{
+"s": "You",
+"en": "That's my question too. Who's the best person to pull that data? Maybe Priya from the lab?",
+"pt": "Também quero saber. Quem é a melhor pessoa? Talvez a Priya do lab?"
+},
+{
+"s": "Director",
+"en": "Yeah, Priya. And please don't send them a fifty-page answer.",
+"pt": "Isso, a Priya. E não mande uma resposta de 50 páginas."
+},
+{
+"s": "You",
+"en": "Agreed. Let's keep the response short and to the point. I'll set up a quick call with CMC and the lab this afternoon.",
+"pt": "Combinado. Curta e objetiva. Marco uma call com CMC e lab hoje à tarde."
+},
+{
+"s": "Director",
+"en": "Perfect. Keep me in the loop.",
+"pt": "Perfeito. Me mantenha informado."
+}
+],
+"prompts": [
+"Avise sua diretora que chegou um information request do FDA e o que pedem.",
+"How long do we have? → prazo + quando quer o rascunho interno.",
+"Who's gonna help you with this? → quem levanta os dados + resposta objetiva + marque a call."
+]
+},
+"watch": {
+"title": "It's the Great Pumpkin, Charlie Brown (1966)",
+"where": "Apple TV+",
+"why": "Clássico americano do Halloween, ~25 min, frases curtas e claras. Dá pra ver com a criança.",
+"tip": "Pausem na cena das crianças contando o que ganharam e repitam.",
+"expr": [
+"Good grief! — puxa vida!",
+"I got a rock. — ganhei uma pedra"
+]
+}
+},
+{
+"day": 21,
+"week": 3,
+"title": "Revisão da semana: Publix, Walmart e Halloween",
+"review": true,
+"common": {
+"chunks": [
+{
+"en": "Say \"trick or treat\"!",
+"pt": "Fala 'doces ou travessuras'!",
+"pr": "trík ór trít"
+},
+{
+"en": "What do you say? Thank you!",
+"pt": "O que se diz? Obrigada!"
+},
+{
+"en": "Love your costume! What are you?",
+"pt": "(Você vai ouvir) Amei sua fantasia! Você é o quê?"
+},
+{
+"en": "Just grab one, sweetie.",
+"pt": "(Você vai ouvir) Pega só um, querida."
+}
+],
+"dialog": [
+{
+"s": "You",
+"en": "I'm on my way. I'll be there in ten.",
+"pt": "Tô a caminho. Chego em dez."
+},
+{
+"s": "Partner",
+"en": "Okay! I'm at Publix. Excuse me, where can I find the peanut butter?",
+"pt": "Tá! Tô no Publix. Com licença, onde fica a pasta de amendoim?"
+},
+{
+"s": "Employee",
+"en": "Aisle seven, on your left.",
+"pt": "Corredor 7, à esquerda."
+},
+{
+"s": "Partner",
+"en": "Thanks! Do you have any more of these in the back? The shelf's empty.",
+"pt": "Obrigada! Tem mais no estoque? A prateleira tá vazia."
+},
+{
+"s": "Employee",
+"en": "Let me check in the back for you.",
+"pt": "Vou ver no estoque."
+},
+{
+"s": "Cashier",
+"en": "Did you find everything okay?",
+"pt": "Achou tudo certinho?"
+},
+{
+"s": "You",
+"en": "Yeah, thanks. Wait, I think that rang up wrong. It's supposed to be on sale.",
+"pt": "Sim. Espera, acho que passou errado. Era pra estar em promoção."
+},
+{
+"s": "Cashier",
+"en": "You're right, it's BOGO. I fixed it.",
+"pt": "Tem razão, é BOGO. Corrigi."
+},
+{
+"s": "Partner",
+"en": "Oh, hold on a sec, I forgot the milk!",
+"pt": "Ah, espera, esqueci o leite!"
+},
+{
+"s": "You",
+"en": "Hi, I'd like to return this. It stopped working after two days.",
+"pt": "Oi, quero devolver isso. Parou depois de dois dias."
+},
+{
+"s": "Associate",
+"en": "Sorry about that. Wanna swap it for a new one?",
+"pt": "Que pena. Quer trocar por um novo?"
+},
+{
+"s": "You",
+"en": "Actually, I'd rather just get a refund.",
+"pt": "Na verdade, prefiro o reembolso."
+},
+{
+"s": "Associate",
+"en": "Sure. It'll take three to five business days to post.",
+"pt": "Claro. Leva de 3 a 5 dias úteis."
+},
+{
+"s": "Partner",
+"en": "Ugh, it won't scan. Can somebody help me out over here?",
+"pt": "Aff, não passa. Alguém me ajuda aqui?"
+},
+{
+"s": "Associate",
+"en": "No worries, let me override that for you.",
+"pt": "Tranquilo, vou liberar pra você."
+},
+{
+"s": "You",
+"en": "Okay, that should do it. Let's head out!",
+"pt": "Pronto, é isso. Vamos embora!"
+}
+],
+"prompts": [
+"Use pelo menos 2 frases de trick-or-treat hoje à noite!"
+]
+},
+"qa": {
+"chunks": [],
+"dialog": [
+{
+"s": "Manager",
+"en": "Hey, how was your week?",
+"pt": "Como foi a semana?"
+},
+{
+"s": "You",
+"en": "Busy, but good. The release went smoothly in the end.",
+"pt": "Corrida, mas boa. O release correu bem no fim."
+},
+{
+"s": "Manager",
+"en": "Nice. I heard there was an issue on iOS?",
+"pt": "Boa. Ouvi que teve problema no iOS?"
+},
+{
+"s": "You",
+"en": "Yeah, push notifications weren't showing up. I said I'd hold off on the release until that's fixed, so we waited one day.",
+"pt": "Sim, as notificações não apareciam. Segurei o release até corrigir, esperamos um dia."
+},
+{
+"s": "Manager",
+"en": "Good call. What about the coupon crash?",
+"pt": "Boa decisão. E o crash do cupom?"
+},
+{
+"s": "You",
+"en": "I logged a bug for that. I can reproduce it every single time, so Ahmed fixed it super fast. Shout-out to him.",
+"pt": "Abri o bug. Reproduzia toda vez, então o Ahmed corrigiu rápido. Um salve pra ele."
+},
+{
+"s": "Manager",
+"en": "Love it. Anything slowing you down?",
+"pt": "Adorei. Algo te atrasando?"
+},
+{
+"s": "You",
+"en": "Tickets keep coming in late. Let's make sure testing is part of the estimate from now on.",
+"pt": "Tickets chegando tarde. Vamos garantir que o teste entre na estimativa daqui pra frente."
+},
+{
+"s": "Manager",
+"en": "Agreed. By the way, about the new test framework...",
+"pt": "Concordo. Aliás, sobre o novo framework..."
+},
+{
+"s": "You",
+"en": "Can we take that offline? I wanna show you some numbers first.",
+"pt": "Falamos depois? Quero te mostrar uns números antes."
+},
+{
+"s": "Manager",
+"en": "Sure. Anything else?",
+"pt": "Claro. Mais algo?"
+},
+{
+"s": "You",
+"en": "The password reset ticket didn't meet the acceptance criteria, so I reopened it. Other than that, no blockers on my end.",
+"pt": "O ticket de reset não atendeu os critérios, reabri. Fora isso, sem bloqueios."
+},
+{
+"s": "Manager",
+"en": "Great work. Have a good weekend!",
+"pt": "Ótimo trabalho. Bom fim de semana!"
+}
+],
+"prompts": [
+"Give me your standup update. → ontem + hoje + sem bloqueios.",
+"I can't reproduce your bug. Are you sure it's real? → reproduz toda vez + 3 passos + gravação/logs.",
+"The PO wants to ship today, but there's a crash on Android. → segurar o release + rollback + levar detalhes 'offline'."
+]
+},
+"reg": {
+"chunks": [],
+"dialog": [
+{
+"s": "Director",
+"en": "Let's go over your week. How's the site transfer supplement?",
+"pt": "Vamos repassar a semana. Como está o suplemento de transferência?"
+},
+{
+"s": "You",
+"en": "To be honest, we're running behind schedule on the submission. The stability data is still pending on QA's side.",
+"pt": "Sinceramente, estamos atrasados. Os dados de estabilidade estão pendentes com a Qualidade."
+},
+{
+"s": "Director",
+"en": "Can't we submit without it?",
+"pt": "Não dá pra submeter sem isso?"
+},
+{
+"s": "You",
+"en": "I'd rather not rush it. A mistake here could cost us months. I suggest we push the internal deadline by a week.",
+"pt": "Prefiro não apressar. Um erro custa meses. Sugiro empurrar o prazo interno uma semana."
+},
+{
+"s": "Director",
+"en": "Okay, makes sense. What about the FDA information request?",
+"pt": "Faz sentido. E o IR do FDA?"
+},
+{
+"s": "You",
+"en": "We've got ten days to get back to them. Priya is pulling the data, and let's keep the response short and to the point.",
+"pt": "Dez dias pra responder. A Priya está levantando os dados; resposta curta e objetiva."
+},
+{
+"s": "Director",
+"en": "Agreed. And the labeling update, who owns this one?",
+"pt": "Concordo. E a rotulagem, quem é o responsável?"
+},
+{
+"s": "You",
+"en": "The RA Associate owns that one. We're still waiting for comments from Marketing.",
+"pt": "O RA Associate. Esperando comentários do Marketing."
+},
+{
+"s": "Director",
+"en": "Okay. Anything you need from me?",
+"pt": "Precisa de algo de mim?"
+},
+{
+"s": "You",
+"en": "Yes, just following up on my email from Monday. I still need your sign-off on the cover letter.",
+"pt": "Sim, retomando meu e-mail de segunda. Preciso da sua aprovação na carta."
+},
+{
+"s": "Director",
+"en": "Oh, sorry! I'll sign it in Vault today.",
+"pt": "Desculpa! Assino no Vault hoje."
+},
+{
+"s": "You",
+"en": "Thank you! I'll update the submission tracker and keep you in the loop.",
+"pt": "Obrigada! Atualizo o tracker e te mantenho informado."
+}
+],
+"prompts": [
+"Where are we on the annual report? → pendente com a Qualidade + quem é o responsável.",
+"Leadership wants the submission next week. Can we do it? → atrasados + não apressar + nova data.",
+"The FDA sent us questions about the impurity method. → prazo + quem levanta os dados + resposta objetiva + call."
+]
+},
+"watch": {
+"title": "Monsters, Inc. (2001)",
+"where": "Disney+",
+"why": "Ótimo para a noite de Halloween sem susto de verdade; muito inglês natural de escritório.",
+"tip": "Na cena em que Mike e Sulley chegam ao trabalho, pausem e repitam 2 ou 3 falas.",
+"expr": [
+"Kitty! — gatinho!",
+"We scare because we care. — a gente assusta porque se importa"
+]
+}
+}
+]
