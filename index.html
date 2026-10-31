@@ -735,7 +735,7 @@ function runLesson(L, lessonRef, level){
         `<button class="btn ghost block" id="spSkip">Não posso falar agora</button>`);
       let waiting=true;
       const grade = (alts) => {
-        tries++; waiting=false; disarm();
+        tries++; waiting=false; disarm(); const hd=$("#heard",el); if(hd) hd.textContent="";
         let top={score:-1}; for(const a of alts){ const g=scoreSpeech(target,a); if(g.score>top.score) top=g; }
         best=Math.max(best,top.score);
         const pass = top.score>=0.8;
@@ -751,11 +751,13 @@ function runLesson(L, lessonRef, level){
         else { $("#spAgain",el).onclick=()=>{ waiting=true; $("#spRes",el).innerHTML=""; const f=$(".foot .wrap",el); f.innerHTML=`<button class="btn ghost block" id="spSkip">Não posso falar agora</button>`; bindSkip(); if(SR) startMic(false); else { $("#dict",el).value=""; $("#dict",el).focus(); } };
           $("#spGive",el).onclick=()=>{ srsMark(ex.c,false); R.mistakes++; R.queue.shift(); R.done++; show(); }; }
       };
-      let rec=null, micStop=null, armed=false, armT=0;
+      let rec=null, micStop=null, armed=false, armT=0, armWait=0, micNote="", retries=0;
       const disarm = () => { armed=false; clearTimeout(armT); };
-      const armMic = () => { if(!armed) return; disarm(); if(!document.hidden && !rec) startMic(true); };
-      const listenAfterAudio = (slow, viaTimer) => { killMic(); armed=true; killMic=disarm; clearTimeout(armT);
-        const onEnd = () => { clearTimeout(armT); armT=setTimeout(armMic,300); };
+      const armMic = () => { if(!armed) return;
+        if(speechSynthesis.speaking){ if(++armWait>40){ disarm(); $("#heard",el).textContent="Toque no microfone e fale a frase"; } else armT=setTimeout(armMic,200); return; }
+        disarm(); if(!document.hidden && !rec) startMic(true); };
+      const listenAfterAudio = (slow, viaTimer) => { killMic(); armed=true; armWait=0; retries=0; killMic=disarm; clearTimeout(armT);
+        const onEnd = () => { clearTimeout(armT); armT=setTimeout(armMic,600); };
         armT=setTimeout(armMic, 2000+target.length*90/(slow?0.6:0.95));
         if(viaTimer) autoSay(ex.say,slow,false,onEnd); else say(ex.say,slow,false,onEnd);
         $("#heard",el).textContent="Ouça a frase. O microfone liga sozinho em seguida."; };
@@ -764,14 +766,18 @@ function runLesson(L, lessonRef, level){
         const r = new SR(); r.lang="en-US"; r.interimResults=true; r.maxAlternatives=3; r.continuous=false; rec=r;
         const btn=$("#micBtn",el), heard=$("#heard",el); let finalAlts=null, interim="", msg="", wd=0;
         const off = () => { clearTimeout(wd); r.onresult=r.onerror=r.onend=r.onspeechstart=null; rec=null; micStop=null; killMic=()=>{}; btn.classList.remove("on"); };
-        const end = () => { off(); const alts = finalAlts || (interim?[interim]:null); if(alts) grade(alts); else heard.textContent = msg || "Não ouvi nada. Toque no microfone e fale mais perto dele."; };
+        const tooShort = a => scoreSpeech(target,a).score<0.8 && speechTokens(a).length<speechTokens(target).length*0.6;
+        const end = () => { off(); const alts = finalAlts || (interim?[interim]:null);
+          if(alts && alts.every(tooShort)){ const note="Ouvi só “"+alts[0].trim()+"”. Fale a frase inteira.";
+            if(retries<2){ retries++; micNote=note; heard.textContent=note; armed=true; armWait=0; killMic=disarm; armT=setTimeout(armMic,400); } else { retries=0; heard.textContent=note+" Toque no microfone para tentar de novo."; } return; }
+          if(alts) grade(alts); else heard.textContent = msg || "Não ouvi nada. Toque no microfone e fale mais perto dele."; };
         const hung = () => { if(!interim) msg="O reconhecimento de voz não respondeu. Ele funciona melhor no Chrome ou no Safari, com internet. Tente de novo ou toque em “Não posso falar agora”."; try{r.abort();}catch(e){} end(); };
         const arm = ms => { clearTimeout(wd); wd=setTimeout(hung,ms); };
         killMic = () => { off(); try{r.abort();}catch(e){} };
-        micStop = () => { heard.textContent="Conferindo…"; try{r.stop();}catch(e){} arm(2500); };
-        btn.classList.add("on"); heard.textContent="Ouvindo… pode falar a frase.";
-        r.onspeechstart = () => { if(!interim) heard.textContent="Captei sua voz, pode continuar…"; };
-        r.onresult = e => { const res=e.results[e.results.length-1]; interim=Array.from(e.results).map(r=>r[0].transcript).join(" ");
+        micStop = () => { if(!interim || scoreSpeech(target,interim).score<0.8){ heard.textContent="Já estou ouvindo, pode falar a frase."; return; } heard.textContent="Conferindo…"; try{r.stop();}catch(e){} arm(2500); };
+        btn.classList.add("on"); heard.textContent=micNote||"Ouvindo… pode falar a frase."; micNote="";
+        r.onspeechstart = () => { if(!interim && !(auto&&speechSynthesis.speaking)) heard.textContent="Captei sua voz, pode continuar…"; };
+        r.onresult = e => { if(auto&&speechSynthesis.speaking) return; const res=e.results[e.results.length-1]; interim=Array.from(e.results).map(r=>r[0].transcript).join(" ");
           heard.textContent="“"+interim+"”"; if(res.isFinal){ finalAlts=Array.from(res).map(a=>Array.from(e.results).slice(0,-1).map(r=>r[0].transcript).concat(a.transcript).join(" ")); }
           const sc=scoreSpeech(target,interim).score; if(sc>=1){ try{r.abort();}catch(e){} end(); return; }
           arm(res.isFinal?1500:sc>=0.8?1000:4000); };
@@ -788,7 +794,7 @@ function runLesson(L, lessonRef, level){
       };
       const bindSkip = () => { const b=$("#spSkip",el); if(b) b.onclick=()=>{ killMic(); R.queue.shift(); R.done++; show(); }; };
       bindSkip();
-      if(SR) { $("#micBtn",el).onclick=()=>{ if(rec){ micStop(); return; } disarm(); startMic(false); };
+      if(SR) { $("#micBtn",el).onclick=()=>{ if(rec){ micStop(); return; } disarm(); retries=0; startMic(false); };
         R.replay = slow => { if(waiting) listenAfterAudio(slow); else say(ex.say,slow); };
         listenAfterAudio(false,true); }
       else { autoSay(ex.say); const go=()=>{ const v=$("#dict",el).value.trim(); if(v) grade([v]); }; $("#dictGo",el).onclick=go; $("#dict",el).onkeydown=e=>{ if(e.key==="Enter"){ e.preventDefault(); go(); } }; }
