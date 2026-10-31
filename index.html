@@ -99,8 +99,6 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .lvl{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--bg);text-align:left;width:100%}
 .lvl b{display:block}
 .lvl .ck{margin-left:auto;font-weight:800;font-size:12px;color:var(--good)}
-.lvl[disabled]{opacity:.5;cursor:not-allowed}
-.lvl.next{border:2px solid var(--accent)}
 .chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:800;border-radius:999px;padding:2px 9px}
 .chip.qa{background:color-mix(in srgb,var(--qa) 15%,transparent);color:var(--qa)}
 .chip.reg{background:color-mix(in srgb,var(--reg) 15%,transparent);color:var(--reg)}
@@ -521,20 +519,19 @@ function openNode(day){
   const list=sortedLessons(); const idx=list.findIndex(l=>l.day===day); const l=list[idx]; const st=nodeState(list,idx);
   if(st==="locked"){ toast("Complete a lição anterior para desbloquear."); return; }
   const lv=levelDone(day); const tr=trackOf(l,S.pid);
-  const levels = l.review ? [{n:"Revisão completa",d:"Chunks e diálogos da semana inteira",chip:"all"}] :
-    [{n:"Dia a dia",d:`${l.common.chunks.length} chunks · para os dois`,chip:"all"},
-     {n: tr ? (S.pid==="qa"?"Inglês de QA":"Inglês regulatório") : "Reforço do dia a dia", d: tr ? `${tr.chunks.length} chunks · só sua trilha` : (PROFILES[S.pid].track ? "Sua trilha começou depois deste dia" : "Os mesmos chunks, com outros exercícios"), chip: tr?S.pid:"all"},
-     {n:"Diálogos e fala",d:"Responder no diálogo e falar em voz alta",chip:"all"}];
+  if(lv<levelsFor(l)){ startLesson(l, lv); return; }
+  const levels = l.review ? [{n:"Revisão completa",d:"Chunks e diálogos da semana inteira"}] :
+    [{n:"Dia a dia",d:`${l.common.chunks.length} chunks · para os dois`},
+     {n: tr ? (S.pid==="qa"?"Inglês de QA":"Inglês regulatório") : "Reforço do dia a dia", d: tr ? `${tr.chunks.length} chunks · só sua trilha` : (PROFILES[S.pid].track ? "Sua trilha começou depois deste dia" : "Os mesmos chunks, com outros exercícios")},
+     {n:"Diálogos e fala",d:"Responder no diálogo e falar em voz alta"}];
   const w=l.watch;
   layer(`<div class="pop" role="dialog" aria-label="Dia ${day}">
     <div><div class="lbl">Dia ${day} · Semana ${l.week}</div><h3>${esc(l.title)}</h3></div>
-    ${levels.map((v,i)=>`<button class="lvl ${i===lv?"next":""}" data-lv="${i}" ${i>lv?"disabled":""}><span><b>${i+1}. ${esc(v.n)}</b><span class="tiny muted">${esc(v.d)}</span></span>${i<lv?`<span class="ck">FEITO · REFAZER</span>`:i===lv?`<span class="chip ${v.chip==="all"?"all":v.chip}">+${l.review?20:10} XP</span>`:ICON("lock")}</button>`).join("")}
+    ${levels.map((v,i)=>`<button class="lvl" data-lv="${i}"><span><b>${i+1}. ${esc(v.n)}</b><span class="tiny muted">${esc(v.d)}</span></span><span class="ck">FEITO · REFAZER</span></button>`).join("")}
     ${w?`<div class="watch"><div class="lbl">Para assistir juntos</div><b>${esc(w.title)}</b> <span class="muted tiny">· ${esc(w.where)}</span><p class="tiny" style="margin:4px 0 0">${esc(w.tip)}</p></div>`:""}
-    ${lv<levels.length?`<button class="btn" id="startPop">${lv?"Continuar":"Começar"}: ${esc(levels[lv].n)}</button>`:""}
     <button class="btn ghost" id="closePop">Fechar</button></div>`, true);
   $("#closePop").onclick=closeLayer;
-  const sp=$("#startPop"); if(sp) sp.onclick=()=>{ closeLayer(); startLesson(l, lv); };
-  document.querySelectorAll(".lvl").forEach(b=>b.onclick=()=>{ if(b.disabled) return; closeLayer(); startLesson(l, +b.dataset.lv); });
+  document.querySelectorAll(".lvl").forEach(b=>b.onclick=()=>{ closeLayer(); startLesson(l, +b.dataset.lv); });
 }
 
 /* ---------- practice tab ---------- */
@@ -652,7 +649,8 @@ function openSettings(first){
 /* ---------- lesson runner ---------- */
 function startLesson(l, level){
   if(hearts()<=0){ noHearts(); return; }
-  const L=buildLesson(l, level); runLesson(L, l, level);
+  try{ runLesson(buildLesson(l, level), l, level); }
+  catch(e){ console.error(e); $(".lesson")?.remove(); document.body.style.overflow=""; toast("Não foi possível abrir a lição: "+e.message); }
 }
 function noHearts(){
   layer(`<div class="pop" role="dialog"><div style="color:var(--bad)">${ICON("heart")}</div><h3>Seus corações acabaram</h3>
