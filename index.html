@@ -307,7 +307,12 @@ let voice=null;
 function pickVoice(){ try{ const vs=speechSynthesis.getVoices(); voice = vs.find(v=>/en-US/i.test(v.lang)&&/(Samantha|Google US|Aria|Jenny|Ava|Allison)/i.test(v.name)) || vs.find(v=>/en-US/i.test(v.lang)) || vs.find(v=>/^en/i.test(v.lang)) || null; }catch(e){} }
 try{ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }catch(e){}
 let sayT=0, sayGen=0, lastU=null;
-function say(text, slow, gentle, onEnd){ try{ if(document.hidden) return; sayGen++; clearTimeout(sayT); const busy=speechSynthesis.speaking||speechSynthesis.pending; const u=new SpeechSynthesisUtterance(fill(text).replace(/\.\.\./g,", ")); lastU=u; speechSynthesis.resume(); speechSynthesis.cancel(); u.lang="en-US"; if(voice) u.voice=voice; u.rate = slow?0.6:(S.slow||gentle?0.8:0.95); if(onEnd) u.onend=()=>{ if(lastU===u) onEnd(); };
+function sayWords(text, onEnd){ try{ if(document.hidden) return; const g=++sayGen; clearTimeout(sayT); clearTimeout(S.autoT); const busy=speechSynthesis.speaking||speechSynthesis.pending; lastU=null; speechSynthesis.resume(); speechSynthesis.cancel();
+  const ws=words(text).map(w=>w.replace(/[.,!?;:…]+$/,"")).filter(w=>/\w/.test(w)); let i=0;
+  const next = () => { if(g!==sayGen) return; if(i>=ws.length){ if(onEnd) onEnd(); return; } const w=ws[i++], u=new SpeechSynthesisUtterance(w); lastU=u; u.lang="en-US"; if(voice) u.voice=voice; u.rate=0.6;
+    let done=false; const go = () => { if(done) return; done=true; if(g===sayGen) sayT=setTimeout(next,220); }; u.onend=go; u.onerror=go; setTimeout(go,1500+w.length*150); try{ speechSynthesis.speak(u); }catch(e){} };
+  if(busy) sayT=setTimeout(next,80); else next(); }catch(e){ toast("O áudio não está disponível neste navegador."); } }
+function say(text, slow, gentle, onEnd){ if(slow) return sayWords(text,onEnd); try{ if(document.hidden) return; sayGen++; clearTimeout(sayT); clearTimeout(S.autoT); const busy=speechSynthesis.speaking||speechSynthesis.pending; const u=new SpeechSynthesisUtterance(fill(text).replace(/\.\.\./g,", ")); lastU=u; speechSynthesis.resume(); speechSynthesis.cancel(); u.lang="en-US"; if(voice) u.voice=voice; u.rate = S.slow||gentle?0.8:0.95; if(onEnd) u.onend=()=>{ if(lastU===u) onEnd(); };
   if(busy) sayT=setTimeout(()=>{ try{ if(lastU===u) speechSynthesis.speak(u); }catch(e){} },80); else speechSynthesis.speak(u); }catch(e){ toast("O áudio não está disponível neste navegador."); } }
 function hush(){ clearTimeout(sayT); clearTimeout(S.autoT); lastU=null; const g=++sayGen; try{ speechSynthesis.resume(); speechSynthesis.cancel(); setTimeout(()=>{ if(g===sayGen) try{ speechSynthesis.cancel(); }catch(e){} },200); }catch(e){} }
 document.addEventListener("visibilitychange",()=>{ if(document.hidden) hush(); });
@@ -690,7 +695,7 @@ function runLesson(L, lessonRef, level){
     const ex=R.queue[0]; if(!ex) return finish();
     let sel=null;
     const check = `<button class="btn block" id="chk" disabled>Verificar</button>`;
-    const speakBtns = (t,gentle) => `<div class="row" style="flex-direction:column;gap:8px"><button class="speak" data-sp="${esc(t)}" ${gentle?'data-gentle="1"':""} aria-label="Ouvir">${ICON("sound")}</button><button class="speak slow" data-sp="${esc(t)}" data-slow="1" aria-label="Ouvir devagar">${ICON("turtle")}</button></div>`;
+    const speakBtns = (t,gentle) => `<div class="row" style="flex-direction:column;gap:8px"><button class="speak" data-sp="${esc(t)}" ${gentle?'data-gentle="1"':""} aria-label="Ouvir">${ICON("sound")}</button><button class="speak slow" data-sp="${esc(t)}" data-slow="1" aria-label="Ouvir palavra por palavra">${ICON("turtle")}</button></div>`;
     if(ex.type==="choice"){
       frame(`<div class="q-title">${ex.title}</div><div class="prompt">${ex.say?speakBtns(ex.say):""}<div class="bubble">${esc(ex.show)}</div></div>
         <div class="opts">${ex.options.map((o,i)=>`<button class="opt" data-i="${i}" aria-pressed="false">${esc(o)}</button>`).join("")}</div>`, check);
@@ -758,7 +763,7 @@ function runLesson(L, lessonRef, level){
         disarm(); if(!document.hidden && !rec) startMic(true); };
       const listenAfterAudio = (slow, viaTimer) => { killMic(); armed=true; armWait=0; retries=0; killMic=disarm; clearTimeout(armT);
         const onEnd = () => { clearTimeout(armT); armT=setTimeout(armMic,600); };
-        armT=setTimeout(armMic, 2000+target.length*90/(slow?0.6:0.95));
+        armT=setTimeout(armMic, slow ? 2000+words(target).length*2500 : 2000+target.length*90/0.95);
         if(viaTimer) autoSay(ex.say,slow,false,onEnd); else say(ex.say,slow,false,onEnd);
         $("#heard",el).textContent="Ouça a frase. O microfone liga sozinho em seguida."; };
       const startMic = auto => {
