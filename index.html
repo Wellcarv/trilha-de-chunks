@@ -693,17 +693,18 @@ function openSettings(first){
 function listenOnce(o){
   const {target,btn,heard,auto,note,min=0.8}=o;
   const r = new SR(); r.lang="en-US"; r.interimResults=true; r.maxAlternatives=3; r.continuous=false;
-  let finalAlts=null, interim="", msg="", wd=0;
-  const off = () => { clearTimeout(wd); r.onresult=r.onerror=r.onend=r.onspeechstart=null; btn.classList.remove("on"); o.onOff(); };
+  let finalAlts=null, interim="", msg="", wd=0, cap=0, tick=0, left=8, spoke=false;
+  const off = () => { clearTimeout(wd); clearTimeout(cap); clearInterval(tick); r.onresult=r.onerror=r.onend=r.onspeechstart=null; btn.classList.remove("on"); o.onOff(); };
   const tooShort = a => scoreSpeech(target,a).score<min && speechTokens(a).length<speechTokens(target).length*0.6;
   const end = () => { off(); const alts = finalAlts || (interim?[interim]:null);
     if(alts && alts.every(tooShort)) return o.onShort(alts[0].trim());
     if(alts) o.onHeard(alts); else heard.textContent = msg || "Não ouvi nada. Toque no microfone e fale mais perto dele."; };
-  const hung = () => { if(!interim) msg="O reconhecimento de voz não respondeu. Ele funciona melhor no Chrome ou no Safari, com internet. Tente de novo ou toque em “Não posso falar agora”."; try{r.abort();}catch(e){} end(); };
+  const hung = () => { if(!interim) msg = spoke ? "O reconhecimento de voz não respondeu. Ele funciona melhor no Chrome ou no Safari, com internet. Tente de novo ou toque em “Não posso falar agora”." : "Não ouvi nada, então desliguei o microfone. Toque nele quando quiser falar."; try{r.abort();}catch(e){} end(); };
   const arm = ms => { clearTimeout(wd); wd=setTimeout(hung,ms); };
-  btn.classList.add("on"); heard.textContent=note||"Ouvindo… pode falar a frase.";
-  r.onspeechstart = () => { if(!interim && !(auto&&speechSynthesis.speaking)) heard.textContent="Captei sua voz, pode continuar…"; };
-  r.onresult = e => { if(auto&&speechSynthesis.speaking) return; const res=e.results[e.results.length-1]; interim=Array.from(e.results).map(r=>r[0].transcript).join(" ");
+  const countdown = () => { heard.textContent="Ouvindo… pode falar a frase ("+left+"s)"; };
+  btn.classList.add("on"); if(note) heard.textContent=note; else { countdown(); tick=setInterval(()=>{ if(left>1){ left--; countdown(); } },1000); }
+  r.onspeechstart = () => { if(auto&&speechSynthesis.speaking) return; spoke=true; clearInterval(tick); if(!interim) heard.textContent="Captei sua voz, pode continuar…"; };
+  r.onresult = e => { if(auto&&speechSynthesis.speaking) return; spoke=true; clearInterval(tick); const res=e.results[e.results.length-1]; interim=Array.from(e.results).map(r=>r[0].transcript).join(" ");
     heard.textContent="“"+interim+"”"; if(res.isFinal){ finalAlts=Array.from(res).map(a=>Array.from(e.results).slice(0,-1).map(r=>r[0].transcript).concat(a.transcript).join(" ")); }
     const sc=scoreSpeech(target,interim).score; if(sc>=1){ try{r.abort();}catch(e){} end(); return; }
     arm(res.isFinal?1500:sc>=min?1000:4000); };
@@ -716,9 +717,9 @@ function listenOnce(o){
     end(); };
   r.onend = end;
   o.onStart({
-    stop(){ if(!interim || scoreSpeech(target,interim).score<min){ heard.textContent="Já estou ouvindo, pode falar a frase."; return; } heard.textContent="Conferindo…"; try{r.stop();}catch(e){} arm(2500); },
+    stop(){ clearInterval(tick); if(!interim || scoreSpeech(target,interim).score<min){ heard.textContent="Já estou ouvindo, pode falar a frase."; return; } heard.textContent="Conferindo…"; try{r.stop();}catch(e){} arm(2500); },
     kill(){ off(); try{r.abort();}catch(e){} } });
-  arm(10000);
+  arm(8000); cap=setTimeout(hung,30000);
   try{ r.start(); }catch(e){ msg=auto?"Toque no microfone e fale a frase":"Não consegui ligar o microfone. Toque e tente de novo."; end(); }
 }
 
@@ -758,7 +759,8 @@ function runLesson(L, lessonRef, level){
   function srsMark(c, ok){ if(!c) return; const k=hkey(c.en); const prev=R.results.get(k); if(prev===false) return; R.results.set(k, ok && prev!==false); }
   function show(){
     hush(); R.replay=null;
-    const ex=R.queue[0]; if(!ex) return finish();
+    let ex=R.queue[0]; if(!ex) return finish();
+    if(ex.type==="speak" && R.noSpeak) ex=R.queue[0]=exFromChunk(ex.c,[...L.chunks,...allChunks("common")],["en_pt","pt_en","build","gap"]);
     let sel=null;
     const check = `<button class="btn block" id="chk" disabled>Verificar</button>`;
     const speakBtns = (t,gentle) => `<div class="row" style="flex-direction:column;gap:8px"><button class="speak" data-sp="${esc(t)}" ${gentle?'data-gentle="1"':""} aria-label="Ouvir">${ICON("sound")}</button><button class="speak slow" data-sp="${esc(t)}" data-slow="1" aria-label="Ouvir palavra por palavra">${ICON("turtle")}</button></div>`;
@@ -838,7 +840,7 @@ function runLesson(L, lessonRef, level){
           onShort:said=>{ const m="Ouvi só “"+said+"”. Fale a frase inteira.";
             if(retries<2){ retries++; micNote=m; heard.textContent=m; armed=true; armWait=0; killMic=disarm; armT=setTimeout(armMic,400); } else { retries=0; heard.textContent=m+" Toque no microfone para tentar de novo."; } } });
       };
-      const bindSkip = () => { const b=$("#spSkip",el); if(b) b.onclick=()=>{ killMic(); R.queue.shift(); R.done++; show(); }; };
+      const bindSkip = () => { const b=$("#spSkip",el); if(b) b.onclick=()=>{ killMic(); R.noSpeak=true; toast("Tudo bem: sem exercícios de fala nesta lição."); show(); }; };
       bindSkip();
       if(SR) { $("#micBtn",el).onclick=()=>{ if(rec){ rec.stop(); return; } disarm(); retries=0; startMic(false); };
         R.replay = slow => { if(waiting) listenAfterAudio(slow); else say(ex.say,slow); };
