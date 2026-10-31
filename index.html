@@ -100,6 +100,7 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .lvl b{display:block}
 .lvl .ck{margin-left:auto;font-weight:800;font-size:12px;color:var(--good)}
 .lvl[disabled]{opacity:.5;cursor:not-allowed}
+.lvl.next{border:2px solid var(--accent)}
 .chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:800;border-radius:999px;padding:2px 9px}
 .chip.qa{background:color-mix(in srgb,var(--qa) 15%,transparent);color:var(--qa)}
 .chip.reg{background:color-mix(in srgb,var(--reg) 15%,transparent);color:var(--reg)}
@@ -130,8 +131,8 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 /* overlay & lesson */
 .overlay{position:fixed;inset:0;z-index:20;background:color-mix(in srgb,var(--ink) 40%,transparent);display:grid;place-items:center;padding:16px}
 .lesson{position:fixed;inset:0;z-index:30;background:var(--bg);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
-.lesson .head{display:flex;align-items:center;gap:12px;padding-block:14px}
-.x{border:0;background:none;padding:4px;color:var(--muted)}
+.lesson .head{display:flex;align-items:center;gap:12px;padding-block:14px;width:100%}
+.x{border:0;background:none;padding:4px;color:var(--muted);display:inline-flex;align-items:center;gap:4px;flex:none;font-size:14px;font-weight:800}
 .lesson .bar{flex:1;height:16px}
 .lesson .bar i{background:var(--good)}
 .lesson .body{flex:1;overflow-y:auto}
@@ -141,6 +142,9 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .speak{width:52px;height:52px;border-radius:14px;border:0;background:var(--qa);color:#fff;display:grid;place-items:center;flex:none;box-shadow:0 4px 0 color-mix(in srgb,var(--qa) 65%,#000)}
 .speak.slow{width:40px;height:40px;background:var(--surface);color:var(--qa);border:2px solid var(--line);box-shadow:0 3px 0 var(--line)}
 .bubble{background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:12px 14px;font-size:18px;font-weight:600;min-width:0}
+.reveal-box{display:grid;gap:8px;min-width:0}
+.reveal summary{cursor:pointer;width:fit-content;padding-block:4px;font-size:14px;font-weight:700;color:var(--accent)}
+.reveal .bubble{margin-top:6px}
 .bubble .s{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
 .opts{display:grid;gap:10px}
 .opt{border:2px solid var(--line);background:var(--surface);border-radius:14px;padding:13px 14px;text-align:left;font-weight:600;box-shadow:0 3px 0 var(--line);font-size:16px}
@@ -304,7 +308,7 @@ function toast(msg){ clearTimeout(S.toastT); let t=$("#toast"); if(!t){ t=docume
 let voice=null;
 function pickVoice(){ try{ const vs=speechSynthesis.getVoices(); voice = vs.find(v=>/en-US/i.test(v.lang)&&/(Samantha|Google US|Aria|Jenny|Ava|Allison)/i.test(v.name)) || vs.find(v=>/en-US/i.test(v.lang)) || vs.find(v=>/^en/i.test(v.lang)) || null; }catch(e){} }
 try{ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }catch(e){}
-function say(text, slow){ try{ speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(fill(text).replace(/\.\.\./g,", ")); u.lang="en-US"; if(voice) u.voice=voice; u.rate = slow?0.6:(S.slow?0.8:0.95); speechSynthesis.speak(u);}catch(e){ toast("O áudio não está disponível neste navegador."); } }
+function say(text, slow, gentle){ try{ speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(fill(text).replace(/\.\.\./g,", ")); u.lang="en-US"; if(voice) u.voice=voice; u.rate = slow?0.6:(S.slow||gentle?0.8:0.95); speechSynthesis.speak(u);}catch(e){ toast("O áudio não está disponível neste navegador."); } }
 let actx=null;
 function beep(ok){ if(!S.sound) return; try{ actx = actx || new (window.AudioContext||window.webkitAudioContext)(); const t=actx.currentTime; const notes = ok?[660,880]:[220,180];
   notes.forEach((f,i)=>{ const o=actx.createOscillator(), g=actx.createGain(); o.type=ok?"triangle":"sawtooth"; o.frequency.value=f; g.gain.setValueAtTime(.0001,t+i*.09); g.gain.exponentialRampToValueAtTime(ok?.18:.08,t+i*.09+.02); g.gain.exponentialRampToValueAtTime(.0001,t+i*.09+.16); o.connect(g).connect(actx.destination); o.start(t+i*.09); o.stop(t+i*.09+.18); }); }catch(e){} }
@@ -524,10 +528,12 @@ function openNode(day){
   const w=l.watch;
   layer(`<div class="pop" role="dialog" aria-label="Dia ${day}">
     <div><div class="lbl">Dia ${day} · Semana ${l.week}</div><h3>${esc(l.title)}</h3></div>
-    ${levels.map((v,i)=>`<button class="lvl" data-lv="${i}" ${i>lv?"disabled":""}><span><b>${i+1}. ${esc(v.n)}</b><span class="tiny muted">${esc(v.d)}</span></span>${i<lv?`<span class="ck">FEITO · REFAZER</span>`:i===lv?`<span class="chip ${v.chip==="all"?"all":v.chip}">+${l.review?20:10} XP</span>`:ICON("lock")}</button>`).join("")}
+    ${levels.map((v,i)=>`<button class="lvl ${i===lv?"next":""}" data-lv="${i}" ${i>lv?"disabled":""}><span><b>${i+1}. ${esc(v.n)}</b><span class="tiny muted">${esc(v.d)}</span></span>${i<lv?`<span class="ck">FEITO · REFAZER</span>`:i===lv?`<span class="chip ${v.chip==="all"?"all":v.chip}">+${l.review?20:10} XP</span>`:ICON("lock")}</button>`).join("")}
     ${w?`<div class="watch"><div class="lbl">Para assistir juntos</div><b>${esc(w.title)}</b> <span class="muted tiny">· ${esc(w.where)}</span><p class="tiny" style="margin:4px 0 0">${esc(w.tip)}</p></div>`:""}
+    ${lv<levels.length?`<button class="btn" id="startPop">${lv?"Continuar":"Começar"}: ${esc(levels[lv].n)}</button>`:""}
     <button class="btn ghost" id="closePop">Fechar</button></div>`, true);
   $("#closePop").onclick=closeLayer;
+  const sp=$("#startPop"); if(sp) sp.onclick=()=>{ closeLayer(); startLesson(l, lv); };
   document.querySelectorAll(".lvl").forEach(b=>b.onclick=()=>{ if(b.disabled) return; closeLayer(); startLesson(l, +b.dataset.lv); });
 }
 
@@ -664,20 +670,20 @@ function runLesson(L, lessonRef, level){
   const quit=()=>{ el.remove(); document.body.style.overflow=""; try{speechSynthesis.cancel();}catch(e){} render(); };
   function frame(inner, footHtml, footCls=""){
     const h = R.practice ? "" : `<span class="stat heart">${ICON("heart")}${hearts()}</span>`;
-    el.innerHTML=`<div class="wrap head"><button class="x" id="lx" aria-label="Sair da lição">${ICON("x")}</button><div class="bar"><i style="width:${R.done/R.total*100}%"></i></div>${h}</div>
+    el.innerHTML=`<div class="wrap head"><button class="x" id="lx" aria-label="Voltar para o início">${ICON("x")}Início</button><div class="bar"><i style="width:${R.done/R.total*100}%"></i></div>${h}</div>
       <div class="body"><div class="wrap">${inner}</div></div><div class="foot ${footCls}"><div class="wrap">${footHtml}</div></div>`;
     $("#lx",el).onclick=()=>confirmQuit();
   }
   function confirmQuit(){
-    const foot=$(".foot .wrap",el); foot.innerHTML=`<div class="fb"><h3>Sair da lição?</h3><p class="muted">O progresso desta lição será perdido.</p></div><button class="btn bad block" id="qY">Sair</button><button class="btn ghost block" id="qN">Continuar estudando</button>`;
-    $("#qY",el).onclick=quit; $("#qN",el).onclick=()=>show();
+    const foot=$(".foot .wrap",el); foot.innerHTML=`<div class="fb"><h3>Voltar para o início?</h3><p class="muted">O progresso desta lição será perdido.</p></div><button class="btn bad block" id="qY">Voltar para o início</button><button class="btn ghost block" id="qN">Continuar estudando</button>`;
+    $("#qY",el).onclick=()=>{ if(S.tab!=="path"){ S.tab="path"; window.scrollTo(0,0); } quit(); }; $("#qN",el).onclick=()=>show();
   }
   function srsMark(c, ok){ if(!c) return; const k=hkey(c.en); const prev=R.results.get(k); if(prev===false) return; R.results.set(k, ok && prev!==false); }
   function show(){
     const ex=R.queue[0]; if(!ex) return finish();
     let sel=null;
     const check = `<button class="btn block" id="chk" disabled>Verificar</button>`;
-    const speakBtns = t => `<div class="row" style="flex-direction:column;gap:8px"><button class="speak" data-sp="${esc(t)}" aria-label="Ouvir">${ICON("sound")}</button><button class="speak slow" data-sp="${esc(t)}" data-slow="1" aria-label="Ouvir devagar">${ICON("turtle")}</button></div>`;
+    const speakBtns = (t,gentle) => `<div class="row" style="flex-direction:column;gap:8px"><button class="speak" data-sp="${esc(t)}" ${gentle?'data-gentle="1"':""} aria-label="Ouvir">${ICON("sound")}</button><button class="speak slow" data-sp="${esc(t)}" data-slow="1" aria-label="Ouvir devagar">${ICON("turtle")}</button></div>`;
     if(ex.type==="choice"){
       frame(`<div class="q-title">${ex.title}</div><div class="prompt">${ex.say?speakBtns(ex.say):""}<div class="bubble">${esc(ex.show)}</div></div>
         <div class="opts">${ex.options.map((o,i)=>`<button class="opt" data-i="${i}" aria-pressed="false">${esc(o)}</button>`).join("")}</div>`, check);
@@ -687,14 +693,14 @@ function runLesson(L, lessonRef, level){
     }
     else if(ex.type==="build"){
       const chosen=[];
-      frame(`<div class="q-title">${ex.title}</div><div class="prompt">${speakBtns(ex.say)}${ex.listen?`<div class="hint">Toque no alto-falante quantas vezes quiser.</div>`:`<div class="bubble">${esc(ex.show)}</div>`}</div>
+      frame(`<div class="q-title">${ex.title}</div><div class="prompt">${speakBtns(ex.say,ex.listen)}${ex.listen?`<div class="reveal-box"><div class="hint">Toque no alto-falante quantas vezes quiser.</div><details class="reveal"><summary>Ver o que foi falado</summary><div class="bubble">${esc(fill(ex.say))}</div></details></div>`:`<div class="bubble">${esc(ex.show)}</div>`}</div>
         <div class="answer" id="ans" aria-label="Sua resposta"></div><div class="bank" id="bank">${ex.tiles.map((t,i)=>`<button class="tile" data-i="${i}">${esc(t)}</button>`).join("")}</div>`, check);
       const redraw=()=>{ $("#ans",el).innerHTML=chosen.map((i,pos)=>`<button class="tile" data-pos="${pos}">${esc(ex.tiles[i])}</button>`).join("");
         el.querySelectorAll("#bank .tile").forEach(b=>b.classList.toggle("used",chosen.includes(+b.dataset.i)));
         $("#ans",el).querySelectorAll(".tile").forEach(b=>b.onclick=()=>{ chosen.splice(+b.dataset.pos,1); redraw(); });
         $("#chk",el).disabled=!chosen.length; };
       el.querySelectorAll("#bank .tile").forEach(b=>b.onclick=()=>{ const i=+b.dataset.i; if(chosen.includes(i)) return; chosen.push(i); redraw(); });
-      setTimeout(()=>say(ex.say),250);
+      setTimeout(()=>say(ex.say,false,ex.listen),250);
       $("#chk",el).onclick=()=>verdict(norm(chosen.map(i=>ex.tiles[i]).join(" "))===norm(ex.answer), ex);
     }
     else if(ex.type==="gap"){
@@ -773,7 +779,7 @@ function runLesson(L, lessonRef, level){
       });
       $("#chk",el).onclick=()=>{ if(slip) R.mistakes++; R.queue.shift(); R.done++; show(); };
     }
-    el.querySelectorAll("[data-sp]").forEach(b=>b.onclick=()=>say(b.dataset.sp, !!b.dataset.slow));
+    el.querySelectorAll("[data-sp]").forEach(b=>b.onclick=()=>say(b.dataset.sp, !!b.dataset.slow, !!b.dataset.gentle));
   }
   function verdict(ok, ex){
     beep(ok); srsMark(ex.c, ok);
@@ -788,8 +794,8 @@ function runLesson(L, lessonRef, level){
     const praise = ["Mandou bem!","Isso aí!","Perfeito!","Boa!","Nice!"][Math.floor(Math.random()*5)];
     foot.querySelector(".wrap").innerHTML = `<div class="fb"><h3>${ok?praise:"Resposta certa:"}</h3>${ok?"":`<p><b>${esc(correct)}</b></p>`}${ptLine?`<p class="tiny">${esc(ptLine)}</p>`:""}${pr}</div>
       <div class="row"><button class="mini-sp" id="fbSay" aria-label="Ouvir a frase">${ICON("sound")}</button><button class="btn ${ok?"good":"bad"} block" id="nx">Continuar</button></div>`;
-    $("#fbSay",el).onclick=()=>say(ex.say || ex.answer);
-    if(ok && ex.say && ex.type!=="choice") say(ex.say);
+    $("#fbSay",el).onclick=()=>say(ex.say || ex.answer, false, ex.listen);
+    if(ok && ex.say && ex.type!=="choice") say(ex.say, false, ex.listen);
     $("#nx",el).focus();
     $("#nx",el).onclick=()=>{ R.queue.shift(); if(ok) R.done++;
       if(!R.practice && hearts()<=0){ el.remove(); document.body.style.overflow=""; render(); noHearts(); return; }
