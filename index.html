@@ -258,7 +258,8 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 /* ---------- constants ---------- */
 const PROFILES = {
   qa:  { label:"Trilha QA", track:"qa", color:"var(--qa)", short:"QA" },
-  reg: { label:"Trilha Regulatório", track:"reg", color:"var(--reg)", short:"RA" }
+  reg: { label:"Trilha Regulatório", track:"reg", color:"var(--reg)", short:"RA" },
+  geral: { label:"Só dia a dia", track:null, color:"var(--sun)", short:"DD" }
 };
 const WEEK_THEMES = ["", "Se apresentar e bater papo","Drive-thru e restaurantes","Publix e Walmart","Escola e atividades da criança","Saúde: consulta e farmácia","Saúde: urgência","Apartamento e vizinhança","Serviços do dia a dia","Contar histórias","Opiniões e planos","Telefone e imprevistos","Revisão geral","Consolidação"];
 const MONTH_OF = w => w<=4 ? "Mês 1 · Sobrevivência" : w<=8 ? "Mês 2 · Fluência prática" : "Mês 3 · Entrevista e simulações";
@@ -345,7 +346,7 @@ function loadLocal(){ for(const k of Object.keys(PROFILES)){ const v=LS.get("pro
 
 /* ---------- lesson model ---------- */
 const sortedLessons = () => S.lessons.slice().sort((a,b)=>a.day-b.day);
-function trackOf(l, pid){ const t=PROFILES[pid].track; return l[t] && (l[t].chunks?.length || l[t].dialog?.length) ? l[t] : null; }
+function trackOf(l, pid){ const t=PROFILES[pid].track; if(!t) return null; return l[t] && (l[t].chunks?.length || l[t].dialog?.length) ? l[t] : null; }
 function levelsFor(l){ return l.review ? 1 : 3; }
 function levelDone(day){ return P().levels[day]||0; }
 function nodeState(list, idx){
@@ -474,7 +475,7 @@ function renderPicker(){
     <div class="lbl">Inglês em chunks · 91 dias</div>
     <h1 style="font-size:34px">Quem vai estudar agora?</h1>
     <p class="muted">Cada perfil tem a própria trilha profissional, XP, sequência e progresso. A parte do dia a dia é igual para os dois.</p>
-    <div class="pick">${Object.entries(PROFILES).map(([k,v])=>`<button data-p="${k}"><span class="av" style="background:${v.color}">${esc((nameOf(k)||v.short).slice(0,2).toUpperCase())}</span><span><b style="font-size:18px">${esc(nameOf(k)||v.label)}</b><br><span class="muted">${k==="qa"?"Chunks de QA, automação e entrevistas":"Chunks de Assuntos Regulatórios e FDA"}</span></span></button>`).join("")}</div>
+    <div class="pick">${Object.entries(PROFILES).map(([k,v])=>`<button data-p="${k}"><span class="av" style="background:${v.color}">${esc((nameOf(k)||v.short).slice(0,2).toUpperCase())}</span><span><b style="font-size:18px">${esc(nameOf(k)||v.label)}</b><br><span class="muted">${k==="qa"?"Chunks de QA, automação e entrevistas":k==="reg"?"Chunks de Assuntos Regulatórios e FDA":"Só inglês do dia a dia, sem trilha profissional"}</span></span></button>`).join("")}</div>
   </div>`;
   $("#main").querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{ S.pid=b.dataset.p; LS.set("pid",S.pid); P(); render(); if(!nameOf(S.pid)) openSettings(true); });
 }
@@ -518,7 +519,7 @@ function openNode(day){
   const lv=levelDone(day); const tr=trackOf(l,S.pid);
   const levels = l.review ? [{n:"Revisão completa",d:"Chunks e diálogos da semana inteira",chip:"all"}] :
     [{n:"Dia a dia",d:`${l.common.chunks.length} chunks · para os dois`,chip:"all"},
-     {n: tr ? (S.pid==="qa"?"Inglês de QA":"Inglês regulatório") : "Reforço do dia a dia", d: tr ? `${tr.chunks.length} chunks · só sua trilha` : "Sua trilha começou depois deste dia", chip: tr?S.pid:"all"},
+     {n: tr ? (S.pid==="qa"?"Inglês de QA":"Inglês regulatório") : "Reforço do dia a dia", d: tr ? `${tr.chunks.length} chunks · só sua trilha` : (PROFILES[S.pid].track ? "Sua trilha começou depois deste dia" : "Os mesmos chunks, com outros exercícios"), chip: tr?S.pid:"all"},
      {n:"Diálogos e fala",d:"Responder no diálogo e falar em voz alta",chip:"all"}];
   const w=l.watch;
   layer(`<div class="pop" role="dialog" aria-label="Dia ${day}">
@@ -553,7 +554,7 @@ function viewPractice(){
 /* ---------- league ---------- */
 function tierOf(xp){ let t=TIERS[0]; for(const x of TIERS) if(xp>=x.min) t=x; return t; }
 function viewLeague(){
-  const wk=weekKey(); const rows=Object.keys(PROFILES).map(k=>({k, xp:(S.prof[k]?.week||{})[wk]||0, name:nameOf(k)||PROFILES[k].label}))
+  const wk=weekKey(); const rows=Object.keys(PROFILES).filter(k=>S.prof[k]||k===S.pid).map(k=>({k, xp:(S.prof[k]?.week||{})[wk]||0, name:nameOf(k)||PROFILES[k].label}))
     .sort((a,b)=>b.xp-a.xp);
   const me=rows.find(r=>r.k===S.pid); const t=tierOf(me.xp); const nextT=TIERS[TIERS.indexOf(t)+1];
   const end=new Date(wk+"T00:00"); end.setDate(end.getDate()+7); const daysLeft=Math.max(0,Math.ceil((end-new Date())/864e5));
@@ -635,11 +636,11 @@ function openSettings(first){
     <label class="row"><input type="checkbox" id="fSound" ${S.sound?"checked":""}> Efeitos sonoros</label>
     <label class="row"><input type="checkbox" id="fSlow" ${S.slow?"checked":""}> Áudio mais lento</label>
     <button class="btn" id="fSave">Salvar</button>
-    ${first?"":`<button class="btn ghost" id="fSwitch">Trocar para ${esc(nameOf(S.pid==="qa"?"reg":"qa")||PROFILES[S.pid==="qa"?"reg":"qa"].label)}</button>`}
+    ${first?"":`<button class="btn ghost" id="fSwitch">Trocar de perfil</button>`}
     <p class="tiny muted">O progresso fica salvo neste aparelho e neste navegador.</p>
   </div>`, !first);
   $("#fSave").onclick=()=>{ p.name=$("#fName").value.trim().slice(0,24); p.goal=+$("#fGoal").value; S.sound=$("#fSound").checked; LS.set("sound",S.sound); S.slow=$("#fSlow").checked; save(); closeLayer(); render(); };
-  const sw=$("#fSwitch"); if(sw) sw.onclick=()=>{ S.pid = S.pid==="qa"?"reg":"qa"; LS.set("pid",S.pid); P(); closeLayer(); render(); if(!nameOf(S.pid)) openSettings(true); };
+  const sw=$("#fSwitch"); if(sw) sw.onclick=()=>{ S.pid=null; LS.set("pid",null); closeLayer(); render(); };
 }
 
 /* ---------- lesson runner ---------- */
