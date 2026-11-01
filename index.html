@@ -550,7 +550,7 @@ function viewPath(){
     const isCur = st==="open" && !currentMarked; if(isCur) currentMarked=true;
     const off = Math.round(Math.sin(idx*1.05)*70);
     const icon = st==="locked" ? "lock" : l.review ? "trophy" : st==="done" ? "check" : "star";
-    html+=`<button class="node ${st} ${l.review?"review":""} ${isCur?"current":""} ${isCur&&p.runs[l.day+":"+lv]?"resume":""}" data-day="${l.day}" style="transform:translateX(${off}px)" aria-label="Dia ${l.day}: ${esc(l.title)}${st==="locked"?" (bloqueado)":""}">
+    html+=`<button class="node ${st} ${l.review?"review":""} ${isCur?"current":""} ${isCur&&p.runs[l.day+":"+lv]?.v===hkey(JSON.stringify(l))?"resume":""}" data-day="${l.day}" style="transform:translateX(${off}px)" aria-label="Dia ${l.day}: ${esc(l.title)}${st==="locked"?" (bloqueado)":""}">
       <span class="disc">${ringSvg(lv,tot,st)}${ICON(icon)}</span><span class="day">DIA ${l.day}</span><span class="cap">${esc(l.title)}</span></button>`;
   });
   html+=`</div>`;
@@ -701,13 +701,14 @@ function openSettings(first){
 function listenOnce(o){
   const {target,btn,heard,auto,note,min=0.8}=o;
   const r = new SR(); r.lang="en-US"; r.interimResults=true; r.maxAlternatives=3; r.continuous=false;
-  let finalAlts=null, interim="", msg="", wd=0, cap=0, tick=0, left=8, spoke=false;
+  let finalAlts=null, interim="", msg="", quiet=false, wd=0, cap=0, tick=0, left=8, spoke=false;
   const off = () => { clearTimeout(wd); clearTimeout(cap); clearInterval(tick); r.onresult=r.onerror=r.onend=r.onspeechstart=null; btn.classList.remove("on"); o.onOff(); };
   const tooShort = a => scoreSpeech(target,a).score<min && speechTokens(a).length<speechTokens(target).length*0.6;
   const end = () => { off(); const alts = finalAlts || (interim?[interim]:null);
     if(alts && alts.every(tooShort)) return o.onShort(alts[0].trim());
-    if(alts) o.onHeard(alts); else heard.textContent = msg || "Não ouvi nada. Toque no microfone e fale mais perto dele."; };
-  const hung = () => { if(!interim) msg = spoke ? "O reconhecimento de voz não respondeu. Ele funciona melhor no Chrome ou no Safari, com internet. Tente de novo ou toque em “Não posso falar agora”." : "Não ouvi nada, então desliguei o microfone. Toque nele quando quiser falar."; try{r.abort();}catch(e){} end(); };
+    if(alts) return o.onHeard(alts);
+    heard.textContent = (!msg||quiet) && btn.closest(".lesson")?.querySelector(".score") ? "" : msg || "Não ouvi nada. Toque no microfone e fale mais perto dele."; };
+  const hung = () => { if(!interim){ quiet=!spoke; msg = spoke ? "O reconhecimento de voz não respondeu. Ele funciona melhor no Chrome ou no Safari, com internet. Tente de novo ou toque em “Não posso falar agora”." : "Não ouvi nada, então desliguei o microfone. Toque nele quando quiser falar."; } try{r.abort();}catch(e){} end(); };
   const arm = ms => { clearTimeout(wd); wd=setTimeout(hung,ms); };
   const countdown = () => { heard.textContent="Ouvindo… pode falar a frase ("+left+"s)"; };
   btn.classList.add("on"); if(note) heard.textContent=note; else { countdown(); tick=setInterval(()=>{ if(left>1){ left--; countdown(); } },1000); }
@@ -718,7 +719,7 @@ function listenOnce(o){
     arm(res.isFinal?1500:sc>=min?1000:4000); };
   r.onerror = e => {
     if(e.error==="not-allowed"||e.error==="service-not-allowed") msg=auto?"Toque no microfone e fale a frase":"O microfone foi bloqueado. Libere o microfone para este site nas configurações do navegador.";
-    else if(e.error==="no-speech") msg="Não ouvi nada. Toque e fale mais perto do microfone.";
+    else if(e.error==="no-speech"){ quiet=true; msg="Não ouvi nada. Toque e fale mais perto do microfone."; }
     else if(e.error==="audio-capture") msg="Não encontrei um microfone. Confira o microfone selecionado no computador.";
     else if(e.error==="network") msg="Este navegador não conseguiu usar o reconhecimento de voz. Tente no Chrome ou no Safari, com internet.";
     else msg="Não consegui ouvir. Toque e tente de novo.";
@@ -748,9 +749,9 @@ function noHearts(){
 
 function runLesson(L, lessonRef, level){
   const R={ queue:L.exs.slice(), total:L.exs.length, done:0, mistakes:0, started:Date.now(), results:new Map(), practice:!!L.practice };
-  const runKey = lessonRef ? lessonRef.day+":"+level : null, saved = runKey && P().runs[runKey];
-  if(saved){ Object.assign(R,{queue:saved.queue, total:saved.total, done:saved.done, mistakes:saved.mistakes, started:Date.now()-saved.elapsed, results:new Map(saved.results), noSpeak:saved.noSpeak}); toast("Continuando de onde você parou."); }
-  const saveRun = () => { if(!runKey) return; P().runs[runKey]={queue:R.queue, total:R.total, done:R.done, mistakes:R.mistakes, elapsed:Date.now()-R.started, results:[...R.results], noSpeak:!!R.noSpeak}; save(); };
+  const runKey = lessonRef ? lessonRef.day+":"+level : null, runV = lessonRef ? hkey(JSON.stringify(lessonRef)) : null, saved = runKey && P().runs[runKey];
+  if(saved && saved.v===runV){ Object.assign(R,{queue:saved.queue, total:saved.total, done:saved.done, mistakes:saved.mistakes, started:Date.now()-saved.elapsed, results:new Map(saved.results), noSpeak:saved.noSpeak}); toast("Continuando de onde você parou."); }
+  const saveRun = () => { if(!runKey) return; P().runs[runKey]={v:runV, queue:R.queue, total:R.total, done:R.done, mistakes:R.mistakes, elapsed:Date.now()-R.started, results:[...R.results], noSpeak:!!R.noSpeak}; save(); };
   let killMic=()=>{};
   const autoSay = (...a) => { clearTimeout(S.autoT); S.autoT=setTimeout(()=>{ if(el.isConnected) say(...a); },250); };
   const el=document.createElement("div"); el.className="lesson"; el.setAttribute("role","dialog"); el.setAttribute("aria-label",L.title);
