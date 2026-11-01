@@ -786,7 +786,7 @@ function runLesson(L, lessonRef, level){
       const chosen=[];
       frame(`<div class="q-title">${ex.title}</div><div class="prompt">${speakBtns(ex.say,ex.listen)}${ex.listen?`<div class="reveal-box"><div class="hint">Toque no alto-falante quantas vezes quiser.</div><details class="reveal"><summary>Ver o que foi falado</summary><div class="bubble">${esc(fill(ex.say))}</div></details></div>`:`<div class="bubble">${esc(ex.show)}</div>`}</div>
         <div class="answer" id="ans" aria-label="Sua resposta"></div><div class="bank" id="bank">${ex.tiles.map((t,i)=>`<button class="tile" data-i="${i}">${esc(t)}</button>`).join("")}</div>`, check);
-      const redraw=()=>{ $("#ans",el).innerHTML=chosen.map((i,pos)=>`<button class="tile" data-pos="${pos}">${esc(ex.tiles[i])}</button>`).join("");
+      const redraw=()=>{ $("#ans",el).classList.remove("wrong"); $("#ans",el).innerHTML=chosen.map((i,pos)=>`<button class="tile" data-pos="${pos}">${esc(ex.tiles[i])}</button>`).join("");
         el.querySelectorAll("#bank .tile").forEach(b=>b.classList.toggle("used",chosen.includes(+b.dataset.i)));
         $("#ans",el).querySelectorAll(".tile").forEach(b=>b.onclick=()=>{ chosen.splice(+b.dataset.pos,1); redraw(); });
         $("#chk",el).disabled=!chosen.length; };
@@ -886,8 +886,8 @@ function runLesson(L, lessonRef, level){
         speakLines(false,true);
         R.replay = slow => speakLines(slow);
         el.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const ok=norm(ex.options[+b.dataset.i])===norm(ex.answer); beep(ok);
-          el.querySelectorAll(".opt").forEach(x=>{ x.disabled=true; if(norm(ex.options[+x.dataset.i])===norm(ex.answer)) x.classList.add("right"); }); if(!ok){ b.classList.add("wrong"); R.mistakes++; }
-          if(ok){ playId++; clearTimeout(armT); myBubble(); } say(ex.you.en,false,true); advT=setTimeout(next, ok?1800:3500); });
+          if(!ok){ b.classList.add("wrong"); b.disabled=true; if(!ex.missed){ ex.missed=true; R.mistakes++; } return; }
+          playId++; clearTimeout(armT); el.querySelectorAll(".opt").forEach(x=>x.disabled=true); myBubble(); say(ex.you.en,false,true); advT=setTimeout(next,1800); });
       } else {
         const start = auto => { const note=micNote; micNote=""; const heard=$("#heard",el); hush();
           listenOnce({target, btn:$("#micBtn",el), heard, auto, note, min:0.7, onStart:c=>{ rec=c; }, onOff:()=>{ rec=null; }, onHeard:grade,
@@ -928,16 +928,23 @@ function runLesson(L, lessonRef, level){
   }
   function verdict(ok, ex){
     beep(ok); srsMark(ex.c, ok);
+    if(ok) return conclude(true, ex);
+    if(!ex.missed){ ex.missed=true; R.mistakes++; if(!R.practice){ setHearts(hearts()-1); save(); const hs=$(".head .stat.heart",el); if(hs) hs.innerHTML=ICON("heart")+hearts(); } saveRun(); }
+    if(!R.practice && hearts()<=0) return conclude(false, ex);
+    if(ex.type==="build") $("#ans",el).classList.add("wrong");
+    else { el.querySelectorAll('.opt[aria-pressed="true"]').forEach(b=>{ b.classList.add("wrong"); b.disabled=true; b.setAttribute("aria-pressed","false"); }); $("#chk",el).disabled=true; const bl=$("#blank",el); if(bl) bl.innerHTML="&nbsp;"; }
+    if(!$("#giveUp",el)){ $(".foot .wrap",el).insertAdjacentHTML("beforeend",`<button class="btn ghost block" id="giveUp">Ver resposta</button>`); $("#giveUp",el).onclick=()=>conclude(false, ex); }
+  }
+  function conclude(ok, ex){
     el.querySelectorAll(".opt,.tile,.pair").forEach(b=>b.disabled=true);
     const correct = ex.type==="gap" ? fill(ex.sentence.replace("\u0000",ex.answer)) : ex.answer;
     const ptLine = ex.type==="choice" ? (ex.say ? "" : "") : (ex.type==="gap" ? ex.hintPt : ex.type==="dialog" ? ex.pt : ex.c ? ptOf(ex.c) : "");
     const pr = ex.c?.pr ? `<p class="tiny">Pronúncia ≈ <i>${esc(ex.c.pr)}</i></p>` : "";
     if(ok){ el.querySelectorAll('.opt[aria-pressed="true"]').forEach(b=>b.classList.add("right")); }
-    else { el.querySelectorAll('.opt[aria-pressed="true"]').forEach(b=>b.classList.add("wrong")); R.mistakes++;
+    else { R.queue.push(Object.assign({},ex,{missed:false}));
       el.querySelectorAll(".opt").forEach(b=>{ if(norm(ex.options[+b.dataset.i])===norm(ex.answer)) b.classList.add("right"); });
       if(ex.type==="build"){ const a=$("#ans",el); a.classList.add("wrong"); a.insertAdjacentHTML("afterend",`<div class="bubble right-ans">${esc(correct)}</div>`); }
-      el.querySelector(".opt.right,.right-ans")?.scrollIntoView({block:"nearest"});
-      if(!R.practice){ setHearts(hearts()-1); save(); } R.queue.push(Object.assign({},ex)); }
+      el.querySelector(".opt.right,.right-ans")?.scrollIntoView({block:"nearest"}); }
     const foot=$(".foot",el); foot.className="foot "+(ok?"ok":"");
     const praise = ["Mandou bem!","Isso aí!","Perfeito!","Boa!","Nice!"][Math.floor(Math.random()*5)];
     foot.querySelector(".wrap").innerHTML = `${ok?`<div class="fb"><h3>${praise}</h3>${ptLine?`<p class="tiny">${esc(ptLine)}</p>`:""}${pr}</div>`:""}
