@@ -220,6 +220,7 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .field{display:grid;gap:6px}
 .field input,.field select{border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px;font:inherit;color:inherit}
 .toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-weight:700;z-index:40;max-width:calc(100% - 32px)}
+body:has(.lesson) .toast{top:calc(56px + env(safe-area-inset-top,0px));bottom:auto;pointer-events:none}
 .empty{text-align:center;padding:40px 10px;display:grid;gap:10px;justify-items:center}
 .watch{border-left:4px solid var(--sun);padding-left:12px}
 .mic{width:96px;height:96px;border-radius:50%;border:0;background:var(--sun);color:#fff;display:grid;place-items:center;margin:0 auto;box-shadow:0 6px 0 var(--sun-2)}
