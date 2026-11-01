@@ -13,7 +13,7 @@
 },
 {
 "en": "I'm {name}, by the way.",
-"pt": "Aliás, eu sou o/a {name}.",
+"pt": "Aliás, eu sou {name}.",
 "pr": "bái dâ uêi"
 },
 {
@@ -61,12 +61,12 @@
 {
 "s": "You",
 "en": "Oh, hi! I'm {name}, by the way. Nice to meet you.",
-"pt": "Ah, oi! Sou o/a {name}. Prazer."
+"pt": "Ah, oi! Aliás, eu sou {name}. Prazer em te conhecer."
 },
 {
 "s": "Neighbor",
 "en": "Nice to meet you too. Are you new around here?",
-"pt": "Prazer. Você é novo por aqui?"
+"pt": "Prazer em te conhecer também. Você é novo por aqui?"
 },
 {
 "s": "You",
@@ -76,7 +76,7 @@
 {
 "s": "Neighbor",
 "en": "Awesome! Where are you from originally?",
-"pt": "Que legal! De onde você é?"
+"pt": "Que legal! De onde você é, originalmente?"
 },
 {
 "s": "You",
@@ -86,7 +86,7 @@
 {
 "s": "Neighbor",
 "en": "Cool! Well, let me know if you need anything.",
-"pt": "Legal! Se precisar de algo, me avisa."
+"pt": "Legal! Bom, se precisar de algo, me avisa."
 },
 {
 "s": "You",
@@ -139,12 +139,12 @@
 {
 "s": "You",
 "en": "Sure! I'm {name}, I'm based in Orlando, Florida.",
-"pt": "Claro! Sou o {name}, moro em Orlando."
+"pt": "Claro! Sou o {name}, moro em Orlando, Flórida."
 },
 {
 "s": "You",
 "en": "I've got over a decade of experience in software testing, and most of my work is around test automation.",
-"pt": "Tenho mais de uma década em teste de software, e a maior parte é automação."
+"pt": "Tenho mais de uma década de experiência em teste de software, e a maior parte do meu trabalho é com automação de testes."
 },
 {
 "s": "Recruiter",
@@ -154,7 +154,7 @@
 {
 "s": "You",
 "en": "Right now, I'm working on mobile apps. I'm really into building frameworks from scratch.",
-"pt": "No momento, apps mobile. Curto muito criar frameworks do zero."
+"pt": "No momento, estou trabalhando com apps mobile. Curto muito criar frameworks do zero."
 },
 {
 "s": "Recruiter",
@@ -238,7 +238,7 @@
 {
 "s": "You",
 "en": "It was pretty chill. We just hung out at home. How about yours?",
-"pt": "Foi tranquilo. Ficamos em casa. E o seu?"
+"pt": "Foi bem tranquilo. A gente só ficou de boa em casa. E o seu?"
 },
 {
 "s": "Sarah",
@@ -248,7 +248,7 @@
 {
 "s": "You",
 "en": "Oh, nice! That sounds like a blast! Did you do anything fun on Sunday?",
-"pt": "Que legal! Fizeram algo no domingo?"
+"pt": "Ah, que legal! Parece que foi muito divertido! Fizeram alguma coisa legal no domingo?"
 },
 {
 "s": "Sarah",
@@ -268,7 +268,7 @@
 {
 "s": "You",
 "en": "Catch you later!",
-"pt": "Até!"
+"pt": "Até mais!"
 }
 ],
 "prompts": [
@@ -299,7 +299,7 @@
 },
 {
 "en": "I'm kind of the go-to person for test automation.",
-"pt": "Sou meio que a referência em automação.",
+"pt": "Sou meio que a referência em automação de testes.",
 "pr": "káinda dâ gôu-tchu pârsân"
 },
 {
@@ -312,7 +312,7 @@
 {
 "s": "Manager",
 "en": "Everyone, this is {name}. Just joined us. Wanna say a few words?",
-"pt": "Pessoal, este é o {name}. Acabou de entrar. Quer falar algo?"
+"pt": "Pessoal, este é o {name}. Acabou de entrar pra equipe. Quer falar algumas palavras?"
 },
 {
 "s": "You",
@@ -322,12 +322,12 @@
 {
 "s": "Dev",
 "en": "Cool. What does that look like for you?",
-"pt": "Como é isso no seu dia a dia?"
+"pt": "Legal. Como é isso no seu dia a dia?"
 },
 {
 "s": "You",
 "en": "Day to day, I write and maintain automated tests, and I work closely with the developers and the product team.",
-"pt": "No dia a dia, escrevo e mantenho testes automatizados e trabalho perto dos devs e do produto."
+"pt": "No dia a dia, escrevo e mantenho testes automatizados e trabalho bem próximo dos devs e do time de produto."
 },
 {
 "s": "You",
@@ -337,12 +337,12 @@
 {
 "s": "Manager",
 "en": "So you're kind of the go-to person for test automation.",
-"pt": "Então você é a referência em automação."
+"pt": "Então você é meio que a referência em automação de testes."
 },
 {
 "s": "You",
 "en": "Exactly. Feel free to reach out if you have any questions!",
-"pt": "Exato. Fiquem à vontade pra me chamar!"
+"pt": "Exato. Fiquem à vontade pra me chamar se tiverem dúvidas!"
 }
 ],
 "prompts": [
@@ -412,7 +412,7 @@
 {
 "s": "Jessica",
 "en": "Hot enough for ya?",
-"pt": "Tá quente o bastante?"
+"pt": "Tá quente o bastante pra você?"
 },
 {
 "s": "You",
@@ -422,7 +422,7 @@
 {
 "s": "Jessica",
 "en": "Can you believe this weather? It's October!",
-"pt": "Dá pra acreditar? É outubro!"
+"pt": "Dá pra acreditar nesse tempo? É outubro!"
 },
 {
 "s": "You",
@@ -432,7 +432,7 @@
 {
 "s": "Jessica",
 "en": "They say it's finally cooling down next week.",
-"pt": "Dizem que vai refrescar semana que vem."
+"pt": "Dizem que finalmente vai refrescar semana que vem."
 },
 {
 "s": "You",
@@ -442,7 +442,7 @@
 {
 "s": "Jessica",
 "en": "Yep, 4 p.m. storm, like clockwork. Well, stay cool!",
-"pt": "É, tempestade das 4, pontual. Se cuida!"
+"pt": "É, tempestade das 4 da tarde, pontual como um relógio. Bom, se cuida!"
 },
 {
 "s": "You",
@@ -496,7 +496,7 @@
 {
 "s": "You",
 "en": "Well, I started out as a manual tester, more than ten years ago.",
-"pt": "Comecei como testador manual, há mais de dez anos."
+"pt": "Bom, comecei como testador manual, há mais de dez anos."
 },
 {
 "s": "You",
@@ -511,7 +511,7 @@
 {
 "s": "You",
 "en": "I've worked across web, mobile and APIs. These days, I'm focused on mobile automation.",
-"pt": "Web, mobile e APIs. Hoje meu foco é automação mobile."
+"pt": "Já trabalhei com web, mobile e APIs. Hoje em dia, meu foco é automação mobile."
 },
 {
 "s": "Recruiter",
@@ -596,32 +596,32 @@
 {
 "s": "You",
 "en": "Mark! Hey, man! How've you been?",
-"pt": "Mark! E aí! Como tem passado?"
+"pt": "Mark! E aí, cara! Como tem passado?"
 },
 {
 "s": "Mark",
 "en": "Good, good. What have you been up to?",
-"pt": "Bem. O que você tem feito?"
+"pt": "Bem, bem. O que você tem feito de bom?"
 },
 {
 "s": "You",
 "en": "Keeping busy, you know. Work, kid, the usual.",
-"pt": "Na correria. Trabalho, filho(a), o de sempre."
+"pt": "Na correria, sabe como é. Trabalho, filho(a), o de sempre."
 },
 {
 "s": "Mark",
 "en": "I hear you. We should get together sometime.",
-"pt": "Te entendo. A gente devia se encontrar."
+"pt": "Te entendo. A gente devia se encontrar qualquer dia."
 },
 {
 "s": "You",
 "en": "For sure! Sorry, I gotta run, someone's waiting in the car.",
-"pt": "Com certeza! Tenho que ir, tem gente me esperando no carro."
+"pt": "Com certeza! Desculpa, tenho que ir correndo, tem gente me esperando no carro."
 },
 {
 "s": "Mark",
 "en": "No worries. Good seeing you!",
-"pt": "Sem problema. Bom te ver!"
+"pt": "Sem problema. Foi bom te ver!"
 },
 {
 "s": "You",
@@ -643,7 +643,7 @@
 },
 {
 "en": "I'm in software quality, specifically test automation.",
-"pt": "Trabalho com qualidade de software, mais especificamente automação.",
+"pt": "Trabalho com qualidade de software, mais especificamente automação de testes.",
 "pr": "spâssífikli"
 },
 {
@@ -676,7 +676,7 @@
 {
 "s": "You",
 "en": "Hi Emily, I'm {name}. I'm in software quality, specifically test automation.",
-"pt": "Oi, sou o {name}. Qualidade de software, especificamente automação."
+"pt": "Oi, Emily, sou o {name}. Trabalho com qualidade de software, mais especificamente automação de testes."
 },
 {
 "s": "Emily",
@@ -686,12 +686,12 @@
 {
 "s": "You",
 "en": "Both, but my background is mostly in mobile. And I'm currently open to new opportunities.",
-"pt": "Os dois, mas principalmente mobile. E estou aberto a oportunidades."
+"pt": "Os dois, mas minha experiência é principalmente em mobile. E no momento estou aberto a novas oportunidades."
 },
 {
 "s": "Emily",
 "en": "Nice! Our team is actually hiring.",
-"pt": "Meu time tá contratando, na verdade."
+"pt": "Legal! Na verdade, nosso time tá contratando."
 },
 {
 "s": "You",
@@ -733,7 +733,7 @@
 "chunks": [
 {
 "en": "Are you guys free this Saturday?",
-"pt": "Vocês estão livres no sábado?",
+"pt": "Vocês estão livres neste sábado?",
 "pr": "ár iú gáiz frí dís séridêi"
 },
 {
@@ -780,7 +780,7 @@
 {
 "s": "Ashley",
 "en": "Hey! Are you guys free this Saturday?",
-"pt": "Vocês estão livres no sábado?"
+"pt": "Ei! Vocês estão livres neste sábado?"
 },
 {
 "s": "You",
@@ -790,17 +790,17 @@
 {
 "s": "Ashley",
 "en": "We're having a few people over for a little cookout. Wanna come over? The kids can play.",
-"pt": "Vamos receber umas pessoas pra um churrasquinho. Querem vir?"
+"pt": "Vamos receber umas pessoas pra um churrasquinho. Querem vir aqui em casa? As crianças podem brincar."
 },
 {
 "s": "You",
 "en": "Aw, I'm down! Let me check and get back to you.",
-"pt": "Tô dentro! Vou confirmar e te falo."
+"pt": "Ah, tô dentro! Deixa eu ver e te dou retorno."
 },
 {
 "s": "Ashley",
 "en": "Sure! Around four?",
-"pt": "Lá pelas quatro?"
+"pt": "Claro! Lá pelas quatro?"
 },
 {
 "s": "You",
@@ -834,7 +834,7 @@
 },
 {
 "en": "I'll be your main point of contact for anything testing-related.",
-"pt": "Vou ser o principal contato para testes.",
+"pt": "Vou ser o principal contato para tudo relacionado a testes.",
 "pr": "mêin póint âv kóntékt"
 },
 {
@@ -854,7 +854,7 @@
 {
 "s": "PM",
 "en": "Okay, let's do a round of intros. You're up.",
-"pt": "Vamos fazer uma rodada de apresentações. Sua vez."
+"pt": "Certo, vamos fazer uma rodada de apresentações. Sua vez."
 },
 {
 "s": "You",
@@ -869,17 +869,17 @@
 {
 "s": "You",
 "en": "Great. Just a quick intro on my end: I'll be your main point of contact for anything testing-related.",
-"pt": "Ótimo. Apresentação rápida: sou o principal contato para testes."
+"pt": "Ótimo. Só uma apresentação rápida da minha parte: vou ser o principal contato para tudo relacionado a testes."
 },
 {
 "s": "Dev",
 "en": "Awesome. What's your sweet spot?",
-"pt": "Qual sua especialidade?"
+"pt": "Ótimo. Qual é o seu forte?"
 },
 {
 "s": "You",
 "en": "My strongest area is end-to-end automation, mostly mobile. I'm coming from a fintech background.",
-"pt": "Automação ponta a ponta, mais mobile. Venho de fintech."
+"pt": "Meu ponto mais forte é automação ponta a ponta, principalmente mobile. Venho de experiência em fintech."
 },
 {
 "s": "PM",
@@ -889,7 +889,7 @@
 {
 "s": "You",
 "en": "Glad to hear it. I'm happy to jump on a call anytime if you need me.",
-"pt": "Que bom. Topo uma call quando precisarem."
+"pt": "Que bom ouvir isso. Topo entrar numa call a qualquer hora, se precisarem."
 }
 ],
 "prompts": [
@@ -916,12 +916,12 @@
 },
 {
 "en": "I mainly handle regulatory submissions and labeling.",
-"pt": "Cuido principalmente de submissões e rotulagem.",
+"pt": "Cuido principalmente de submissões regulatórias e rotulagem.",
 "pr": "sâbmíshâns, lêibâlin"
 },
 {
 "en": "For me, compliance always comes first.",
-"pt": "Pra mim, conformidade vem em primeiro lugar.",
+"pt": "Pra mim, conformidade sempre vem em primeiro lugar.",
 "pr": "kâmpláiâns"
 },
 {
@@ -938,12 +938,12 @@
 {
 "s": "You",
 "en": "Sure. I'm a pharmacist by training, and I specialize in Regulatory Affairs.",
-"pt": "Claro. Sou farmacêutica e especializada em Assuntos Regulatórios."
+"pt": "Claro. Sou farmacêutica de formação e especializada em Assuntos Regulatórios."
 },
 {
 "s": "Manager",
 "en": "Great. How long have you been in the field?",
-"pt": "Há quanto tempo está na área?"
+"pt": "Ótimo. Há quanto tempo você está na área?"
 },
 {
 "s": "You",
@@ -953,12 +953,12 @@
 {
 "s": "Manager",
 "en": "And what did your day-to-day look like?",
-"pt": "Como era seu dia a dia?"
+"pt": "E como era seu dia a dia?"
 },
 {
 "s": "You",
 "en": "I mainly handled regulatory submissions and labeling. For me, compliance always comes first.",
-"pt": "Submissões e rotulagem. Conformidade em primeiro lugar."
+"pt": "Eu cuidava principalmente de submissões regulatórias e rotulagem. Pra mim, conformidade sempre vem em primeiro lugar."
 },
 {
 "s": "Manager",
@@ -968,7 +968,7 @@
 {
 "s": "You",
 "en": "I'm looking to grow my career here in the US, and this role is a great fit.",
-"pt": "Quero crescer na carreira nos EUA, e a vaga encaixa bem."
+"pt": "Quero crescer na carreira aqui nos EUA, e esta vaga encaixa muito bem."
 }
 ],
 "prompts": [
@@ -1040,17 +1040,17 @@
 {
 "s": "Staff",
 "en": "Hi! Here for your amenity card? I'll just need your ID and a proof of address, like a utility bill.",
-"pt": "Veio pelo cartão de acesso? Preciso do documento e um comprovante de endereço, tipo uma conta."
+"pt": "Oi! Veio pelo cartão de acesso? Só vou precisar do seu documento e de um comprovante de endereço, tipo uma conta de consumo."
 },
 {
 "s": "You",
 "en": "Sorry, I didn't catch that. Could you slow down a little? English is my second language.",
-"pt": "Desculpa, não peguei. Pode falar mais devagar? Inglês é minha segunda língua."
+"pt": "Desculpa, não peguei o que você disse. Pode falar um pouquinho mais devagar? Inglês é minha segunda língua."
 },
 {
 "s": "Staff",
 "en": "Oh, of course! Your ID... and a proof of address.",
-"pt": "Claro! Seu documento... e um comprovante de endereço."
+"pt": "Ah, claro! Seu documento... e um comprovante de endereço."
 },
 {
 "s": "You",
@@ -1065,7 +1065,7 @@
 {
 "s": "You",
 "en": "Oh, gotcha! That makes sense. Sorry, what was your name?",
-"pt": "Ah, entendi! Desculpa, qual seu nome?"
+"pt": "Ah, entendi! Faz sentido. Desculpa, qual é o seu nome?"
 },
 {
 "s": "Staff",
@@ -1122,22 +1122,22 @@
 {
 "s": "Recruiter",
 "en": "So, can you walk me through how you... ...your test suite?",
-"pt": "Pode me explicar como você... ...sua suíte de testes?"
+"pt": "Então, pode me explicar como você... ...sua suíte de testes?"
 },
 {
 "s": "You",
 "en": "Sorry, you cut out for a second. Could you repeat the question?",
-"pt": "Desculpa, cortou. Pode repetir a pergunta?"
+"pt": "Desculpa, sua voz cortou por um segundo. Pode repetir a pergunta?"
 },
 {
 "s": "Recruiter",
 "en": "Sure! How do you keep your test suite stable as the app grows?",
-"pt": "Como você mantém a suíte estável conforme o app cresce?"
+"pt": "Claro! Como você mantém a suíte de testes estável conforme o app cresce?"
 },
 {
 "s": "You",
 "en": "Just to make sure I understand, you're asking about maintenance, right?",
-"pt": "Só pra confirmar, você pergunta sobre manutenção, certo?"
+"pt": "Só pra garantir que entendi, você está perguntando sobre manutenção, certo?"
 },
 {
 "s": "Recruiter",
@@ -1147,7 +1147,7 @@
 {
 "s": "You",
 "en": "That's a great question. Let me think for a sec... To give you some context, our app has over a hundred automated flows, so we review flaky tests every sprint.",
-"pt": "Ótima pergunta... Pra contextualizar, temos mais de cem fluxos automatizados, então revisamos testes instáveis a cada sprint."
+"pt": "Ótima pergunta. Deixa eu pensar um segundo... Pra te dar um contexto, nosso app tem mais de cem fluxos automatizados, então revisamos os testes instáveis a cada sprint."
 },
 {
 "s": "You",
@@ -1206,12 +1206,12 @@
 {
 "s": "You",
 "en": "I graduated in Pharmacy back in Brazil, and I also have a postgraduate degree in Regulatory Affairs.",
-"pt": "Me formei em Farmácia no Brasil e tenho pós em Assuntos Regulatórios."
+"pt": "Me formei em Farmácia no Brasil e também tenho pós-graduação em Assuntos Regulatórios."
 },
 {
 "s": "HR",
 "en": "Great. How well do you know the US regulatory landscape?",
-"pt": "Quanto você conhece do cenário regulatório americano?"
+"pt": "Ótimo. Quanto você conhece do cenário regulatório americano?"
 },
 {
 "s": "You",
@@ -1226,17 +1226,17 @@
 {
 "s": "You",
 "en": "Yes. I'm familiar with both ANVISA and FDA requirements, and I'm currently working toward the RAC certification.",
-"pt": "Sim. Conheço ANVISA e FDA e estou me preparando para o RAC."
+"pt": "Sim. Conheço as exigências da ANVISA e do FDA e estou me preparando para a certificação RAC."
 },
 {
 "s": "HR",
 "en": "That's impressive. What would you say is your biggest strength?",
-"pt": "Impressionante. Qual seu maior ponto forte?"
+"pt": "Isso é impressionante. Qual você diria que é seu maior ponto forte?"
 },
 {
 "s": "You",
 "en": "I'm a fast learner, and I pay close attention to detail, which is key in regulatory work.",
-"pt": "Aprendo rápido e presto atenção aos detalhes, essencial no regulatório."
+"pt": "Aprendo rápido e presto muita atenção aos detalhes, o que é essencial no trabalho regulatório."
 }
 ],
 "prompts": [
@@ -1267,7 +1267,7 @@
 {
 "s": "Ashley",
 "en": "Hey, you made it! Come on in!",
-"pt": "Vocês vieram! Entrem!"
+"pt": "Ei, vocês vieram! Entrem!"
 },
 {
 "s": "You",
@@ -1277,27 +1277,27 @@
 {
 "s": "Mike",
 "en": "Hey, long time no see! How've you been?",
-"pt": "Quanto tempo! Como tem passado?"
+"pt": "Ei, quanto tempo! Como tem passado?"
 },
 {
 "s": "You",
 "en": "Keeping busy, you know. How's it going with you?",
-"pt": "Na correria. E com você?"
+"pt": "Na correria, sabe como é. E com você, como vão as coisas?"
 },
 {
 "s": "Mike",
 "en": "Can't complain. Hot enough for ya?",
-"pt": "Não posso reclamar. Calor, hein?"
+"pt": "Não posso reclamar. Tá quente o bastante pra você?"
 },
 {
 "s": "You",
 "en": "Ha! It's crazy humid today. Perfect pool weather, though.",
-"pt": "Haha! Tá úmido demais. Mas tempo perfeito pra piscina."
+"pt": "Haha! Tá úmido demais hoje. Mas é tempo perfeito pra piscina."
 },
 {
 "s": "Mike",
 "en": "So, did you guys do anything fun this week? We tried that new taco spot by the pier...",
-"pt": "Fizeram algo legal? Fomos naquele taco novo perto do píer..."
+"pt": "Então, vocês fizeram algo legal esta semana? A gente foi naquele lugar novo de tacos perto do píer..."
 },
 {
 "s": "You",
@@ -1312,7 +1312,7 @@
 {
 "s": "You",
 "en": "Oh, gotcha! That sounds like a blast!",
-"pt": "Ah, entendi! Parece muito divertido!"
+"pt": "Ah, entendi! Parece que foi muito divertido!"
 },
 {
 "s": "Mike",
@@ -1322,7 +1322,7 @@
 {
 "s": "You",
 "en": "I'm down! What time works for you guys?",
-"pt": "Tô dentro! Que horário fica bom?"
+"pt": "Tô dentro! Que horário fica bom pra vocês?"
 },
 {
 "s": "Mike",
@@ -1332,12 +1332,12 @@
 {
 "s": "You",
 "en": "Sounds like a plan! Well, sorry, we gotta run. It's past bedtime for the kid.",
-"pt": "Fechado! Bom, temos que ir. Já passou da hora da criança dormir."
+"pt": "Fechado! Bom, desculpa, temos que ir correndo. Já passou da hora da criança dormir."
 },
 {
 "s": "Ashley",
 "en": "No worries! Good seeing you guys!",
-"pt": "Sem problema! Bom ver vocês!"
+"pt": "Sem problema! Foi bom ver vocês!"
 },
 {
 "s": "You",
@@ -1353,7 +1353,7 @@
 {
 "s": "Recruiter",
 "en": "Hi, thanks for taking the time. Can you hear me okay?",
-"pt": "Oi, obrigado pelo tempo. Me ouve bem?"
+"pt": "Oi, obrigado por reservar um tempo. Consegue me ouvir bem?"
 },
 {
 "s": "You",
@@ -1368,17 +1368,17 @@
 {
 "s": "You",
 "en": "Sure! I'm based in Orlando, and I've got over a decade of experience in software testing.",
-"pt": "Claro! Moro em Orlando e tenho mais de uma década em testes."
+"pt": "Claro! Moro em Orlando e tenho mais de uma década de experiência em teste de software."
 },
 {
 "s": "Recruiter",
 "en": "Great. How did you get into QA?",
-"pt": "Ótimo. Como entrou em QA?"
+"pt": "Ótimo. Como você entrou em QA?"
 },
 {
 "s": "You",
 "en": "I started out as a manual tester. Over the years, I moved into automation, and that's what got me into coding.",
-"pt": "Comecei manual. Com os anos fui pra automação, e isso me levou a programar."
+"pt": "Comecei como testador manual. Com os anos, fui para automação, e foi isso que me levou a programar."
 },
 {
 "s": "Recruiter",
@@ -1388,7 +1388,7 @@
 {
 "s": "You",
 "en": "Sorry, you cut out for a second. Just to make sure I understand, you're asking about my current role?",
-"pt": "Desculpa, cortou. Só pra confirmar, sobre meu papel atual?"
+"pt": "Desculpa, sua voz cortou por um segundo. Só pra garantir que entendi, você está perguntando sobre meu papel atual?"
 },
 {
 "s": "Recruiter",
@@ -1398,7 +1398,7 @@
 {
 "s": "You",
 "en": "Day to day, I write and maintain automated tests. Basically, I make sure nothing breaks before it goes live.",
-"pt": "Escrevo e mantenho testes automatizados. Garanto que nada quebre antes de ir pra produção."
+"pt": "No dia a dia, escrevo e mantenho testes automatizados. Basicamente, garanto que nada quebre antes de ir pra produção."
 },
 {
 "s": "Recruiter",
@@ -1408,17 +1408,17 @@
 {
 "s": "You",
 "en": "My strongest area is end-to-end automation, mostly mobile. Does that answer your question?",
-"pt": "Automação ponta a ponta, mais mobile. Isso responde?"
+"pt": "Meu ponto mais forte é automação ponta a ponta, principalmente mobile. Isso responde sua pergunta?"
 },
 {
 "s": "Recruiter",
 "en": "Totally. Let's connect on LinkedIn and set up a call with the hiring manager.",
-"pt": "Totalmente. Vamos conectar no LinkedIn e marcar com o gestor."
+"pt": "Totalmente. Vamos nos conectar no LinkedIn e marcar uma call com o gestor da vaga."
 },
 {
 "s": "You",
 "en": "Sounds great. It was great chatting with you!",
-"pt": "Ótimo. Foi ótimo conversar!"
+"pt": "Parece ótimo. Foi ótimo conversar com você!"
 }
 ],
 "prompts": [
@@ -1432,22 +1432,22 @@
 {
 "s": "Director",
 "en": "Hi, nice to meet you. Thanks for coming in.",
-"pt": "Prazer. Obrigada por vir."
+"pt": "Oi, prazer em te conhecer. Obrigada por vir."
 },
 {
 "s": "You",
 "en": "Nice to meet you too. Thanks for having me.",
-"pt": "O prazer é meu. Obrigada pelo convite."
+"pt": "Prazer em te conhecer também. Obrigada pelo convite."
 },
 {
 "s": "Director",
 "en": "So, walk me through your background.",
-"pt": "Me conte sua trajetória."
+"pt": "Então, me conte sua trajetória."
 },
 {
 "s": "You",
 "en": "Sure. I'm a pharmacist by training, and I specialize in Regulatory Affairs. I graduated in Pharmacy back in Brazil.",
-"pt": "Sou farmacêutica, especializada em AR. Me formei no Brasil."
+"pt": "Claro. Sou farmacêutica de formação e especializada em Assuntos Regulatórios. Me formei em Farmácia no Brasil."
 },
 {
 "s": "Director",
@@ -1467,17 +1467,17 @@
 {
 "s": "You",
 "en": "I'm familiar with both ANVISA and FDA requirements, and I'm currently working toward the RAC certification.",
-"pt": "Conheço ANVISA e FDA e estou me preparando para o RAC."
+"pt": "Conheço as exigências da ANVISA e do FDA e estou me preparando para a certificação RAC."
 },
 {
 "s": "Director",
 "en": "That's great. What matters most to you in this kind of work?",
-"pt": "Ótimo. O que mais importa pra você nesse trabalho?"
+"pt": "Ótimo. O que mais importa pra você nesse tipo de trabalho?"
 },
 {
 "s": "You",
 "en": "For me, compliance always comes first. I'm a fast learner, and I pay close attention to detail.",
-"pt": "Conformidade em primeiro lugar. Aprendo rápido e sou detalhista."
+"pt": "Pra mim, conformidade sempre vem em primeiro lugar. Aprendo rápido e presto muita atenção aos detalhes."
 },
 {
 "s": "Director",
@@ -1487,7 +1487,7 @@
 {
 "s": "You",
 "en": "I'm looking to grow my career here in the US, and this role is a great fit for my background.",
-"pt": "Quero crescer nos EUA, e a vaga encaixa com minha trajetória."
+"pt": "Quero crescer na carreira aqui nos EUA, e esta vaga encaixa muito bem com a minha trajetória."
 }
 ],
 "prompts": [
@@ -1571,12 +1571,12 @@
 {
 "s": "Speaker",
 "en": "Hi, welcome to Chick-fil-A! What can I get started for you today?",
-"pt": "Bem-vindo! O que vai querer hoje?"
+"pt": "Oi, bem-vindo ao Chick-fil-A! O que vai querer hoje?"
 },
 {
 "s": "You",
 "en": "Hi, can I get a number one, please?",
-"pt": "Oi, me vê um número 1?"
+"pt": "Oi, me vê um número 1, por favor?"
 },
 {
 "s": "Speaker",
@@ -1586,7 +1586,7 @@
 {
 "s": "You",
 "en": "Yeah, make it a large. Can I get that with no pickles?",
-"pt": "Isso, o grande. Pode vir sem picles?"
+"pt": "Isso, pode ser o grande. Pode vir sem picles?"
 },
 {
 "s": "Speaker",
@@ -1596,7 +1596,7 @@
 {
 "s": "You",
 "en": "Could I also get a kid's meal with apple juice?",
-"pt": "Também um lanche infantil com suco de maçã?"
+"pt": "Também pode me ver um lanche infantil com suco de maçã?"
 },
 {
 "s": "Speaker",
@@ -1611,7 +1611,7 @@
 {
 "s": "Speaker",
 "en": "My pleasure! That'll be $18.47. Please pull up to the first window.",
-"pt": "Com prazer! Fica $18,47. Avance até a primeira janela."
+"pt": "Com prazer! Fica $18,47. Pode avançar até a primeira janela."
 },
 {
 "s": "You",
@@ -1670,7 +1670,7 @@
 {
 "s": "You",
 "en": "Let me walk you through it. First, I put together a test plan. It covers scope, approach and timelines.",
-"pt": "Vou explicar. Primeiro monto um plano de teste: escopo, abordagem e prazos."
+"pt": "Deixa eu te explicar passo a passo. Primeiro, eu monto um plano de teste. Cobre escopo, abordagem e prazos."
 },
 {
 "s": "QA Lead",
@@ -1680,7 +1680,7 @@
 {
 "s": "You",
 "en": "Pretty detailed. Each test case has clear steps and an expected result.",
-"pt": "Bem detalhados. Passos claros e resultado esperado."
+"pt": "Bem detalhados. Cada caso de teste tem passos claros e um resultado esperado."
 },
 {
 "s": "QA Lead",
@@ -1690,7 +1690,7 @@
 {
 "s": "You",
 "en": "We prioritize test cases by risk. Login and checkout always come first.",
-"pt": "Priorizamos por risco. Login e checkout sempre primeiro."
+"pt": "Priorizamos os casos de teste por risco. Login e checkout sempre vêm primeiro."
 },
 {
 "s": "QA Lead",
@@ -1700,7 +1700,7 @@
 {
 "s": "You",
 "en": "That's out of scope for this release, but I've already drafted a few test cases for it.",
-"pt": "Fora do escopo desta release, mas já rascunhei alguns casos."
+"pt": "Isso está fora do escopo desta release, mas já rascunhei alguns casos de teste pra isso."
 },
 {
 "s": "QA Lead",
@@ -1727,7 +1727,7 @@
 },
 {
 "en": "We're still waiting on FDA approval.",
-"pt": "Ainda aguardando a aprovação do FDA.",
+"pt": "Ainda estamos aguardando a aprovação do FDA.",
 "pr": "âprúvâl"
 },
 {
@@ -1755,7 +1755,7 @@
 {
 "s": "You",
 "en": "We're getting ready to submit to the FDA. The submission is due at the end of the month.",
-"pt": "Nos preparando para submeter. O prazo é fim do mês."
+"pt": "Estamos nos preparando para submeter ao FDA. O prazo da submissão é no fim do mês."
 },
 {
 "s": "PM",
@@ -1765,17 +1765,17 @@
 {
 "s": "You",
 "en": "Not yet. We're still waiting on FDA approval for the labeling changes.",
-"pt": "Ainda não. Aguardando aprovação das mudanças de rotulagem."
+"pt": "Ainda não. Ainda estamos aguardando a aprovação do FDA para as mudanças de rotulagem."
 },
 {
 "s": "PM",
 "en": "They also want a bigger logo and a shorter warnings section.",
-"pt": "Querem um logo maior e advertências mais curtas."
+"pt": "Eles também querem um logo maior e advertências mais curtas."
 },
 {
 "s": "You",
 "en": "I hear you, but according to the latest FDA guidance, the warnings have to stay. We need to make sure the label is compliant.",
-"pt": "Entendo, mas pelo guidance as advertências ficam. O rótulo precisa estar em conformidade."
+"pt": "Entendo, mas de acordo com o guidance mais recente do FDA, as advertências têm que ficar. Precisamos garantir que o rótulo está em conformidade."
 },
 {
 "s": "PM",
@@ -1819,7 +1819,7 @@
 "chunks": [
 {
 "en": "Hi, table for three, please.",
-"pt": "Mesa para três, por favor.",
+"pt": "Oi, mesa para três, por favor.",
 "pr": "têibâl fór thrí"
 },
 {
@@ -1834,7 +1834,7 @@
 },
 {
 "en": "Could we also get a booster seat for her?",
-"pt": "Pode trazer um assento elevado pra ela?",
+"pt": "Também pode trazer um assento elevado pra ela?",
 "pr": "búster sít"
 },
 {
@@ -1844,7 +1844,7 @@
 },
 {
 "en": "Can we get a few more minutes?",
-"pt": "Mais uns minutinhos?",
+"pt": "Pode nos dar mais uns minutinhos?",
 "pr": "a fiú mór mínits"
 },
 {
@@ -1880,7 +1880,7 @@
 {
 "s": "You",
 "en": "Hi, table for three, please. How long's the wait?",
-"pt": "Mesa para três. Quanto tempo de espera?"
+"pt": "Oi, mesa para três, por favor. Quanto tempo de espera?"
 },
 {
 "s": "Host",
@@ -1890,27 +1890,27 @@
 {
 "s": "You",
 "en": "No problem. Could we get a booth? And could we also get a booster seat for her?",
-"pt": "Sem problema. Pode ser sofá? E um assento elevado pra ela?"
+"pt": "Sem problema. Pode ser uma mesa de sofá? E também pode trazer um assento elevado pra ela?"
 },
 {
 "s": "Server",
 "en": "Hi guys, I'm Jake, I'll be taking care of you tonight. Can I start you off with something to drink?",
-"pt": "Oi, sou o Jake, vou atender vocês. Algo pra beber?"
+"pt": "Oi, pessoal, sou o Jake, vou atender vocês hoje à noite. Algo pra beber pra começar?"
 },
 {
 "s": "You",
 "en": "Can we get some waters for the table? And can we get a few more minutes?",
-"pt": "Água pra mesa? E mais uns minutinhos?"
+"pt": "Pode trazer água pra mesa? E pode nos dar mais uns minutinhos?"
 },
 {
 "s": "Server",
 "en": "Alright, are you guys ready?",
-"pt": "Prontos?"
+"pt": "Certo, vocês estão prontos?"
 },
 {
 "s": "You",
 "en": "What would you recommend? ... Okay, I'll go with the salmon. Could I get the dressing on the side?",
-"pt": "O que recomenda? ... Vou de salmão. Molho à parte?"
+"pt": "O que você recomenda? ... Tá, vou de salmão. O molho pode vir à parte?"
 }
 ],
 "prompts": [
@@ -1940,12 +1940,12 @@
 },
 {
 "en": "I'd say it's high severity, but medium priority.",
-"pt": "Severidade alta, prioridade média.",
+"pt": "Eu diria que a severidade é alta, mas a prioridade é média.",
 "pr": "sivérâri / praiórâri"
 },
 {
 "en": "I logged it and attached a screen recording and the logs.",
-"pt": "Registrei e anexei gravação de tela e logs.",
+"pt": "Registrei e anexei uma gravação de tela e os logs.",
 "pr": "âtétcht"
 }
 ],
@@ -1953,7 +1953,7 @@
 {
 "s": "You",
 "en": "Hey Ryan, got a sec? I ran into a bug on the checkout screen.",
-"pt": "Ryan, tem um segundo? Achei um bug no checkout."
+"pt": "Ei, Ryan, tem um segundo? Encontrei um bug na tela de checkout."
 },
 {
 "s": "Dev",
@@ -1963,7 +1963,7 @@
 {
 "s": "You",
 "en": "Ha! I was able to reproduce it consistently on Android. Here are the steps to reproduce.",
-"pt": "Haha! Reproduzi toda vez no Android. Aqui os passos."
+"pt": "Haha! Consegui reproduzir toda vez no Android. Aqui estão os passos para reproduzir."
 },
 {
 "s": "Dev",
@@ -1978,22 +1978,22 @@
 {
 "s": "Dev",
 "en": "Ouch. How bad is it?",
-"pt": "Ai. Quão grave?"
+"pt": "Ai. Quão grave é?"
 },
 {
 "s": "You",
 "en": "I'd say it's high severity, but medium priority. It only happens with gift cards.",
-"pt": "Severidade alta, prioridade média. Só acontece com gift card."
+"pt": "Eu diria que a severidade é alta, mas a prioridade é média. Só acontece com gift cards."
 },
 {
 "s": "Dev",
 "en": "Can you send me the details?",
-"pt": "Me manda os detalhes?"
+"pt": "Pode me mandar os detalhes?"
 },
 {
 "s": "You",
 "en": "Already did. I logged it and attached a screen recording and the logs.",
-"pt": "Já mandei. Registrei com gravação de tela e logs."
+"pt": "Já mandei. Registrei e anexei uma gravação de tela e os logs."
 }
 ],
 "prompts": [
@@ -2020,7 +2020,7 @@
 },
 {
 "en": "Let me double-check the regulatory requirements before we move forward.",
-"pt": "Deixa eu checar as exigências antes de seguirmos."
+"pt": "Deixa eu checar as exigências regulatórias antes de seguirmos."
 },
 {
 "en": "That could be a compliance risk.",
@@ -2036,12 +2036,12 @@
 {
 "s": "Marketing",
 "en": "We want the new website to say our product is \"the best on the market.\" Quick approval?",
-"pt": "Queremos dizer no site que o produto é 'o melhor do mercado'. Aprova rapidinho?"
+"pt": "Queremos que o site novo diga que nosso produto é 'o melhor do mercado'. Aprova rapidinho?"
 },
 {
 "s": "You",
 "en": "Hmm, that could be a compliance risk. We need to stay in compliance with FDA regulations, and claims like that need data to back them up.",
-"pt": "Hmm, risco de conformidade. Afirmações assim precisam de dados."
+"pt": "Hmm, isso pode ser um risco de conformidade. Precisamos continuar em conformidade com as regulamentações do FDA, e afirmações assim precisam de dados que as sustentem."
 },
 {
 "s": "Marketing",
@@ -2051,7 +2051,7 @@
 {
 "s": "You",
 "en": "The FDA looks at promotional materials too. If we're not compliant, we could get a warning letter.",
-"pt": "O FDA olha material promocional também. Podemos receber warning letter."
+"pt": "O FDA olha materiais promocionais também. Se não estivermos em conformidade, podemos receber uma warning letter."
 },
 {
 "s": "Marketing",
@@ -2061,7 +2061,7 @@
 {
 "s": "You",
 "en": "True, guidance documents aren't legally binding, but the FDA expects us to follow them.",
-"pt": "Verdade, não tem força de lei, mas o FDA espera que sigamos."
+"pt": "Verdade, guidances não têm força de lei, mas o FDA espera que a gente siga."
 },
 {
 "s": "Marketing",
@@ -2071,7 +2071,7 @@
 {
 "s": "You",
 "en": "Let me double-check the regulatory requirements before we move forward. I'd rather flag it now than deal with it later.",
-"pt": "Vou checar as exigências antes. Prefiro sinalizar agora."
+"pt": "Deixa eu checar as exigências regulatórias antes de seguirmos. Prefiro sinalizar agora do que resolver depois."
 }
 ],
 "prompts": [
@@ -2105,12 +2105,12 @@
 },
 {
 "en": "Everything was great, thanks!",
-"pt": "Estava tudo ótimo!",
+"pt": "Estava tudo ótimo, valeu!",
 "pr": "évrithin uâz grêit"
 },
 {
 "en": "Could we get the check, please?",
-"pt": "Pode trazer a conta?",
+"pt": "Pode trazer a conta, por favor?",
 "pr": "kúdui guét dâ tchék"
 },
 {
@@ -2156,17 +2156,17 @@
 {
 "s": "You",
 "en": "No, I'm done, thanks! Actually, could I get a to-go box for this?",
-"pt": "Não, terminei! Pode me dar uma caixinha pra levar?"
+"pt": "Não, terminei, valeu! Na verdade, pode me dar uma caixinha pra levar?"
 },
 {
 "s": "Server",
 "en": "Sure thing! Can I get you guys anything else? Any dessert?",
-"pt": "Claro! Mais alguma coisa? Sobremesa?"
+"pt": "Claro! Mais alguma coisa pra vocês? Alguma sobremesa?"
 },
 {
 "s": "You",
 "en": "We're all set, thank you! Could we get the check, please?",
-"pt": "Tudo certo, obrigado! Pode trazer a conta?"
+"pt": "Tá tudo certo, valeu! Pode trazer a conta, por favor?"
 },
 {
 "s": "Server",
@@ -2176,17 +2176,17 @@
 {
 "s": "You",
 "en": "Together's fine. Oh, quick question: is the tip already included?",
-"pt": "Junto. Ah, a gorjeta já está incluída?"
+"pt": "Junto tá bom. Ah, uma pergunta rápida: a gorjeta já está incluída?"
 },
 {
 "s": "Server",
 "en": "Nope, it's not. I'll take that whenever you're ready.",
-"pt": "Não. Levo quando estiverem prontos."
+"pt": "Não, não está. Levo quando vocês estiverem prontos."
 },
 {
 "s": "You",
 "en": "Everything was great, thanks! Keep the change.",
-"pt": "Estava tudo ótimo! Pode ficar com o troco."
+"pt": "Estava tudo ótimo, valeu! Pode ficar com o troco."
 }
 ],
 "prompts": [
@@ -2202,7 +2202,7 @@
 },
 {
 "en": "This looks like a regression. It was working fine in the last build.",
-"pt": "Parece uma regressão. Funcionava no último build."
+"pt": "Parece uma regressão. Funcionava bem no último build."
 },
 {
 "en": "Which environment are you testing on?",
@@ -2244,27 +2244,27 @@
 {
 "s": "You",
 "en": "The login bug is back. This looks like a regression. It was working fine in the last build.",
-"pt": "O bug de login voltou. Parece regressão. Funcionava no último build."
+"pt": "O bug de login voltou. Parece uma regressão. Funcionava bem no último build."
 },
 {
 "s": "Dev",
 "en": "Weird. Which environment are you testing on?",
-"pt": "Estranho. Qual ambiente?"
+"pt": "Estranho. Em qual ambiente você está testando?"
 },
 {
 "s": "You",
 "en": "It passed on staging, but it's failing in production.",
-"pt": "Passou em staging, falha em produção."
+"pt": "Passou em staging, mas falha em produção."
 },
 {
 "s": "Dev Lead",
 "en": "Okay, that's not good. Are we still shipping Friday?",
-"pt": "Não é bom. Ainda lançamos sexta?"
+"pt": "Tá, isso não é bom. Ainda vamos lançar na sexta?"
 },
 {
 "s": "You",
 "en": "Let's run a quick smoke test first. But honestly, we need to run a full regression before the release.",
-"pt": "Vamos rodar um smoke test. Mas precisamos de regressão completa antes."
+"pt": "Vamos rodar um smoke test rápido primeiro. Mas, sinceramente, precisamos rodar uma regressão completa antes da release."
 }
 ],
 "prompts": [
@@ -2276,7 +2276,7 @@
 "chunks": [
 {
 "en": "I'm reviewing the draft labeling right now.",
-"pt": "Estou revisando o rascunho da rotulagem.",
+"pt": "Estou revisando o rascunho da rotulagem agora.",
 "pr": "dréft lêibâlin"
 },
 {
@@ -2314,7 +2314,7 @@
 {
 "s": "You",
 "en": "Yes, I'm reviewing the draft labeling right now. I found a couple of issues.",
-"pt": "Sim, estou revisando agora. Achei alguns problemas."
+"pt": "Sim, estou revisando o rascunho da rotulagem agora. Achei alguns problemas."
 },
 {
 "s": "Packaging",
@@ -2324,7 +2324,7 @@
 {
 "s": "You",
 "en": "First, \"fast relief in 5 minutes\": this claim isn't supported by the data.",
-"pt": "Primeiro, 'alívio em 5 minutos': não é sustentado pelos dados."
+"pt": "Primeiro, 'alívio rápido em 5 minutos': essa alegação não é sustentada pelos dados."
 },
 {
 "s": "Packaging",
@@ -2334,7 +2334,7 @@
 {
 "s": "You",
 "en": "Not really. The wording has to match the approved labeling. I'll send it back with tracked changes.",
-"pt": "Não. Tem que bater com o aprovado. Devolvo com controle de alterações."
+"pt": "Na verdade, não. O texto precisa bater com a rotulagem aprovada. Vou devolver com controle de alterações."
 },
 {
 "s": "Packaging",
@@ -2344,7 +2344,7 @@
 {
 "s": "You",
 "en": "We also need to update the package insert and the carton. Once Legal and Medical sign off, we're good to go.",
-"pt": "Atualizar bula e cartucho. Com o aval do Jurídico e Médico, seguimos."
+"pt": "Também precisamos atualizar a bula e o cartucho. Assim que Jurídico e Médico aprovarem, podemos seguir."
 }
 ],
 "prompts": [
@@ -2388,7 +2388,7 @@
 },
 {
 "en": "Hey, I think there's a mix-up with my order.",
-"pt": "Acho que houve uma confusão com meu pedido.",
+"pt": "Ei, acho que houve uma confusão com meu pedido.",
 "pr": "dérz â míks-âp"
 },
 {
@@ -2403,7 +2403,7 @@
 },
 {
 "en": "Could you guys fix that, or should I just get a refund?",
-"pt": "Vocês resolvem ou é melhor pedir reembolso?",
+"pt": "Vocês podem resolver isso, ou é melhor eu só pedir reembolso?",
 "pr": "rífând"
 },
 {
@@ -2424,12 +2424,12 @@
 {
 "s": "Employee",
 "en": "Thanks for calling Tony's! Is this gonna be for pickup or delivery?",
-"pt": "Obrigado por ligar! Retirada ou entrega?"
+"pt": "Obrigado por ligar pro Tony's! É pra retirada ou entrega?"
 },
 {
 "s": "You",
 "en": "Hi, I'd like to place an order for pickup. A large pepperoni and a chicken wrap.",
-"pt": "Oi, pedido pra retirar. Uma pepperoni grande e um wrap de frango."
+"pt": "Oi, quero fazer um pedido pra retirar. Uma pepperoni grande e um wrap de frango."
 },
 {
 "s": "Employee",
@@ -2439,7 +2439,7 @@
 {
 "s": "You",
 "en": "It's under \"{name}.\" About how long will that take?",
-"pt": "No nome de \"{name}\". Quanto tempo leva?"
+"pt": "Tá no nome de \"{name}\". Mais ou menos quanto tempo vai levar?"
 },
 {
 "s": "Employee",
@@ -2449,17 +2449,17 @@
 {
 "s": "You",
 "en": "Hey, I think there's a mix-up with my order. I ordered the chicken wrap, but I got a burger instead.",
-"pt": "Acho que houve confusão. Pedi wrap e veio hambúrguer."
+"pt": "Ei, acho que houve uma confusão com meu pedido. Pedi o wrap de frango, mas veio um hambúrguer no lugar."
 },
 {
 "s": "Employee",
 "en": "Oh no, I'm so sorry about that! Let me make that right for you.",
-"pt": "Ah não, mil desculpas! Deixa eu resolver."
+"pt": "Ah não, mil desculpas! Deixa eu resolver isso pra você."
 },
 {
 "s": "You",
 "en": "Thanks. We're also missing a side of fries. Could you guys fix that, or should I just get a refund?",
-"pt": "Obrigado. Também faltou fritas. Vocês resolvem ou peço reembolso?"
+"pt": "Valeu. Também tá faltando uma porção de fritas. Vocês podem resolver isso, ou é melhor eu só pedir reembolso?"
 },
 {
 "s": "Employee",
@@ -2469,7 +2469,7 @@
 {
 "s": "You",
 "en": "Oh, that's so nice. It's all good, these things happen.",
-"pt": "Que gentil. Tudo bem, acontece."
+"pt": "Ah, que gentil. Tá tudo bem, acontece."
 }
 ],
 "prompts": [
@@ -2495,7 +2495,7 @@
 },
 {
 "en": "Those tests are blocked until the API is fixed.",
-"pt": "Bloqueados até a API ser corrigida.",
+"pt": "Esses testes estão bloqueados até a API ser corrigida.",
 "pr": "ântíl"
 },
 {
@@ -2518,7 +2518,7 @@
 {
 "s": "You",
 "en": "I kicked off a test run this morning. Forty-five passed, three failed, and two are blocked.",
-"pt": "Iniciei uma rodada hoje. 45 passaram, 3 falharam, 2 bloqueados."
+"pt": "Iniciei uma rodada de testes hoje de manhã. 45 passaram, 3 falharam, 2 bloqueados."
 },
 {
 "s": "QA Manager",
@@ -2528,7 +2528,7 @@
 {
 "s": "You",
 "en": "On the refund screen, the actual result doesn't match the expected one. It shows the wrong amount.",
-"pt": "Na tela de reembolso, o resultado real não bate. Mostra valor errado."
+"pt": "Na tela de reembolso, o resultado real não bate com o esperado. Mostra o valor errado."
 },
 {
 "s": "QA Manager",
@@ -2538,22 +2538,22 @@
 {
 "s": "You",
 "en": "Those tests are blocked until the API is fixed. The backend team's on it.",
-"pt": "Bloqueados até corrigirem a API. O backend está cuidando."
+"pt": "Esses testes estão bloqueados até a API ser corrigida. O time de backend está cuidando disso."
 },
 {
 "s": "QA Manager",
 "en": "Okay. Anything that worries you?",
-"pt": "Algo te preocupa?"
+"pt": "Tá. Algo te preocupa?"
 },
 {
 "s": "You",
 "en": "Honestly, we don't have enough test coverage on payments. Did we cover the edge cases, like zero-dollar orders?",
-"pt": "Falta cobertura em pagamentos. Cobrimos edge cases, tipo pedido de zero dólar?"
+"pt": "Sinceramente, não temos cobertura de teste suficiente em pagamentos. A gente cobriu os edge cases, tipo pedidos de zero dólar?"
 },
 {
 "s": "QA Manager",
 "en": "Good catch. Let's add those this sprint.",
-"pt": "Boa. Vamos adicionar nesta sprint."
+"pt": "Boa observação. Vamos adicionar nesta sprint."
 }
 ],
 "prompts": [
@@ -2596,7 +2596,7 @@
 {
 "s": "You",
 "en": "Hi everyone, quick update. The FDA sent us an information request this morning.",
-"pt": "Oi, atualização rápida. O FDA mandou um IR hoje."
+"pt": "Oi, pessoal, atualização rápida. O FDA mandou um pedido de informação hoje de manhã."
 },
 {
 "s": "CMC Lead",
@@ -2606,17 +2606,17 @@
 {
 "s": "You",
 "en": "They found a deficiency in the stability data. They want the 12-month results for all three batches.",
-"pt": "Deficiência nos dados de estabilidade. Querem 12 meses dos três lotes."
+"pt": "Encontraram uma deficiência nos dados de estabilidade. Querem os resultados de 12 meses dos três lotes."
 },
 {
 "s": "CMC Lead",
 "en": "We have those. How much time do we have?",
-"pt": "Temos isso. Quanto tempo?"
+"pt": "Temos isso. Quanto tempo temos?"
 },
 {
 "s": "You",
 "en": "We have to respond within ten business days.",
-"pt": "Responder em até 10 dias úteis."
+"pt": "Temos que responder em até 10 dias úteis."
 },
 {
 "s": "PM",
@@ -2626,17 +2626,17 @@
 {
 "s": "You",
 "en": "Not if we answer on time. Our target action date is still in March. But if we don't address it, we could get a Complete Response Letter.",
-"pt": "Não se respondermos a tempo. A data-alvo continua março. Senão, CRL."
+"pt": "Não se respondermos a tempo. Nossa data-alvo de decisão continua em março. Mas, se não resolvermos, podemos receber uma CRL (não aprovação)."
 },
 {
 "s": "PM",
 "en": "Okay, that's a no-go. What do you need from us?",
-"pt": "Isso não pode. O que precisa?"
+"pt": "Tá, isso não pode acontecer. O que você precisa da gente?"
 },
 {
 "s": "You",
 "en": "Send me the data by Wednesday. Let's put together a response and get it out the door by Friday.",
-"pt": "Me mandem os dados até quarta. Enviamos a resposta até sexta."
+"pt": "Me mandem os dados até quarta. Vamos montar a resposta e mandar até sexta."
 }
 ],
 "prompts": [
@@ -2665,17 +2665,17 @@
 "chunks": [
 {
 "en": "Hi! Could I do a medium iced latte with oat milk?",
-"pt": "Pode ser um latte gelado médio com leite de aveia?",
+"pt": "Oi! Pode ser um latte gelado médio com leite de aveia?",
 "pr": "kúdái dú â mídiâm áist látêi uídh ôut mílk"
 },
 {
 "en": "Can you make it half-sweet, with light ice?",
-"pt": "Metade do açúcar e pouco gelo?",
+"pt": "Pode fazer com metade do açúcar e pouco gelo?",
 "pr": "héf-suít, uídh láit áis"
 },
 {
 "en": "Could you add an extra shot?",
-"pt": "Uma dose extra de espresso?",
+"pt": "Pode colocar uma dose extra de espresso?",
 "pr": "éd ân éxtrâ xót"
 },
 {
@@ -2721,7 +2721,7 @@
 {
 "s": "You",
 "en": "Hi! Could I do a medium iced latte with oat milk? Can you make it half-sweet, with light ice?",
-"pt": "Um latte gelado médio com leite de aveia? Metade do açúcar, pouco gelo?"
+"pt": "Oi! Pode ser um latte gelado médio com leite de aveia? Pode fazer com metade do açúcar e pouco gelo?"
 },
 {
 "s": "Barista",
@@ -2731,7 +2731,7 @@
 {
 "s": "You",
 "en": "Yeah, a large hot coffee. Could you add an extra shot? And can I grab a cake pop for my daughter?",
-"pt": "Um café quente grande com dose extra. E um cake pop pra minha filha?"
+"pt": "Sim, um café quente grande. Pode colocar uma dose extra de espresso? E um cake pop pra minha filha?"
 },
 {
 "s": "Barista",
@@ -2741,7 +2741,7 @@
 {
 "s": "You",
 "en": "A banana bread. Could you warm that up for me?",
-"pt": "Um banana bread. Pode esquentar?"
+"pt": "Um banana bread. Pode esquentar isso pra mim?"
 },
 {
 "s": "Barista",
@@ -2751,12 +2751,12 @@
 {
 "s": "You",
 "en": "To go, please.",
-"pt": "Pra viagem."
+"pt": "Pra viagem, por favor."
 },
 {
 "s": "Barista",
 "en": "Can I get a name for the order? It'll be at the end of the bar.",
-"pt": "Um nome pro pedido? Sai no final do balcão."
+"pt": "Pode me dar um nome pro pedido? Vai sair no final do balcão."
 },
 {
 "s": "You",
@@ -2810,42 +2810,42 @@
 {
 "s": "PO",
 "en": "Okay, next story: users can save their favorite stores. Any questions?",
-"pt": "Próxima história: usuário salva lojas favoritas. Dúvidas?"
+"pt": "Certo, próxima história: usuários podem salvar lojas favoritas. Alguma dúvida?"
 },
 {
 "s": "You",
 "en": "Let's go over the acceptance criteria first. What happens if someone saves more than ten?",
-"pt": "Vamos repassar os critérios de aceite. E se salvarem mais de dez?"
+"pt": "Vamos repassar os critérios de aceite primeiro. O que acontece se alguém salvar mais de dez?"
 },
 {
 "s": "PO",
 "en": "Good question. Let's say ten is the max.",
-"pt": "Boa. Dez é o máximo."
+"pt": "Boa pergunta. Digamos que dez é o máximo."
 },
 {
 "s": "You",
 "en": "Got it. I'm gonna need some test data for that, a few accounts with different numbers of favorites.",
-"pt": "Certo. Vou precisar de dados de teste, contas com quantidades diferentes."
+"pt": "Entendi. Vou precisar de dados de teste pra isso, algumas contas com quantidades diferentes de favoritos."
 },
 {
 "s": "Dev",
 "en": "I can set that up. By the way, someone said the list isn't sorted. Bug?",
-"pt": "Eu preparo. Aliás, disseram que a lista não está ordenada. Bug?"
+"pt": "Eu preparo. Aliás, disseram que a lista não está ordenada. É bug?"
 },
 {
 "s": "You",
 "en": "That's not a bug, it's working as intended. It's sorted by date, per the criteria.",
-"pt": "Não é bug, funciona como planejado. Ordena por data, pelos critérios."
+"pt": "Não é bug, está funcionando como planejado. Está ordenada por data, conforme os critérios."
 },
 {
 "s": "PO",
 "en": "Nice. And the crash we saw last week?",
-"pt": "E aquele crash da semana passada?"
+"pt": "Legal. E aquele crash que vimos semana passada?"
 },
 {
 "s": "You",
 "en": "I added five new test cases to the suite, and I also did some exploratory testing around it. Once the fix is in, I'll verify it and close it out.",
-"pt": "Adicionei cinco casos e fiz testes exploratórios. Quando a correção entrar, valido e encerro."
+"pt": "Adicionei cinco casos de teste na suíte e também fiz testes exploratórios em volta disso. Assim que a correção entrar, eu valido e encerro."
 }
 ],
 "prompts": [
@@ -2890,42 +2890,42 @@
 {
 "s": "R&D Director",
 "en": "We wanna launch a new 12-hour version of our allergy tablet. How fast can we do it?",
-"pt": "Queremos lançar uma versão 12 horas do antialérgico. Quão rápido?"
+"pt": "Queremos lançar uma versão nova de 12 horas do nosso comprimido antialérgico. Quão rápido conseguimos?"
 },
 {
 "s": "You",
 "en": "Good question. First: what's our regulatory pathway for this product? Is it gonna be Rx or OTC?",
-"pt": "Boa. Primeiro: qual o caminho regulatório? Rx ou OTC?"
+"pt": "Boa pergunta. Primeiro: qual é o caminho regulatório deste produto? Vai ser de prescrição ou isento de prescrição?"
 },
 {
 "s": "R&D Director",
 "en": "OTC, same as the current one. Just a new extended-release formula.",
-"pt": "OTC, como o atual. Só uma fórmula de liberação prolongada."
+"pt": "Isento de prescrição, como o atual. Só uma fórmula nova de liberação prolongada."
 },
 {
 "s": "You",
 "en": "Okay. A new dosage form usually needs new data, so I don't wanna guess. We should request a pre-submission meeting with the FDA.",
-"pt": "Nova forma farmacêutica costuma exigir dados. Devemos pedir pré-submissão ao FDA."
+"pt": "Tá. Uma nova forma farmacêutica costuma exigir dados novos, então não quero chutar. Deveríamos pedir uma reunião de pré-submissão com o FDA."
 },
 {
 "s": "R&D Director",
 "en": "Isn't that gonna slow us down?",
-"pt": "Isso não vai atrasar?"
+"pt": "Isso não vai atrasar a gente?"
 },
 {
 "s": "You",
 "en": "A little at first, but it saves time later. Let's get alignment with the agency before we file.",
-"pt": "Um pouco no início, mas economiza depois. Vamos alinhar com a agência antes."
+"pt": "Um pouco no início, mas economiza tempo depois. Vamos alinhar com a agência antes de protocolar."
 },
 {
 "s": "QA Manager",
 "en": "And manufacturing, anything new for us?",
-"pt": "E a fabricação, algo novo?"
+"pt": "E a fabricação, tem algo novo pra gente?"
 },
 {
 "s": "You",
 "en": "The new line still falls under 21 CFR Part 211, so cGMP applies as usual. I'm putting together the briefing package.",
-"pt": "Continua no 21 CFR 211, cGMP normal. Estou montando o briefing package."
+"pt": "A linha nova continua se enquadrando no 21 CFR Parte 211, então o cGMP se aplica normalmente. Estou montando o briefing package."
 }
 ],
 "prompts": [
@@ -3009,42 +3009,42 @@
 {
 "s": "Employee",
 "en": "Sure! It's in aisle seven, on your left. Follow me, I'll show you.",
-"pt": "Claro! Corredor 7, à esquerda. Vem comigo."
+"pt": "Claro! Fica no corredor 7, à esquerda. Vem comigo, eu te mostro."
 },
 {
 "s": "You",
 "en": "Thanks! Oh, is this buy one, get one?",
-"pt": "Obrigado! Isso tá no leve dois pague um?"
+"pt": "Valeu! Ah, isso tá no 'leve dois, pague um'?"
 },
 {
 "s": "Employee",
 "en": "Yep, that one's BOGO this week.",
-"pt": "Sim, tá BOGO esta semana."
+"pt": "Sim, esse tá BOGO esta semana."
 },
 {
 "s": "You",
 "en": "Nice. Do you have any more of these in the back? The shelf's almost empty.",
-"pt": "Legal. Tem mais no estoque? A prateleira tá quase vazia."
+"pt": "Legal. Tem mais desses no estoque? A prateleira tá quase vazia."
 },
 {
 "s": "Employee",
 "en": "Let me check in the back for you. Anything else?",
-"pt": "Vou ver no estoque. Mais algo?"
+"pt": "Deixa eu ver no estoque pra você. Mais alguma coisa?"
 },
 {
 "s": "You",
 "en": "Yeah, I'm looking for kids' snacks, like Goldfish. And which aisle is the bread in?",
-"pt": "Procuro lanchinhos de criança. E o pão fica em qual corredor?"
+"pt": "Sim, estou procurando lanchinhos de criança, tipo Goldfish. E em qual corredor fica o pão?"
 },
 {
 "s": "Employee",
 "en": "Snacks are in aisle nine, bread's in aisle two.",
-"pt": "Lanches no 9, pão no 2."
+"pt": "Os lanchinhos ficam no corredor 9, o pão no corredor 2."
 },
 {
 "s": "You",
 "en": "And could you grab that for me? It's on the top shelf.",
-"pt": "E pode pegar aquilo? Tá lá em cima."
+"pt": "E pode pegar aquilo pra mim? Tá na prateleira de cima."
 },
 {
 "s": "Employee",
@@ -3054,7 +3054,7 @@
 {
 "s": "You",
 "en": "Hey, do you guys carry gluten-free pasta? ... Oh, never mind, I found it!",
-"pt": "Vocês vendem macarrão sem glúten? ... Deixa pra lá, achei!"
+"pt": "Ei, vocês vendem macarrão sem glúten? ... Ah, deixa pra lá, achei!"
 }
 ],
 "prompts": [
@@ -3098,12 +3098,12 @@
 {
 "s": "Scrum Master",
 "en": "Morning, everyone! You wanna go first?",
-"pt": "Bom dia! Quer começar?"
+"pt": "Bom dia, pessoal! Quer começar?"
 },
 {
 "s": "You",
 "en": "Sure. Yesterday I wrapped up testing on the sign-up flow. Today I'm gonna pick up the next ticket on the board, the push notifications one.",
-"pt": "Claro. Ontem terminei o cadastro. Hoje pego o próximo ticket, o das notificações."
+"pt": "Claro. Ontem terminei os testes do fluxo de cadastro. Hoje vou pegar o próximo ticket do board, o das notificações push."
 },
 {
 "s": "Scrum Master",
@@ -3113,17 +3113,17 @@
 {
 "s": "You",
 "en": "I'm about halfway through it already. No blockers on my end.",
-"pt": "Já estou na metade. Sem bloqueios."
+"pt": "Já estou mais ou menos na metade. Sem bloqueios do meu lado."
 },
 {
 "s": "Dev",
 "en": "Quick question: did you test sign-up with an expired email link? I think there's an issue there.",
-"pt": "Testou cadastro com link de e-mail expirado? Acho que tem problema."
+"pt": "Pergunta rápida: testou o cadastro com um link de e-mail expirado? Acho que tem um problema aí."
 },
 {
 "s": "You",
 "en": "Good point. Can we take that offline? I'll ping you right after this.",
-"pt": "Boa. Falamos depois? Te chamo logo após."
+"pt": "Boa. Podemos falar disso depois da daily? Te chamo logo depois."
 },
 {
 "s": "Scrum Master",
@@ -3133,7 +3133,7 @@
 {
 "s": "You",
 "en": "That's it from me. I'll keep you posted.",
-"pt": "É isso. Te mantenho informado."
+"pt": "É isso da minha parte. Te mantenho informado."
 }
 ],
 "prompts": [
@@ -3178,27 +3178,27 @@
 {
 "s": "You",
 "en": "Hi everyone, thanks for joining. Let's go through the open action items.",
-"pt": "Oi, obrigada por entrarem. Vamos às pendências."
+"pt": "Oi, pessoal, obrigada por entrarem. Vamos repassar as pendências em aberto."
 },
 {
 "s": "RA Specialist",
 "en": "First one is the annual report for the cough syrup.",
-"pt": "Primeira: relatório anual do xarope."
+"pt": "A primeira é o relatório anual do xarope pra tosse."
 },
 {
 "s": "You",
 "en": "Okay. Who owns this one?",
-"pt": "Quem é o responsável?"
+"pt": "Tá. Quem é o responsável por essa?"
 },
 {
 "s": "RA Specialist",
 "en": "I do. I have almost everything, but the batch data is missing. That's still pending on QA's side.",
-"pt": "Eu. Falta os dados de lote, pendente com a Qualidade."
+"pt": "Sou eu. Tenho quase tudo, mas faltam os dados de lote. Ainda está pendente do lado da Qualidade."
 },
 {
 "s": "You",
 "en": "Got it. The due date is the 15th. Is that deadline still realistic?",
-"pt": "Entendi. O prazo é dia 15. Ainda é realista?"
+"pt": "Entendi. O prazo é dia 15. Esse prazo ainda é realista?"
 },
 {
 "s": "RA Specialist",
@@ -3208,17 +3208,17 @@
 {
 "s": "You",
 "en": "Okay, I'll reach out to them today. What about the labeling update for the vitamins?",
-"pt": "Falo com eles hoje. E a rotulagem das vitaminas?"
+"pt": "Tá, falo com eles hoje. E a atualização da rotulagem das vitaminas?"
 },
 {
 "s": "Associate",
 "en": "We're still waiting for comments from Marketing.",
-"pt": "Esperando comentários do Marketing."
+"pt": "Ainda estamos esperando comentários do Marketing."
 },
 {
 "s": "You",
 "en": "Then let's circle back on this next week. I'll update the submission tracker after the meeting.",
-"pt": "Retomamos semana que vem. Atualizo o tracker depois."
+"pt": "Então vamos retomar isso semana que vem. Vou atualizar o controle de submissões depois da reunião."
 }
 ],
 "prompts": [
@@ -3277,7 +3277,7 @@
 },
 {
 "en": "I'm good, no receipt, thanks.",
-"pt": "Tô bem, não precisa de nota.",
+"pt": "Tô bem, não precisa de nota, valeu.",
 "pr": "rissít (o p é mudo)"
 },
 {
@@ -3303,17 +3303,17 @@
 {
 "s": "You",
 "en": "Yeah, I found everything, thanks! Oh, and I brought my own bags.",
-"pt": "Sim, achei tudo! E trouxe minhas sacolas."
+"pt": "Sim, achei tudo, valeu! Ah, e eu trouxe minhas sacolas."
 },
 {
 "s": "Cashier",
 "en": "Perfect. Can I get your phone number for your account?",
-"pt": "Perfeito. Seu telefone pra conta de pontos?"
+"pt": "Perfeito. Pode me dar seu telefone pra sua conta?"
 },
 {
 "s": "You",
 "en": "Sure... Wait, I think that rang up wrong. The orange juice is supposed to be on sale.",
-"pt": "Claro... Espera, acho que passou errado. O suco era pra estar em promoção."
+"pt": "Claro... Espera, acho que passou o preço errado. O suco de laranja era pra estar em promoção."
 },
 {
 "s": "Cashier",
@@ -3323,17 +3323,17 @@
 {
 "s": "You",
 "en": "Thanks! Could you double-bag that? It's kinda heavy. Oh, hold on a sec, I forgot the milk!",
-"pt": "Obrigado! Coloca em duas sacolas? É pesado. Ah, espera, esqueci o leite!"
+"pt": "Valeu! Pode colocar em duas sacolas? É meio pesado. Ah, espera um segundo, esqueci o leite!"
 },
 {
 "s": "Cashier",
 "en": "No worries, go ahead. ... Okay, your total is $86.40. Debit or credit?",
-"pt": "Sem problema. ... Total $86,40. Débito ou crédito?"
+"pt": "Sem problema, pode ir. ... Tá, seu total é $86,40. Débito ou crédito?"
 },
 {
 "s": "You",
 "en": "Debit. Do I just tap my card here? And can I get forty in cash back?",
-"pt": "Débito. É só encostar? E 40 de saque?"
+"pt": "Débito. É só encostar o cartão aqui? E pode me dar 40 dólares de saque no caixa?"
 },
 {
 "s": "Cashier",
@@ -3343,17 +3343,17 @@
 {
 "s": "You",
 "en": "I'm good, no receipt, thanks.",
-"pt": "Não precisa, obrigado."
+"pt": "Tô bem, não precisa de nota, valeu."
 },
 {
 "s": "Cashier",
 "en": "Would you like help out to your car?",
-"pt": "Quer ajuda até o carro?"
+"pt": "Quer ajuda pra levar até o carro?"
 },
 {
 "s": "You",
 "en": "We're good, thank you! Have a good one!",
-"pt": "Tudo bem, obrigado! Bom dia!"
+"pt": "Tudo bem, valeu! Tenha um bom dia!"
 }
 ],
 "prompts": [
@@ -3396,7 +3396,7 @@
 {
 "s": "You",
 "en": "Hey Mike, got a minute? The app crashes when you apply a coupon. I just logged a bug for that.",
-"pt": "Mike, tem um minuto? O app trava ao aplicar cupom. Acabei de abrir o bug."
+"pt": "Ei, Mike, tem um minuto? O app trava quando você aplica um cupom. Acabei de abrir um bug pra isso."
 },
 {
 "s": "Dev",
@@ -3406,7 +3406,7 @@
 {
 "s": "You",
 "en": "No, I can reproduce it every single time. Add two items, go to checkout, apply \"SAVE10\".",
-"pt": "Não, reproduzo toda vez. Dois itens, checkout, aplica 'SAVE10'."
+"pt": "Não, consigo reproduzir toda vez. Adicione dois itens, vá pro checkout e aplique 'SAVE10'."
 },
 {
 "s": "Dev",
@@ -3416,22 +3416,22 @@
 {
 "s": "You",
 "en": "Yep, I attached a screen recording and the logs to the ticket.",
-"pt": "Sim, anexei gravação e logs no ticket."
+"pt": "Sim, anexei uma gravação de tela e os logs no ticket."
 },
 {
 "s": "Dev",
 "en": "Cool. What priority did you set?",
-"pt": "Legal. Que prioridade?"
+"pt": "Legal. Que prioridade você colocou?"
 },
 {
 "s": "You",
 "en": "I'd mark it as high priority, it's blocking checkout. Could you take a look when you get a chance?",
-"pt": "Alta, está travando o checkout. Pode olhar quando puder?"
+"pt": "Eu marcaria como alta prioridade, está travando o checkout. Pode dar uma olhada quando tiver um tempinho?"
 },
 {
 "s": "Dev",
 "en": "Sure, I'll jump on it after lunch.",
-"pt": "Claro, pego depois do almoço."
+"pt": "Claro, começo a resolver depois do almoço."
 }
 ],
 "prompts": [
@@ -3481,7 +3481,7 @@
 {
 "s": "You",
 "en": "Yes, I went through the whole document and left some comments. It looks good overall, just a few minor fixes.",
-"pt": "Sim, li tudo e comentei. No geral está bom, só pequenas correções."
+"pt": "Sim, li o documento inteiro e deixei alguns comentários. No geral está bom, só umas correções pequenas."
 },
 {
 "s": "Writer",
@@ -3491,7 +3491,7 @@
 {
 "s": "You",
 "en": "One thing: there are a few inconsistencies between Module 2 and Module 3. The impurity limits don't match.",
-"pt": "Uma coisa: inconsistências entre Módulo 2 e 3. Os limites de impureza não batem."
+"pt": "Uma coisa: há algumas inconsistências entre o Módulo 2 e o Módulo 3. Os limites de impureza não batem."
 },
 {
 "s": "Writer",
@@ -3501,17 +3501,17 @@
 {
 "s": "You",
 "en": "Could be. Can you double-check the numbers against the source data? And we need to cross-reference this table in the summary.",
-"pt": "Pode ser. Confere com os dados de origem? E referência cruzada dessa tabela no resumo."
+"pt": "Pode ser. Pode conferir os números com os dados de origem? E precisamos fazer a referência cruzada desta tabela no resumo."
 },
 {
 "s": "Writer",
 "en": "No problem. When do you need it back?",
-"pt": "Sem problema. Pra quando?"
+"pt": "Sem problema. Pra quando você precisa de volta?"
 },
 {
 "s": "You",
 "en": "I'll need the final version by end of day Thursday, so we have time for the eCTD publishing.",
-"pt": "Versão final até fim do dia de quinta, pra dar tempo do eCTD."
+"pt": "Vou precisar da versão final até o fim do dia de quinta, pra dar tempo da publicação do eCTD."
 }
 ],
 "prompts": [
@@ -3596,17 +3596,17 @@
 {
 "s": "You",
 "en": "Hi, I'd like to return this air fryer. It stopped working after two days.",
-"pt": "Quero devolver esta air fryer. Parou depois de dois dias."
+"pt": "Oi, eu gostaria de devolver esta air fryer. Parou de funcionar depois de dois dias."
 },
 {
 "s": "Associate",
 "en": "Oh no, sorry about that. Do you have the receipt?",
-"pt": "Que pena. Tem o recibo?"
+"pt": "Ah não, desculpa por isso. Tem o recibo?"
 },
 {
 "s": "You",
 "en": "Yeah, I've got the receipt on my app. Here you go.",
-"pt": "Sim, está no app. Aqui."
+"pt": "Sim, tenho o recibo no app. Aqui está."
 },
 {
 "s": "Associate",
@@ -3616,7 +3616,7 @@
 {
 "s": "You",
 "en": "Actually, I'd rather just get a refund. Can you put it back on my card?",
-"pt": "Prefiro o reembolso. Pode estornar no cartão?"
+"pt": "Na verdade, prefiro só pegar o dinheiro de volta. Pode estornar no meu cartão?"
 },
 {
 "s": "Associate",
@@ -3626,17 +3626,17 @@
 {
 "s": "You",
 "en": "Here. How long till it shows up on my account?",
-"pt": "Aqui. Quanto tempo até aparecer na conta?"
+"pt": "Aqui. Quanto tempo até aparecer na minha conta?"
 },
 {
 "s": "Associate",
 "en": "It'll take three to five business days to post.",
-"pt": "De 3 a 5 dias úteis."
+"pt": "Leva de 3 a 5 dias úteis pra cair."
 },
 {
 "s": "You",
 "en": "And these rain boots are too small. Could I exchange them for a bigger size? They're still in the box. Never even opened them.",
-"pt": "E estas galochas ficaram pequenas. Posso trocar por maior? Estão na caixa, nem abri."
+"pt": "E estas galochas ficaram pequenas. Posso trocar por um tamanho maior? Ainda estão na caixa. Nem abri."
 },
 {
 "s": "Associate",
@@ -3690,17 +3690,17 @@
 {
 "s": "Scrum Master",
 "en": "Okay team, let's kick off planning. What's the sprint goal?",
-"pt": "Vamos começar o planning. Qual o objetivo?"
+"pt": "Certo, pessoal, vamos começar o planning. Qual é o objetivo da sprint?"
 },
 {
 "s": "PO",
 "en": "Ship the new loyalty points screen.",
-"pt": "Entregar a nova tela de pontos."
+"pt": "Entregar a nova tela de pontos de fidelidade."
 },
 {
 "s": "Scrum Master",
 "en": "First ticket: show the points balance. How many story points is this one?",
-"pt": "Primeiro ticket: saldo de pontos. Quantos pontos?"
+"pt": "Primeiro ticket: mostrar o saldo de pontos. Quantos story points tem esse?"
 },
 {
 "s": "Dev",
@@ -3710,7 +3710,7 @@
 {
 "s": "You",
 "en": "I'd estimate it at a five. There's a lot of testing involved: iOS, Android and three user types. Let's make sure testing is part of the estimate.",
-"pt": "Eu estimaria cinco. Muito teste: iOS, Android e três tipos de usuário. O teste entra na estimativa."
+"pt": "Eu estimaria em cinco. Tem muito teste envolvido: iOS, Android e três tipos de usuário. Vamos garantir que o teste entre na estimativa."
 },
 {
 "s": "Dev",
@@ -3720,17 +3720,17 @@
 {
 "s": "PO",
 "en": "Can we also squeeze in the referral feature?",
-"pt": "Dá pra encaixar a feature de indicação?"
+"pt": "Também dá pra encaixar a feature de indicação?"
 },
 {
 "s": "You",
 "en": "Honestly, I don't think we have the capacity for that this sprint. I'm out on Friday, too.",
-"pt": "Sinceramente, não temos capacidade nesta sprint. E não estou na sexta."
+"pt": "Sinceramente, acho que não temos capacidade pra isso nesta sprint. E também não estou na sexta."
 },
 {
 "s": "Scrum Master",
 "en": "Got it. Can we carry it over to the next sprint?",
-"pt": "Entendi. Passamos pra próxima?"
+"pt": "Entendi. Podemos passar pra próxima sprint?"
 },
 {
 "s": "PO",
@@ -3785,17 +3785,17 @@
 {
 "s": "You",
 "en": "Not really. We're running behind schedule on the submission.",
-"pt": "Não muito. Estamos atrasados."
+"pt": "Não muito. Estamos atrasados com a submissão."
 },
 {
 "s": "PM",
 "en": "Oh. What's causing the delay?",
-"pt": "O que está causando o atraso?"
+"pt": "Ah. O que está causando o atraso?"
 },
 {
 "s": "You",
 "en": "The QC lab hasn't finished the stability testing for the new site. Without that data, we can't complete Module 3.",
-"pt": "O laboratório não terminou a estabilidade do novo site. Sem isso não fecho o Módulo 3."
+"pt": "O laboratório de CQ não terminou os testes de estabilidade do novo site. Sem esses dados, não conseguimos fechar o Módulo 3."
 },
 {
 "s": "PM",
@@ -3805,27 +3805,27 @@
 {
 "s": "You",
 "en": "I'd rather not rush it. A mistake here could cost us months. The timeline is pretty tight already.",
-"pt": "Prefiro não apressar. Um erro custa meses. O cronograma já está apertado."
+"pt": "Prefiro não apressar. Um erro aqui pode custar meses. O cronograma já está bem apertado."
 },
 {
 "s": "PM",
 "en": "So what do you suggest?",
-"pt": "O que sugere?"
+"pt": "Então o que você sugere?"
 },
 {
 "s": "You",
 "en": "Can we push the internal deadline by a week? That gives us time for the data and a final review.",
-"pt": "Empurrar o prazo interno uma semana? Dá tempo dos dados e revisão final."
+"pt": "Podemos empurrar o prazo interno em uma semana? Isso dá tempo pros dados e pra uma revisão final."
 },
 {
 "s": "PM",
 "en": "And if the data comes in even later?",
-"pt": "E se os dados atrasarem mais?"
+"pt": "E se os dados chegarem ainda mais tarde?"
 },
 {
 "s": "You",
 "en": "Worst-case scenario, the launch slips to Q2. I'll send you an updated timeline today.",
-"pt": "No pior cenário, vai pro Q2. Mando cronograma atualizado hoje."
+"pt": "No pior cenário, o lançamento escorrega pro 2º trimestre. Te mando um cronograma atualizado hoje."
 }
 ],
 "prompts": [
@@ -3905,7 +3905,7 @@
 {
 "s": "You",
 "en": "I placed an order for pickup on the app. I'm on my way. I'll be there in ten.",
-"pt": "Fiz um pedido de retirada. Tô a caminho, chego em dez."
+"pt": "Fiz um pedido de retirada pelo app. Tô a caminho. Chego em dez minutos."
 },
 {
 "s": "Associate",
@@ -3915,17 +3915,17 @@
 {
 "s": "You",
 "en": "It's {name}. I'm here for my pickup. I'm parked in spot six.",
-"pt": "{name}. Vim retirar. Estou na vaga seis."
+"pt": "É {name}. Cheguei pra retirada. Estou na vaga seis."
 },
 {
 "s": "Associate",
 "en": "Got it. Just so you know, we had to substitute a couple of items.",
-"pt": "Certo. Só avisando, substituímos alguns itens."
+"pt": "Certo. Só pra avisar, tivemos que substituir alguns itens."
 },
 {
 "s": "You",
 "en": "Oh, okay. Looks like they subbed the milk for a different brand. That's fine.",
-"pt": "Ah, ok. Trocaram a marca do leite. Tudo bem."
+"pt": "Ah, ok. Parece que trocaram o leite por outra marca. Tudo bem."
 },
 {
 "s": "Associate",
@@ -3935,22 +3935,22 @@
 {
 "s": "You",
 "en": "Hmm, can I just say no to that substitution? The kid only eats the real ones.",
-"pt": "Hmm, posso recusar essa? A criança só come o original."
+"pt": "Hmm, posso só recusar essa substituição? A criança só come o original."
 },
 {
 "s": "Associate",
 "en": "Sure, I'll take it off. You won't be charged.",
-"pt": "Claro, tiro. Não será cobrado."
+"pt": "Claro, vou tirar. Você não será cobrado."
 },
 {
 "s": "You",
 "en": "Thanks! The trunk's open. You can just toss it in the back.",
-"pt": "Obrigado! O porta-malas tá aberto, pode jogar atrás."
+"pt": "Valeu! O porta-malas tá aberto. Pode só jogar lá atrás."
 },
 {
 "s": "Associate",
 "en": "You're all set! Have a great day!",
-"pt": "Tudo certo! Ótimo dia!"
+"pt": "Tudo certo, pode ir! Tenha um ótimo dia!"
 }
 ],
 "prompts": [
@@ -3999,7 +3999,7 @@
 {
 "s": "You",
 "en": "The build just got deployed to staging. I'm gonna run a quick smoke test.",
-"pt": "O build subiu pra staging. Vou rodar um smoke test."
+"pt": "O build acabou de subir pra staging. Vou rodar um smoke test rápido."
 },
 {
 "s": "Eng Manager",
@@ -4009,22 +4009,22 @@
 {
 "s": "You",
 "en": "Smoke test passed. Login, cart and checkout look good.",
-"pt": "Smoke passou. Login, carrinho e checkout ok."
+"pt": "O smoke test passou. Login, carrinho e checkout estão bons."
 },
 {
 "s": "Eng Manager",
 "en": "Nice. So is this the release candidate?",
-"pt": "Boa. Essa é a release candidate?"
+"pt": "Boa. Então essa é a versão candidata ao release?"
 },
 {
 "s": "You",
 "en": "Yep, RC two. But push notifications aren't showing up on iOS. I'd hold off on the release until that's fixed.",
-"pt": "Sim, RC2. Mas as notificações não aparecem no iOS. Seguraria o release até corrigir."
+"pt": "Sim, a RC2. Mas as notificações push não estão aparecendo no iOS. Eu seguraria o release até isso ser corrigido."
 },
 {
 "s": "Eng Manager",
 "en": "Fair enough. If anything breaks, can we roll it back?",
-"pt": "Justo. Se quebrar, dá rollback?"
+"pt": "Justo. Se algo quebrar, dá pra fazer rollback?"
 },
 {
 "s": "Dev",
@@ -4034,12 +4034,12 @@
 {
 "s": "Eng Manager",
 "en": "Alright, it's a go after the fix.",
-"pt": "Aprovado depois da correção."
+"pt": "Certo, vamos em frente depois da correção."
 },
 {
 "s": "You",
 "en": "Sounds good. I'll do a sanity check on prod right after the deploy.",
-"pt": "Beleza. Faço um sanity check em produção logo depois."
+"pt": "Beleza. Faço um sanity check em produção logo depois do deploy."
 }
 ],
 "prompts": [
@@ -4085,12 +4085,12 @@
 {
 "s": "Manager",
 "en": "Hi! How's your week going?",
-"pt": "Oi! Como está a semana?"
+"pt": "Oi! Como está indo sua semana?"
 },
 {
 "s": "You",
 "en": "Busy! I've got a lot on my plate this week: the annual report, a labeling update and the CMC supplement.",
-"pt": "Corrida! Muita coisa: relatório anual, rotulagem e o suplemento CMC."
+"pt": "Corrida! Estou com muita coisa essa semana: o relatório anual, uma atualização de rotulagem e o suplemento CMC."
 },
 {
 "s": "Manager",
@@ -4100,7 +4100,7 @@
 {
 "s": "You",
 "en": "Let me prioritize. The annual report is due Friday, so that's the most urgent.",
-"pt": "Deixa eu priorizar. O relatório anual vence sexta, é o mais urgente."
+"pt": "Deixa eu priorizar. O relatório anual vence sexta, então é o mais urgente."
 },
 {
 "s": "Manager",
@@ -4110,17 +4110,17 @@
 {
 "s": "You",
 "en": "Yes. I still need your sign-off on the cover letter for the supplement. Just following up on my email from Monday.",
-"pt": "Sim. Preciso da sua aprovação na carta do suplemento. Retomando meu e-mail de segunda."
+"pt": "Sim. Ainda preciso da sua aprovação na carta de apresentação do suplemento. Só retomando meu e-mail de segunda."
 },
 {
 "s": "Manager",
 "en": "Oh, sorry, it got buried in my inbox. I'll sign it today.",
-"pt": "Desculpa, se perdeu na caixa. Assino hoje."
+"pt": "Ah, desculpa, se perdeu na minha caixa de entrada. Assino hoje."
 },
 {
 "s": "You",
 "en": "Thank you! And the labeling depends on Marketing. Can you give me a heads-up if their timeline changes?",
-"pt": "Obrigada! A rotulagem depende do Marketing. Me avisa se o prazo deles mudar?"
+"pt": "Obrigada! E a rotulagem depende do Marketing. Você me avisa com antecedência se o cronograma deles mudar?"
 },
 {
 "s": "Manager",
@@ -4130,7 +4130,7 @@
 {
 "s": "You",
 "en": "Great. Let's touch base tomorrow morning to check on the annual report.",
-"pt": "Ótimo. Falamos amanhã cedo sobre o relatório anual."
+"pt": "Ótimo. Vamos nos falar rapidinho amanhã de manhã pra ver o relatório anual."
 }
 ],
 "prompts": [
@@ -4212,42 +4212,42 @@
 {
 "s": "You",
 "en": "The line's huge. I'm just gonna use the self-checkout.",
-"pt": "A fila tá enorme. Vou no autoatendimento."
+"pt": "A fila tá enorme. Vou usar o autoatendimento."
 },
 {
 "s": "Partner",
 "en": "Okay. How do I look up bananas? Is there a code?",
-"pt": "Tá. Como procuro banana? Tem código?"
+"pt": "Tá. Como eu procuro banana? Tem código?"
 },
 {
 "s": "You",
 "en": "Hit \"Look Up Item\"... Ugh, now the candy won't scan. I've tried like three times.",
-"pt": "Aperta 'Look Up Item'... Aff, agora o doce não passa. Tentei três vezes."
+"pt": "Aperta 'Look Up Item'... Aff, agora o doce não passa. Já tentei umas três vezes."
 },
 {
 "s": "Partner",
 "en": "And it keeps saying \"unexpected item in the bagging area.\" Can somebody help me out over here?",
-"pt": "E fica dizendo 'item inesperado'. Alguém pode ajudar aqui?"
+"pt": "E fica dizendo 'item inesperado na área de embalagem'. Alguém pode me dar uma ajuda aqui?"
 },
 {
 "s": "Associate",
 "en": "Sure! Did you put your purse on the scale? That's probably it. Let me override that for you.",
-"pt": "Claro! Colocou a bolsa na balança? Deve ser isso. Vou liberar."
+"pt": "Claro! Você colocou a bolsa na balança? Deve ser isso. Deixa eu liberar isso pra você."
 },
 {
 "s": "You",
 "en": "Oops, I accidentally scanned the candy twice.",
-"pt": "Opa, passei o doce duas vezes."
+"pt": "Opa, passei o doce duas vezes sem querer."
 },
 {
 "s": "Associate",
 "en": "No worries, I'll void that one. Just hit \"Pay Now\" when you're done.",
-"pt": "Tranquilo, cancelo esse. Aperta 'Pay Now' quando terminar."
+"pt": "Tranquilo, eu cancelo esse item. É só apertar 'Pay Now' quando terminar."
 },
 {
 "s": "Partner",
 "en": "Thanks! Oh, and the wine. I need someone to check my ID for this.",
-"pt": "Obrigada! E o vinho, precisa conferir meu documento."
+"pt": "Obrigada! Ah, e o vinho. Preciso que alguém confira meu documento pra isso."
 },
 {
 "s": "Associate",
@@ -4296,7 +4296,7 @@
 {
 "s": "Dev",
 "en": "Hey, the password reset ticket is ready for QA.",
-"pt": "O ticket de reset de senha está pronto pra QA."
+"pt": "Ei, o ticket de reset de senha está pronto pra QA."
 },
 {
 "s": "You",
@@ -4306,7 +4306,7 @@
 {
 "s": "You",
 "en": "So, the reset works, but it doesn't meet the acceptance criteria. The link should expire in 15 minutes and it never expires.",
-"pt": "O reset funciona, mas não atende os critérios. O link devia expirar em 15 min e nunca expira."
+"pt": "Então, o reset funciona, mas não atende os critérios de aceite. O link devia expirar em 15 minutos e nunca expira."
 },
 {
 "s": "Dev",
@@ -4316,22 +4316,22 @@
 {
 "s": "You",
 "en": "No worries. I reopened the ticket and left a comment with the steps. I'm gonna move it back to In Progress.",
-"pt": "Tranquilo. Reabri e comentei os passos. Vou voltar pra In Progress."
+"pt": "Tranquilo. Reabri o ticket e deixei um comentário com os passos. Vou voltar ele pra In Progress."
 },
 {
 "s": "PO",
 "en": "Also, the error message is kinda confusing. Can we change it?",
-"pt": "A mensagem de erro é confusa. Dá pra mudar?"
+"pt": "Além disso, a mensagem de erro é meio confusa. Dá pra mudar?"
 },
 {
 "s": "You",
 "en": "Good catch, but is this a bug or a new requirement? It's not in the ticket.",
-"pt": "Boa observação, mas é bug ou requisito novo? Não está no ticket."
+"pt": "Boa observação, mas isso é bug ou requisito novo? Não está no ticket."
 },
 {
 "s": "PO",
 "en": "Fair. I'll create a separate story.",
-"pt": "Justo. Crio outra história."
+"pt": "Justo. Vou criar uma história separada."
 },
 {
 "s": "You",
@@ -4386,42 +4386,42 @@
 {
 "s": "You",
 "en": "Almost. I routed it for approval this morning, but it's stuck on the second approver.",
-"pt": "Quase. Mandei pra aprovação hoje, mas está travado no segundo aprovador."
+"pt": "Quase. Mandei pra aprovação hoje de manhã, mas está travado no segundo aprovador."
 },
 {
 "s": "Doc Control",
 "en": "Oh, that's the RA Director. I'll ping him. Did you include Marketing's changes?",
-"pt": "É o Diretor de AR. Vou chamá-lo. Incluiu as mudanças do Marketing?"
+"pt": "Ah, é o Diretor de AR. Vou chamá-lo. Você incluiu as mudanças do Marketing?"
 },
 {
 "s": "You",
 "en": "Yes, but Marketing sent me an old copy. Make sure you're working on the latest version. It's 3.0, not 2.1.",
-"pt": "Sim, mas me mandaram cópia antiga. Confira a versão mais recente: 3.0, não 2.1."
+"pt": "Sim, mas o Marketing me mandou uma cópia antiga. Confira se está trabalhando na versão mais recente. É a 3.0, não a 2.1."
 },
 {
 "s": "Doc Control",
 "en": "Good to know. I also wanted to fix a typo, but I can't open it.",
-"pt": "Bom saber. Queria corrigir um erro de digitação, mas não abre."
+"pt": "Bom saber. Também queria corrigir um erro de digitação, mas não consigo abrir."
 },
 {
 "s": "You",
 "en": "Right, someone has it checked out, so nobody can edit it.",
-"pt": "Alguém fez check-out, ninguém consegue editar."
+"pt": "Certo, alguém fez check-out dele, então ninguém consegue editar."
 },
 {
 "s": "Doc Control",
 "en": "Okay. Anything you need from the Director?",
-"pt": "Precisa de algo do Diretor?"
+"pt": "Tá. Precisa de algo do Diretor?"
 },
 {
 "s": "You",
 "en": "It just needs his e-signature in Vault. Then, when does it become effective?",
-"pt": "Só a assinatura eletrônica no Vault. E quando entra em vigor?"
+"pt": "Só falta a assinatura eletrônica dele no Vault. E depois, quando ele entra em vigor?"
 },
 {
 "s": "Doc Control",
 "en": "Usually 30 days after approval, so the team has time for training.",
-"pt": "Normalmente 30 dias após aprovação, pra dar tempo de treinamento."
+"pt": "Normalmente 30 dias após a aprovação, pra equipe ter tempo de treinamento."
 }
 ],
 "prompts": [
@@ -4494,7 +4494,7 @@
 },
 {
 "en": "Just so you know, all sales on costumes are final.",
-"pt": "(Você vai ouvir) Fantasia não tem troca nem devolução."
+"pt": "(Você vai ouvir) Só pra avisar, fantasia não tem troca nem devolução."
 }
 ],
 "dialog": [
@@ -4506,7 +4506,7 @@
 {
 "s": "Partner",
 "en": "And a costume! She wants to be a butterfly. Excuse me, do you have this costume in a kids' 4T?",
-"pt": "E fantasia! Ela quer ser borboleta. Com licença, tem essa no 4T?"
+"pt": "E uma fantasia! Ela quer ser borboleta. Com licença, tem essa fantasia no tamanho 4T infantil?"
 },
 {
 "s": "Associate",
@@ -4516,42 +4516,42 @@
 {
 "s": "Partner",
 "en": "She's a four. Ugh, these are pretty much sold out, huh?",
-"pt": "Quatro. Aff, tá praticamente esgotado, né?"
+"pt": "Ela usa quatro. Aff, tá praticamente esgotado, né?"
 },
 {
 "s": "Associate",
 "en": "Pretty much, sorry. There's a 5T, but that one runs small. And all costumes are 30% off today.",
-"pt": "Praticamente. Tem 5T, mas veste pequeno. E tudo com 30% off hoje."
+"pt": "Praticamente, desculpa. Tem 5T, mas esse veste pequeno. E todas as fantasias estão com 30% de desconto hoje."
 },
 {
 "s": "Partner",
 "en": "Is there a fitting room, or can she just try it on here?",
-"pt": "Tem provador ou ela experimenta aqui?"
+"pt": "Tem provador, ou ela pode experimentar aqui mesmo?"
 },
 {
 "s": "Associate",
 "en": "She can just try it on here, no problem. Just so you know, all sales on costumes are final.",
-"pt": "Pode experimentar aqui. Só avisando, fantasia não tem troca."
+"pt": "Ela pode experimentar aqui mesmo, sem problema. Só pra avisar, fantasia não tem troca nem devolução."
 },
 {
 "s": "You",
 "en": "Now she wants the bee one too... She can't make up her mind.",
-"pt": "Agora ela quer a de abelha também... Não consegue se decidir."
+"pt": "Agora ela quer a de abelha também... Ela não consegue se decidir."
 },
 {
 "s": "Partner",
 "en": "Butterfly. Final answer. Now candy: which one's the better deal, the big bag or the two small ones?",
-"pt": "Borboleta. Resposta final. Agora doce: qual compensa mais?"
+"pt": "Borboleta. Resposta final. Agora os doces: qual compensa mais, o pacote grande ou os dois pequenos?"
 },
 {
 "s": "You",
 "en": "The big bag. And let's get the nut-free stuff, just to be safe.",
-"pt": "O pacote grande. E os sem amendoim, por segurança."
+"pt": "O pacote grande. E vamos levar os sem amendoim/castanha, só por segurança."
 },
 {
 "s": "Partner",
 "en": "Okay, that should do it. Let's head out.",
-"pt": "Pronto, é isso. Vamos embora."
+"pt": "Pronto, acho que é isso. Vamos embora."
 }
 ],
 "prompts": [
@@ -4591,12 +4591,12 @@
 {
 "s": "Scrum Master",
 "en": "Alright, let's start the retro. What went well this sprint?",
-"pt": "Vamos começar a retro. O que deu certo?"
+"pt": "Certo, vamos começar a retro. O que deu certo nesta sprint?"
 },
 {
 "s": "You",
 "en": "The release went smoothly. And shout-out to Ahmed for fixing that crash so fast.",
-"pt": "O release correu tranquilo. E um salve pro Ahmed pelo crash."
+"pt": "O release correu tranquilo. E um salve pro Ahmed por corrigir aquele crash tão rápido."
 },
 {
 "s": "Ahmed",
@@ -4606,22 +4606,22 @@
 {
 "s": "Scrum Master",
 "en": "Love it. What could we do better next time?",
-"pt": "Adorei. O que melhorar?"
+"pt": "Adorei. O que dá pra melhorar da próxima vez?"
 },
 {
 "s": "You",
 "en": "We kept getting tickets late in the sprint. Four tickets came in on Wednesday, and that left us almost no time for testing.",
-"pt": "Os tickets chegaram tarde. Quatro na quarta, quase sem tempo pra testar."
+"pt": "Os tickets ficaram chegando no fim da sprint. Quatro tickets chegaram na quarta, e isso deixou a gente quase sem tempo pra testar."
 },
 {
 "s": "Dev",
 "en": "Yeah, fair. Some of those were bigger than we thought.",
-"pt": "Justo. Alguns eram maiores que achávamos."
+"pt": "É, justo. Alguns eram maiores do que a gente achava."
 },
 {
 "s": "You",
 "en": "Totally. So, can we try a code freeze two days before the end? Just for one sprint, to see how it goes.",
-"pt": "Total. Podemos testar um code freeze dois dias antes? Só uma sprint, pra ver."
+"pt": "Total. Então, podemos testar um congelamento de código dois dias antes do fim? Só por uma sprint, pra ver como fica."
 },
 {
 "s": "Scrum Master",
@@ -4631,7 +4631,7 @@
 {
 "s": "You",
 "en": "Nope, that's it from my side. Have a great weekend, guys!",
-"pt": "Não, é isso. Bom fim de semana!"
+"pt": "Não, é isso da minha parte. Bom fim de semana, pessoal!"
 }
 ],
 "prompts": [
@@ -4674,7 +4674,7 @@
 {
 "s": "You",
 "en": "Do you have a minute? We just got an information request from the FDA on the ANDA.",
-"pt": "Tem um minuto? Recebemos um IR do FDA sobre a ANDA."
+"pt": "Tem um minuto? Acabamos de receber um pedido de informação do FDA sobre a ANDA."
 },
 {
 "s": "Director",
@@ -4684,37 +4684,37 @@
 {
 "s": "You",
 "en": "They're asking us to clarify the dissolution method. Basically, why we picked that medium and that speed.",
-"pt": "Esclarecer o método de dissolução: por que escolhemos aquele meio e velocidade."
+"pt": "Estão pedindo pra esclarecer o método de dissolução. Basicamente, por que escolhemos aquele meio e aquela velocidade."
 },
 {
 "s": "Director",
 "en": "Okay. How much time do we have?",
-"pt": "Quanto tempo temos?"
+"pt": "Tá. Quanto tempo temos?"
 },
 {
 "s": "You",
 "en": "We've got ten days to get back to them. So I'd like an internal draft by Wednesday.",
-"pt": "Dez dias. Quero um rascunho interno até quarta."
+"pt": "Temos dez dias pra responder a eles. Então eu queria um rascunho interno até quarta."
 },
 {
 "s": "Director",
 "en": "Makes sense. Who's gonna pull the method validation data?",
-"pt": "Faz sentido. Quem levanta os dados de validação?"
+"pt": "Faz sentido. Quem vai levantar os dados de validação do método?"
 },
 {
 "s": "You",
 "en": "That's my question too. Who's the best person to pull that data? Maybe Priya from the lab?",
-"pt": "Também quero saber. Quem é a melhor pessoa? Talvez a Priya do lab?"
+"pt": "Essa é minha pergunta também. Quem é a melhor pessoa pra levantar esses dados? Talvez a Priya do laboratório?"
 },
 {
 "s": "Director",
 "en": "Yeah, Priya. And please don't send them a fifty-page answer.",
-"pt": "Isso, a Priya. E não mande uma resposta de 50 páginas."
+"pt": "Isso, a Priya. E, por favor, não mandem uma resposta de 50 páginas."
 },
 {
 "s": "You",
 "en": "Agreed. Let's keep the response short and to the point. I'll set up a quick call with CMC and the lab this afternoon.",
-"pt": "Combinado. Curta e objetiva. Marco uma call com CMC e lab hoje à tarde."
+"pt": "Combinado. Vamos manter a resposta curta e objetiva. Vou marcar uma call rápida com CMC e o laboratório hoje à tarde."
 },
 {
 "s": "Director",
@@ -4783,12 +4783,12 @@
 {
 "s": "Partner",
 "en": "Thanks! Do you have any more of these in the back? The shelf's empty.",
-"pt": "Obrigada! Tem mais no estoque? A prateleira tá vazia."
+"pt": "Obrigada! Tem mais desses no estoque? A prateleira tá vazia."
 },
 {
 "s": "Employee",
 "en": "Let me check in the back for you.",
-"pt": "Vou ver no estoque."
+"pt": "Deixa eu ver no estoque pra você."
 },
 {
 "s": "Cashier",
@@ -4798,7 +4798,7 @@
 {
 "s": "You",
 "en": "Yeah, thanks. Wait, I think that rang up wrong. It's supposed to be on sale.",
-"pt": "Sim. Espera, acho que passou errado. Era pra estar em promoção."
+"pt": "Sim, valeu. Espera, acho que passou o preço errado. Era pra estar em promoção."
 },
 {
 "s": "Cashier",
@@ -4808,12 +4808,12 @@
 {
 "s": "Partner",
 "en": "Oh, hold on a sec, I forgot the milk!",
-"pt": "Ah, espera, esqueci o leite!"
+"pt": "Ah, espera um segundo, esqueci o leite!"
 },
 {
 "s": "You",
 "en": "Hi, I'd like to return this. It stopped working after two days.",
-"pt": "Oi, quero devolver isso. Parou depois de dois dias."
+"pt": "Oi, eu gostaria de devolver isso. Parou de funcionar depois de dois dias."
 },
 {
 "s": "Associate",
@@ -4823,27 +4823,27 @@
 {
 "s": "You",
 "en": "Actually, I'd rather just get a refund.",
-"pt": "Na verdade, prefiro o reembolso."
+"pt": "Na verdade, prefiro só pegar o dinheiro de volta."
 },
 {
 "s": "Associate",
 "en": "Sure. It'll take three to five business days to post.",
-"pt": "Claro. Leva de 3 a 5 dias úteis."
+"pt": "Claro. Leva de 3 a 5 dias úteis pra cair."
 },
 {
 "s": "Partner",
 "en": "Ugh, it won't scan. Can somebody help me out over here?",
-"pt": "Aff, não passa. Alguém me ajuda aqui?"
+"pt": "Aff, não passa. Alguém pode me dar uma ajuda aqui?"
 },
 {
 "s": "Associate",
 "en": "No worries, let me override that for you.",
-"pt": "Tranquilo, vou liberar pra você."
+"pt": "Tranquilo, deixa eu liberar isso pra você."
 },
 {
 "s": "You",
 "en": "Okay, that should do it. Let's head out!",
-"pt": "Pronto, é isso. Vamos embora!"
+"pt": "Pronto, acho que é isso. Vamos embora!"
 }
 ],
 "prompts": [
@@ -4856,7 +4856,7 @@
 {
 "s": "Manager",
 "en": "Hey, how was your week?",
-"pt": "Como foi a semana?"
+"pt": "Ei, como foi sua semana?"
 },
 {
 "s": "You",
@@ -4871,7 +4871,7 @@
 {
 "s": "You",
 "en": "Yeah, push notifications weren't showing up. I said I'd hold off on the release until that's fixed, so we waited one day.",
-"pt": "Sim, as notificações não apareciam. Segurei o release até corrigir, esperamos um dia."
+"pt": "Sim, as notificações push não estavam aparecendo. Eu disse que seguraria o release até corrigir, então esperamos um dia."
 },
 {
 "s": "Manager",
@@ -4881,7 +4881,7 @@
 {
 "s": "You",
 "en": "I logged a bug for that. I can reproduce it every single time, so Ahmed fixed it super fast. Shout-out to him.",
-"pt": "Abri o bug. Reproduzia toda vez, então o Ahmed corrigiu rápido. Um salve pra ele."
+"pt": "Abri um bug pra isso. Consigo reproduzir toda vez, então o Ahmed corrigiu super rápido. Um salve pra ele."
 },
 {
 "s": "Manager",
@@ -4891,7 +4891,7 @@
 {
 "s": "You",
 "en": "Tickets keep coming in late. Let's make sure testing is part of the estimate from now on.",
-"pt": "Tickets chegando tarde. Vamos garantir que o teste entre na estimativa daqui pra frente."
+"pt": "Os tickets continuam chegando tarde. Vamos garantir que o teste entre na estimativa daqui pra frente."
 },
 {
 "s": "Manager",
@@ -4901,7 +4901,7 @@
 {
 "s": "You",
 "en": "Can we take that offline? I wanna show you some numbers first.",
-"pt": "Falamos depois? Quero te mostrar uns números antes."
+"pt": "Podemos falar disso depois? Quero te mostrar uns números antes."
 },
 {
 "s": "Manager",
@@ -4911,7 +4911,7 @@
 {
 "s": "You",
 "en": "The password reset ticket didn't meet the acceptance criteria, so I reopened it. Other than that, no blockers on my end.",
-"pt": "O ticket de reset não atendeu os critérios, reabri. Fora isso, sem bloqueios."
+"pt": "O ticket de reset de senha não atendeu os critérios de aceite, então reabri. Fora isso, sem bloqueios do meu lado."
 },
 {
 "s": "Manager",
@@ -4936,7 +4936,7 @@
 {
 "s": "You",
 "en": "To be honest, we're running behind schedule on the submission. The stability data is still pending on QA's side.",
-"pt": "Sinceramente, estamos atrasados. Os dados de estabilidade estão pendentes com a Qualidade."
+"pt": "Sinceramente, estamos atrasados com a submissão. Os dados de estabilidade ainda estão pendentes do lado da Qualidade."
 },
 {
 "s": "Director",
@@ -4951,42 +4951,42 @@
 {
 "s": "Director",
 "en": "Okay, makes sense. What about the FDA information request?",
-"pt": "Faz sentido. E o IR do FDA?"
+"pt": "Tá, faz sentido. E o pedido de informação do FDA?"
 },
 {
 "s": "You",
 "en": "We've got ten days to get back to them. Priya is pulling the data, and let's keep the response short and to the point.",
-"pt": "Dez dias pra responder. A Priya está levantando os dados; resposta curta e objetiva."
+"pt": "Temos dez dias pra responder a eles. A Priya está levantando os dados, e vamos manter a resposta curta e objetiva."
 },
 {
 "s": "Director",
 "en": "Agreed. And the labeling update, who owns this one?",
-"pt": "Concordo. E a rotulagem, quem é o responsável?"
+"pt": "Concordo. E a atualização da rotulagem, quem é o responsável?"
 },
 {
 "s": "You",
 "en": "The RA Associate owns that one. We're still waiting for comments from Marketing.",
-"pt": "O RA Associate. Esperando comentários do Marketing."
+"pt": "O RA Associate é o responsável. Ainda estamos esperando comentários do Marketing."
 },
 {
 "s": "Director",
 "en": "Okay. Anything you need from me?",
-"pt": "Precisa de algo de mim?"
+"pt": "Tá. Precisa de algo de mim?"
 },
 {
 "s": "You",
 "en": "Yes, just following up on my email from Monday. I still need your sign-off on the cover letter.",
-"pt": "Sim, retomando meu e-mail de segunda. Preciso da sua aprovação na carta."
+"pt": "Sim, só retomando meu e-mail de segunda. Ainda preciso da sua aprovação na carta de apresentação."
 },
 {
 "s": "Director",
 "en": "Oh, sorry! I'll sign it in Vault today.",
-"pt": "Desculpa! Assino no Vault hoje."
+"pt": "Ah, desculpa! Assino no Vault hoje."
 },
 {
 "s": "You",
 "en": "Thank you! I'll update the submission tracker and keep you in the loop.",
-"pt": "Obrigada! Atualizo o tracker e te mantenho informado."
+"pt": "Obrigada! Vou atualizar o controle de submissões e te manter informado."
 }
 ],
 "prompts": [
