@@ -89,6 +89,7 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .node .ringsvg{position:absolute;inset:-9px;width:94px;height:90px;pointer-events:none}
 .node .cap{font-size:13px;font-weight:700;max-width:180px;text-align:center;line-height:1.25}
 .node .day{font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.06em}
+.node.current.resume .disc::after{content:"CONTINUAR"}
 .node.current .disc::after{content:"COMEÇAR";position:absolute;top:-34px;background:var(--surface);color:var(--accent);border:2px solid var(--line);border-radius:10px;padding:3px 9px;font-size:11px;font-weight:800;letter-spacing:.08em;animation:bob 1.6s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-4px)}}
 .gap-note{font-size:13px;color:var(--muted);text-align:center;border:1px dashed var(--line);border-radius:12px;padding:8px 12px}
@@ -143,7 +144,10 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .simlist{max-height:calc(100dvh - 32px);overflow-y:auto}
 .simlist .lvl{flex:none}
 .chat{display:grid;gap:10px}
-.chat .bubble{width:fit-content;max-width:85%;font-size:16px}
+.chat .bubble{width:fit-content;max-width:85%;font-size:16px;animation:msgin .22s ease-out}
+.chat .bubble.pending{display:none}
+.chat .bubble.speaking{border-color:var(--qa);box-shadow:0 0 0 1px var(--qa)}
+@keyframes msgin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .chat .bubble.me{justify-self:end;border-color:var(--accent)}
 .reveal-box{display:grid;gap:8px;min-width:0}
 .reveal summary{cursor:pointer;width:fit-content;padding-block:4px;font-size:14px;font-weight:700;color:var(--accent)}
@@ -153,7 +157,10 @@ main{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
 .opt{border:2px solid var(--line);background:var(--surface);border-radius:14px;padding:13px 14px;text-align:left;font-weight:600;box-shadow:0 3px 0 var(--line);font-size:16px}
 .opt[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--surface));box-shadow:0 3px 0 var(--accent)}
 .opt.right{border-color:var(--good);background:var(--good-bg)}
-.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg);box-shadow:0 0 0 2px var(--bad)}
+.opt.right{box-shadow:0 0 0 2px var(--good)}
+.answer.wrong{border:3px solid var(--bad);border-radius:14px;padding:10px}
+.right-ans{border-color:var(--good);box-shadow:0 0 0 1px var(--good)}
 .answer{min-height:64px;border-bottom:2px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;padding-bottom:10px}
 .bank{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .tile{border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:8px 12px;font-weight:600;box-shadow:0 3px 0 var(--line);font-size:16px}
@@ -285,7 +292,7 @@ S.pid = LS.get("pid", null);
 S.sound = LS.get("sound", true);
 
 function blankProfile(){
-  return { name:"", xp:0, gems:50, streak:0, bestStreak:0, lastDay:"", freezes:0, hearts:MAX_HEARTS, heartsAt:0,
+  return { name:"", xp:0, gems:50, streak:0, bestStreak:0, lastDay:"", freezes:0, hearts:MAX_HEARTS, heartsAt:0, runs:{},
     goal:30, today:{d:"",xp:0}, week:{}, levels:{}, srs:{}, badges:[], perfect:0, lessonsDone:0, practiceDone:0 };
 }
 const P = () => { const p = S.prof[S.pid] || (S.prof[S.pid] = blankProfile()); return p; };
@@ -542,7 +549,7 @@ function viewPath(){
     const isCur = st==="open" && !currentMarked; if(isCur) currentMarked=true;
     const off = Math.round(Math.sin(idx*1.05)*70);
     const icon = st==="locked" ? "lock" : l.review ? "trophy" : st==="done" ? "check" : "star";
-    html+=`<button class="node ${st} ${l.review?"review":""} ${isCur?"current":""}" data-day="${l.day}" style="transform:translateX(${off}px)" aria-label="Dia ${l.day}: ${esc(l.title)}${st==="locked"?" (bloqueado)":""}">
+    html+=`<button class="node ${st} ${l.review?"review":""} ${isCur?"current":""} ${isCur&&p.runs[l.day+":"+lv]?"resume":""}" data-day="${l.day}" style="transform:translateX(${off}px)" aria-label="Dia ${l.day}: ${esc(l.title)}${st==="locked"?" (bloqueado)":""}">
       <span class="disc">${ringSvg(lv,tot,st)}${ICON(icon)}</span><span class="day">DIA ${l.day}</span><span class="cap">${esc(l.title)}</span></button>`;
   });
   html+=`</div>`;
@@ -740,6 +747,9 @@ function noHearts(){
 
 function runLesson(L, lessonRef, level){
   const R={ queue:L.exs.slice(), total:L.exs.length, done:0, mistakes:0, started:Date.now(), results:new Map(), practice:!!L.practice };
+  const runKey = lessonRef ? lessonRef.day+":"+level : null, saved = runKey && P().runs[runKey];
+  if(saved){ Object.assign(R,{queue:saved.queue, total:saved.total, done:saved.done, mistakes:saved.mistakes, started:Date.now()-saved.elapsed, results:new Map(saved.results), noSpeak:saved.noSpeak}); toast("Continuando de onde você parou."); }
+  const saveRun = () => { if(!runKey) return; P().runs[runKey]={queue:R.queue, total:R.total, done:R.done, mistakes:R.mistakes, elapsed:Date.now()-R.started, results:[...R.results], noSpeak:!!R.noSpeak}; save(); };
   let killMic=()=>{};
   const autoSay = (...a) => { clearTimeout(S.autoT); S.autoT=setTimeout(()=>{ if(el.isConnected) say(...a); },250); };
   const el=document.createElement("div"); el.className="lesson"; el.setAttribute("role","dialog"); el.setAttribute("aria-label",L.title);
@@ -753,7 +763,7 @@ function runLesson(L, lessonRef, level){
   }
   function confirmQuit(){
     killMic(); hush();
-    const foot=$(".foot .wrap",el); foot.innerHTML=`<div class="fb"><h3>Voltar para o início?</h3><p class="muted">O progresso desta lição será perdido.</p></div><button class="btn bad block" id="qY">Voltar para o início</button><button class="btn ghost block" id="qN">Continuar estudando</button>`;
+    const foot=$(".foot .wrap",el); foot.innerHTML=`<div class="fb"><h3>Voltar para o início?</h3><p class="muted">${runKey?"Você continua daqui quando voltar.":"O progresso desta lição será perdido."}</p></div><button class="btn bad block" id="qY">Voltar para o início</button><button class="btn ghost block" id="qN">Continuar estudando</button>`;
     $("#qY",el).onclick=()=>{ if(S.tab!=="path"){ S.tab="path"; window.scrollTo(0,0); } quit(); }; $("#qN",el).onclick=()=>show();
   }
   function srsMark(c, ok){ if(!c) return; const k=hkey(c.en); const prev=R.results.get(k); if(prev===false) return; R.results.set(k, ok && prev!==false); }
@@ -761,6 +771,7 @@ function runLesson(L, lessonRef, level){
     hush(); R.replay=null;
     let ex=R.queue[0]; if(!ex) return finish();
     if(ex.type==="speak" && R.noSpeak) ex=R.queue[0]=exFromChunk(ex.c,[...L.chunks,...allChunks("common")],["en_pt","pt_en","build","gap"]);
+    saveRun();
     let sel=null;
     const check = `<button class="btn block" id="chk" disabled>Verificar</button>`;
     const speakBtns = (t,gentle) => `<div class="row" style="flex-direction:column;gap:8px"><button class="speak" data-sp="${esc(t)}" ${gentle?'data-gentle="1"':""} aria-label="Ouvir">${ICON("sound")}</button><button class="speak slow" data-sp="${esc(t)}" data-slow="1" aria-label="Ouvir palavra por palavra">${ICON("turtle")}</button></div>`;
@@ -816,7 +827,7 @@ function runLesson(L, lessonRef, level){
         $("#spRes",el).innerHTML = `<div class="score" style="color:${pass?"var(--good)":"var(--bad)"}">${Math.round(top.score*100)}%</div>
           <div class="scored">${top.marks.map(m=>`<span class="${m.ok?"w-ok":"w-no"}">${esc(m.w)}</span>`).join(" ")}</div>
           <div class="heard">Ouvi: “${esc(top.heard||"…")}”</div>
-          <p class="hint">${pass?"O reconhecimento de voz entendeu você. Um americano também entenderia.":"As palavras sublinhadas não foram entendidas. Ouça o nativo de novo, foque nelas e tente outra vez."}</p>`;
+          <p class="hint">${pass?"O reconhecimento de voz entendeu você. Um americano também entenderia.":""}</p>`;
         const foot=$(".foot .wrap",el);
         foot.innerHTML = pass ? `<button class="btn good block" id="spNext">Continuar</button>`
           : `<button class="btn block" id="spAgain">Tentar de novo</button><button class="btn ghost block" id="spGive">${tries>=3?"Seguir em frente":"Pular esta"}</button>`;
@@ -849,23 +860,34 @@ function runLesson(L, lessonRef, level){
     }
     else if(ex.type==="sim"){
       const target=fill(ex.you.en), npc=ex.npc.map(d=>d.en).join(" "), useOpts=R.simChoice||!SR;
-      let rec=null, armT=0, advT=0, retries=0, micNote="";
-      const line = d => `<div class="bubble ${d.s==="You"?"me":""}"><span class="s">${esc(d.s==="You"?"Você":d.s)}</span>${esc(fill(d.en))}</div>`;
+      let rec=null, armT=0, advT=0, retries=0, micNote="", playId=0;
+      const line = (d,cls="") => `<div class="bubble ${d.s==="You"?"me":""} ${cls}"><span class="s">${esc(d.s==="You"?"Você":d.s)}</span>${esc(fill(d.en))}</div>`;
       const next = () => { killMic(); R.queue.shift(); R.done++; show(); };
       const answerBox = useOpts ? `<div class="opts">${ex.options.map((o,i)=>`<button class="opt" data-i="${i}" aria-pressed="false">${esc(o)}</button>`).join("")}</div>`
         : `<button class="mic" id="micBtn" aria-label="Tocar e falar">${ICON("mic")}</button><div class="heard" id="heard">Ouça e espere o microfone ligar.</div>`;
-      frame(`<div class="q-title">${esc(L.title)}</div><div class="chat">${[...ex.hist,...ex.npc].map(line).join("")}</div>
-        <div class="prompt">${npc?speakBtns(npc,true):""}<div class="reveal-box"><div class="hint"><b>Sua vez:</b> ${esc(fill(ex.you.pt))}</div><details class="reveal"><summary>Ver em inglês</summary><div class="bubble">${esc(target)}</div></details></div></div>
-        ${answerBox}<div id="spRes" class="stack"></div>`,
+      frame(`<div class="q-title">${esc(L.title)}</div><div class="chat" id="chat">${ex.hist.map(d=>line(d)).join("")}${ex.npc.map(d=>line(d,"npc pending")).join("")}</div>
+        <div class="prompt simctl">${npc?speakBtns(npc,true):""}<div class="reveal-box"><div class="hint"><b>Sua vez:</b> ${esc(fill(ex.you.pt))}</div><details class="reveal"><summary>Ver em inglês</summary><div class="bubble">${esc(target)}</div></details></div></div>
+        <div id="simAns" class="stack">${answerBox}</div><div id="spRes" class="stack"></div>`,
         useOpts ? `<button class="btn ghost block" id="spSkip">Pular esta fala</button>` : `<button class="btn ghost block" id="spSkip">Não posso falar agora</button>`);
       const bd=$(".body",el); bd.scrollTop=bd.scrollHeight;
-      killMic = () => { clearTimeout(armT); clearTimeout(advT); if(rec) rec.kill(); };
+      killMic = () => { playId++; clearTimeout(armT); clearTimeout(advT); if(rec) rec.kill(); };
+      const toBottom = () => { bd.scrollTop=bd.scrollHeight; };
+      const npcEls = [...el.querySelectorAll("#chat .npc")];
+      const speakLines = (slow, viaTimer, done) => { const id=++playId; let i=0;
+        const step = () => { if(id!==playId) return; if(i>=ex.npc.length) return done&&done();
+          const text=ex.npc[i].en, b=npcEls[i]; npcEls.forEach(x=>x.classList.remove("speaking")); b.classList.remove("pending"); b.classList.add("speaking"); toBottom();
+          let fin=false; const go = () => { if(fin||id!==playId) return; fin=true; b.classList.remove("speaking"); clearTimeout(armT); i++; armT=setTimeout(step,300); };
+          armT=setTimeout(go, slow ? 2000+words(text).length*2500 : 2000+text.length*90/0.8);
+          if(viaTimer&&i===0) autoSay(text,slow,true,go); else say(text,slow,true,go); };
+        step(); };
+      const myBubble = () => { $("#chat",el).insertAdjacentHTML("beforeend",line(ex.you)); $("#simAns",el).hidden=true; el.querySelector(".simctl").hidden=true; toBottom(); };
       $("#spSkip",el).onclick = () => { if(useOpts){ R.mistakes++; next(); } else { killMic(); R.simChoice=true; show(); } };
       if(useOpts){
-        if(npc) autoSay(npc,false,true);
+        speakLines(false,true);
+        R.replay = slow => speakLines(slow);
         el.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ const ok=norm(ex.options[+b.dataset.i])===norm(ex.answer); beep(ok);
           el.querySelectorAll(".opt").forEach(x=>{ x.disabled=true; if(norm(ex.options[+x.dataset.i])===norm(ex.answer)) x.classList.add("right"); }); if(!ok){ b.classList.add("wrong"); R.mistakes++; }
-          say(ex.you.en,false,true); advT=setTimeout(next, ok?1500:3500); });
+          if(ok){ playId++; clearTimeout(armT); myBubble(); } say(ex.you.en,false,true); advT=setTimeout(next, ok?1800:3500); });
       } else {
         const start = auto => { const note=micNote; micNote=""; const heard=$("#heard",el); hush();
           listenOnce({target, btn:$("#micBtn",el), heard, auto, note, min:0.7, onStart:c=>{ rec=c; }, onOff:()=>{ rec=null; }, onHeard:grade,
@@ -873,14 +895,12 @@ function runLesson(L, lessonRef, level){
               if(retries<2){ retries++; micNote=m; armT=setTimeout(()=>start(true),400); } else { retries=0; heard.textContent=m+" Toque no microfone para tentar de novo."; } } }); };
         const armMic = () => { if(speechSynthesis.speaking){ armT=setTimeout(armMic,200); return; } if(!document.hidden && !rec) start(true); };
         const play = (slow, viaTimer) => { killMic(); retries=0; if(!npc){ armT=setTimeout(armMic,250); return; }
-          const onEnd = () => { clearTimeout(armT); armT=setTimeout(armMic,600); };
-          armT=setTimeout(armMic, slow ? 2000+words(npc).length*2500 : 2000+npc.length*90/0.8);
-          if(viaTimer) autoSay(npc,slow,true,onEnd); else say(npc,slow,true,onEnd); };
+          speakLines(slow,viaTimer,()=>{ clearTimeout(armT); armT=setTimeout(armMic,600); }); };
         const grade = alts => { let top={score:-1}; for(const a of alts){ const g=scoreSpeech(target,a); if(g.score>top.score) top=g; }
           const pass=top.score>=0.7; beep(pass); $("#heard",el).textContent="";
-          $("#spRes",el).innerHTML=`<div class="score" style="color:${pass?"var(--good)":"var(--bad)"}">${Math.round(top.score*100)}%</div><div class="scored">${top.marks.map(m=>`<span class="${m.ok?"w-ok":"w-no"}">${esc(m.w)}</span>`).join(" ")}</div><div class="heard">Ouvi: “${esc(top.heard||"…")}”</div>`;
-          bd.scrollTop=bd.scrollHeight;
-          if(pass){ advT=setTimeout(next,1600); return; }
+          if(pass){ myBubble(); advT=setTimeout(next,1400); return; }
+          $("#spRes",el).innerHTML=`<div class="score" style="color:var(--bad)">${Math.round(top.score*100)}%</div><div class="scored">${top.marks.map(m=>`<span class="${m.ok?"w-ok":"w-no"}">${esc(m.w)}</span>`).join(" ")}</div><div class="heard">Ouvi: “${esc(top.heard||"…")}”</div>`;
+          toBottom();
           $(".foot .wrap",el).innerHTML=`<button class="btn block" id="spAgain">Tentar de novo</button><button class="btn ghost block" id="spGive">Seguir em frente</button>`;
           $("#spAgain",el).onclick=()=>{ $("#spRes",el).innerHTML=""; start(false); };
           $("#spGive",el).onclick=()=>{ R.mistakes++; next(); }; };
@@ -914,16 +934,19 @@ function runLesson(L, lessonRef, level){
     const pr = ex.c?.pr ? `<p class="tiny">Pronúncia ≈ <i>${esc(ex.c.pr)}</i></p>` : "";
     if(ok){ el.querySelectorAll('.opt[aria-pressed="true"]').forEach(b=>b.classList.add("right")); }
     else { el.querySelectorAll('.opt[aria-pressed="true"]').forEach(b=>b.classList.add("wrong")); R.mistakes++;
+      el.querySelectorAll(".opt").forEach(b=>{ if(norm(ex.options[+b.dataset.i])===norm(ex.answer)) b.classList.add("right"); });
+      if(ex.type==="build"){ const a=$("#ans",el); a.classList.add("wrong"); a.insertAdjacentHTML("afterend",`<div class="bubble right-ans">${esc(correct)}</div>`); }
+      el.querySelector(".opt.right,.right-ans")?.scrollIntoView({block:"nearest"});
       if(!R.practice){ setHearts(hearts()-1); save(); } R.queue.push(Object.assign({},ex)); }
-    const foot=$(".foot",el); foot.className="foot "+(ok?"ok":"no");
+    const foot=$(".foot",el); foot.className="foot "+(ok?"ok":"");
     const praise = ["Mandou bem!","Isso aí!","Perfeito!","Boa!","Nice!"][Math.floor(Math.random()*5)];
-    foot.querySelector(".wrap").innerHTML = `<div class="fb"><h3>${ok?praise:"Resposta certa:"}</h3>${ok?"":`<p><b>${esc(correct)}</b></p>`}${ptLine?`<p class="tiny">${esc(ptLine)}</p>`:""}${pr}</div>
-      <div class="row"><button class="mini-sp" id="fbSay" aria-label="Ouvir a frase">${ICON("sound")}</button><button class="btn ${ok?"good":"bad"} block" id="nx">Continuar</button></div>`;
+    foot.querySelector(".wrap").innerHTML = `${ok?`<div class="fb"><h3>${praise}</h3>${ptLine?`<p class="tiny">${esc(ptLine)}</p>`:""}${pr}</div>`:""}
+      <div class="row"><button class="mini-sp" id="fbSay" aria-label="Ouvir a frase">${ICON("sound")}</button><button class="btn ${ok?"good":""} block" id="nx">Continuar</button></div>`;
     $("#fbSay",el).onclick=()=>say(ex.say || ex.answer, false, ex.listen);
     if(ok && ex.say && ex.type!=="choice") say(ex.say, false, ex.listen);
     $("#nx",el).focus();
     $("#nx",el).onclick=()=>{ R.queue.shift(); if(ok) R.done++;
-      if(!R.practice && hearts()<=0){ el.remove(); document.body.style.overflow=""; render(); noHearts(); return; }
+      if(!R.practice && hearts()<=0){ saveRun(); el.remove(); document.body.style.overflow=""; render(); noHearts(); return; }
       show(); };
   }
   function finish(){
@@ -946,7 +969,7 @@ function runLesson(L, lessonRef, level){
     const now=Date.now();
     for(const [k,ok] of R.results){ const r=p.srs[k]||{s:0,due:0}; r.s = ok ? Math.min(5,r.s+1) : Math.max(0,r.s-1); r.due = now + SRS_DAYS[r.s]*864e5; p.srs[k]=r; }
     if(R.practice){ p.practiceDone++; setHearts(hearts()+1); }
-    else { p.lessonsDone++; if(perfect) p.perfect++; if(lessonRef){ const cur=p.levels[lessonRef.day]||0; if(level>=cur) p.levels[lessonRef.day]=Math.min(levelsFor(lessonRef),level+1); } }
+    else { p.lessonsDone++; if(perfect) p.perfect++; if(runKey) delete p.runs[runKey]; if(lessonRef){ const cur=p.levels[lessonRef.day]||0; if(level>=cur) p.levels[lessonRef.day]=Math.min(levelsFor(lessonRef),level+1); } }
     const beforeBadges = new Set(p.badges);
     badgeDefs().forEach(b=>{ if(b.ok && !p.badges.includes(b.id)) p.badges.push(b.id); });
     const newBadges = badgeDefs().filter(b=>p.badges.includes(b.id) && !beforeBadges.has(b.id) && b.id!=="goal");
