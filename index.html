@@ -325,7 +325,7 @@ function sayWords(text, onEnd){ try{ if(document.hidden) return; const g=++sayGe
   const next = () => { if(g!==sayGen) return; if(i>=ws.length){ if(onEnd) onEnd(); return; } const w=ws[i++], u=new SpeechSynthesisUtterance(w); lastU=u; u.lang="en-US"; if(voice) u.voice=voice; u.rate=0.6;
     let done=false; const go = () => { if(done) return; done=true; if(g===sayGen) sayT=setTimeout(next,220); }; u.onend=go; u.onerror=go; setTimeout(go,1500+w.length*150); try{ speechSynthesis.speak(u); }catch(e){} };
   if(busy) sayT=setTimeout(next,80); else next(); }catch(e){ toast("O áudio não está disponível neste navegador."); } }
-function say(text, slow, gentle, onEnd){ if(slow) return sayWords(text,onEnd); try{ if(document.hidden) return; sayGen++; clearTimeout(sayT); clearTimeout(S.autoT); const busy=speechSynthesis.speaking||speechSynthesis.pending; const u=new SpeechSynthesisUtterance(fill(text).replace(/\.\.\./g,", ")); lastU=u; speechSynthesis.resume(); speechSynthesis.cancel(); u.lang="en-US"; if(voice) u.voice=voice; u.rate = S.slow||gentle?0.8:0.95; if(onEnd) u.onend=()=>{ if(lastU===u) onEnd(); };
+function say(text, slow, gentle, onEnd){ if(slow) return sayWords(text,onEnd); try{ if(document.hidden) return; sayGen++; clearTimeout(sayT); clearTimeout(S.autoT); const busy=speechSynthesis.speaking||speechSynthesis.pending; const u=new SpeechSynthesisUtterance(fill(text).replace(/\.\.\./g,", ")); lastU=u; speechSynthesis.resume(); speechSynthesis.cancel(); u.lang="en-US"; if(voice) u.voice=voice; u.rate = typeof gentle==="number"?gentle:S.slow||gentle?0.8:0.95; if(onEnd) u.onend=()=>{ if(lastU===u) onEnd(); };
   if(busy) sayT=setTimeout(()=>{ try{ if(lastU===u) speechSynthesis.speak(u); }catch(e){} },80); else speechSynthesis.speak(u); }catch(e){ toast("O áudio não está disponível neste navegador."); } }
 function hush(){ clearTimeout(sayT); clearTimeout(S.autoT); lastU=null; const g=++sayGen; try{ speechSynthesis.resume(); speechSynthesis.cancel(); setTimeout(()=>{ if(g===sayGen) try{ speechSynthesis.cancel(); }catch(e){} },200); }catch(e){} }
 document.addEventListener("visibilitychange",()=>{ if(document.hidden) hush(); });
@@ -917,7 +917,7 @@ function runLesson(L, lessonRef, level){
         `<button class="btn block" id="chk" disabled>Continuar</button>`);
       el.querySelectorAll(".pair").forEach(btn=>btn.onclick=()=>{
         const side=btn.dataset.side;
-        if(side==="en"){ if(a) a.setAttribute("aria-pressed","false"); a=btn; const p=ex.pairs.find(x=>x.k===btn.dataset.k); say(p.c.en); } else { if(b) b.setAttribute("aria-pressed","false"); b=btn; }
+        if(side==="en"){ if(a) a.setAttribute("aria-pressed","false"); a=btn; const p=ex.pairs.find(x=>x.k===btn.dataset.k); say(p.c.en,false,0.7); } else { if(b) b.setAttribute("aria-pressed","false"); b=btn; }
         btn.setAttribute("aria-pressed","true");
         if(a&&b){ if(a.dataset.k===b.dataset.k){ beep(true); a.classList.add("ok"); b.classList.add("ok"); srsMark(ex.pairs.find(x=>x.k===a.dataset.k).c,true); left--; }
           else { beep(false); slip=true; const A=a,B=b; A.classList.add("shake"); B.classList.add("shake"); setTimeout(()=>{A.classList.remove("shake");B.classList.remove("shake");},400); srsMark(ex.pairs.find(x=>x.k===a.dataset.k).c,false); }
